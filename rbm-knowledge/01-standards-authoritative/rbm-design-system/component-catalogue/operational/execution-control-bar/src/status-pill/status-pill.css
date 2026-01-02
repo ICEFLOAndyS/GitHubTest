@@ -1,0 +1,15 @@
+.rbm-pill {
+  display: inline-flex;
+  align-items: center;
+  height: calc(var(--rbm-control-height) - 8px);
+  padding: 0 var(--rbm-space-2);
+  border-radius: 999px;
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  background: var(--rbm-color-surface-2);
+  font-size: var(--rbm-font-size-sm);
+  font-weight: var(--rbm-font-weight-medium);
+}
+.rbm-pill--info { border-color: var(--rbm-color-info); }
+.rbm-pill--success { border-color: var(--rbm-color-success); }
+.rbm-pill--warning { border-color: var(--rbm-color-warning); }
+.rbm-pill--critical { border-color: var(--rbm-color-critical); }

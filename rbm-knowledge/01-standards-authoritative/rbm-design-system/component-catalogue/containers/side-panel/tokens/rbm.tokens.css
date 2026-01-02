@@ -1,0 +1,73 @@
+:root {
+  /* Typography */
+  --rbm-font-family-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --rbm-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --rbm-font-size-xs: 12px;
+  --rbm-font-size-sm: 13px;
+  --rbm-font-size-md: 14px;
+  --rbm-font-size-lg: 16px;
+  --rbm-font-size-xl: 18px;
+  --rbm-font-size-2xl: 20px;
+
+  --rbm-line-height-tight: 1.2;
+  --rbm-line-height-normal: 1.4;
+  --rbm-line-height-loose: 1.6;
+
+  --rbm-font-weight-regular: 400;
+  --rbm-font-weight-medium: 500;
+  --rbm-font-weight-semibold: 600;
+
+  /* Spacing (4px base) */
+  --rbm-space-1: 4px;
+  --rbm-space-2: 8px;
+  --rbm-space-3: 12px;
+  --rbm-space-4: 16px;
+  --rbm-space-5: 20px;
+  --rbm-space-6: 24px;
+  --rbm-space-8: 32px;
+  --rbm-space-10: 40px;
+
+  /* Radius */
+  --rbm-radius-sm: 6px;
+  --rbm-radius-md: 10px;
+  --rbm-radius-lg: 14px;
+
+  /* Borders */
+  --rbm-border-width-1: 1px;
+
+  /* Surfaces */
+  --rbm-color-surface-0: #f9fafb;
+  --rbm-color-surface-1: #ffffff;
+  --rbm-color-surface-2: #f3f4f6;
+  --rbm-color-surface-inset: #eef2f7;
+
+  /* Text */
+  --rbm-color-text: #111827;
+  --rbm-color-text-muted: #4b5563;
+
+  /* Semantic colours */
+  --rbm-color-primary: #2563eb;
+  --rbm-color-primary-contrast: #ffffff;
+
+  --rbm-color-success: #16a34a;
+  --rbm-color-warning: #d97706;
+  --rbm-color-critical: #dc2626;
+  --rbm-color-info: #0ea5e9;
+
+  --rbm-color-border: #e5e7eb;
+  --rbm-color-focus: #2563eb;
+  --rbm-color-overlay: rgba(0,0,0,0.45);
+
+  /* Shadows */
+  --rbm-shadow-sm: 0 1px 2px rgba(0,0,0,0.08);
+  --rbm-shadow-md: 0 4px 12px rgba(0,0,0,0.10);
+
+  /* Motion */
+  --rbm-motion-fast: 120ms;
+  --rbm-motion-medium: 180ms;
+  --rbm-motion-slow: 240ms;
+
+  --rbm-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --rbm-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+}

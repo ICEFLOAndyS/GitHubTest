@@ -1,0 +1,14 @@
+:root[data-theme="dark"] {
+  --rbm-color-surface-0: #0b1220;
+  --rbm-color-surface-1: #0f172a;
+  --rbm-color-surface-2: #111c34;
+  --rbm-color-surface-inset: #0b162b;
+
+  --rbm-color-text: #e5e7eb;
+  --rbm-color-text-muted: #9ca3af;
+  --rbm-color-border: #24324d;
+
+  --rbm-color-overlay: rgba(0,0,0,0.6);
+  --rbm-shadow-sm: 0 1px 2px rgba(0,0,0,0.35);
+  --rbm-shadow-md: 0 10px 24px rgba(0,0,0,0.45);
+}

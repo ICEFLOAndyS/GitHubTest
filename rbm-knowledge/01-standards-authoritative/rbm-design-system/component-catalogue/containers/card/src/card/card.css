@@ -1,0 +1,15 @@
+.rbm-card {
+  background: var(--rbm-color-surface-1);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  border-radius: var(--rbm-radius-lg);
+  box-shadow: var(--rbm-shadow-md);
+}
+.rbm-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--rbm-space-4);
+  border-bottom: var(--rbm-border-width-1) solid var(--rbm-color-border);
+}
+.rbm-card__title { margin: 0; font-size: var(--rbm-font-size-lg); font-weight: var(--rbm-font-weight-semibold); }
+.rbm-card__body { padding: var(--rbm-space-4); }

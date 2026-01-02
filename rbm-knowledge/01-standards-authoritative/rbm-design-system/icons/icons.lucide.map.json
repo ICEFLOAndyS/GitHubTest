@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "product": "ICEFLO RBM",
+    "generated_utc": "2025-12-23T14:13:43Z",
+    "notes": [
+      "Canonical icon names are the only icon identifiers permitted in product code and UX specs.",
+      "lucide-react mapping is for React applications outside ServiceNow.",
+      "Horizon mapping is for ServiceNow UI Framework using <sn-icon> with @servicenow/icons."
+    ],
+    "coverage": {
+      "canonical_count": 44,
+      "missing_in_lucide_map": [],
+      "missing_in_horizon_map": []
+    }
+  },
+  "map": {
+    "action.add": "PlusCircle",
+    "action.edit": "Pencil",
+    "action.delete": "Trash2",
+    "action.save": "Save",
+    "action.cancel": "X",
+    "action.search": "Search",
+    "action.filter": "Filter",
+    "action.settings": "Settings",
+    "action.refresh": "RefreshCw",
+    "action.export": "Download",
+    "action.import": "Upload",
+    "action.open": "ArrowUpRight",
+    "action.close": "X",
+    "action.copy": "Copy",
+    "action.link": "Link2",
+    "nav.back": "ChevronLeft",
+    "nav.forward": "ChevronRight",
+    "nav.expand": "ChevronDown",
+    "nav.collapse": "ChevronUp",
+    "nav.more": "MoreVertical",
+    "nav.externalLink": "ExternalLink",
+    "status.success": "CheckCircle2",
+    "status.warning": "AlertTriangle",
+    "status.error": "XCircle",
+    "status.info": "Info",
+    "status.inProgress": "Loader2",
+    "status.blocked": "Ban",
+    "status.paused": "PauseCircle",
+    "rbm.event": "CalendarClock",
+    "rbm.runbook": "BookOpen",
+    "rbm.stage": "Layers",
+    "rbm.task": "ListTodo",
+    "rbm.dependency": "Link2",
+    "rbm.workstream": "Workflow",
+    "rbm.execution": "PlayCircle",
+    "rbm.timeline": "GanttChart",
+    "rbm.manualTaskType": "User",
+    "rbm.automatedTaskType": "Zap",
+    "rbm.communicationTaskType": "MessageSquare",
+    "rbm.verificationTaskType": "BadgeCheck",
+    "rbm.checkpointTaskType": "Flag",
+    "rbm.audit": "ClipboardCheck",
+    "rbm.compliance": "ShieldCheck",
+    "rbm.contentPack": "Package"
+  }
+}

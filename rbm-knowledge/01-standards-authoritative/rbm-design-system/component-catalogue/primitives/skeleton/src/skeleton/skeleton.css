@@ -1,0 +1,16 @@
+.rbm-skel {
+  background: color-mix(in srgb, var(--rbm-color-surface-2) 70%, transparent);
+  border-radius: var(--rbm-radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+.rbm-skel::after {
+  content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent,
+    color-mix(in srgb, var(--rbm-color-surface-1) 65%, transparent), transparent);
+  animation: rbm-skel 1.1s var(--rbm-ease-standard) infinite;
+}
+@keyframes rbm-skel { to { transform: translateX(100%); } }
+@media (prefers-reduced-motion: reduce) { .rbm-skel::after { animation: none; } }
+.rbm-skel--line { height: 12px; width: 100%; }
+.rbm-skel--block { height: 120px; width: 100%; }

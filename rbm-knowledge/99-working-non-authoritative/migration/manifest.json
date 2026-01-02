@@ -1,0 +1,2306 @@
+[
+  {
+    "old_path": "knowledge.manifest.json",
+    "new_path": "02-specifications-derived/knowledge.manifest.json",
+    "bytes": 489,
+    "sha256": "98485245f1aa076654fa778900d78fcb43a0ab901ab28917b0a25a931b3eab8e"
+  },
+  {
+    "old_path": "agents/AGENTS_INDEX.md",
+    "new_path": "03-prompt-packs-derived/agents/agents-index.md",
+    "bytes": 542,
+    "sha256": "25382efbc7da8b2b247190fc81130a10aea530449fc7ef9a15be44917d6abf90"
+  },
+  {
+    "old_path": "agents/Ai_Prompt_Engineer_Agent/ai-prompt-engineer-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/ai-prompt-engineer-agent/ai-prompt-engineer-agent.md",
+    "bytes": 1110,
+    "sha256": "0f82eb96d177482809de92028eb519155f4cf2a550d8b3e2bc05970234e85945"
+  },
+  {
+    "old_path": "agents/Ai_Prompt_Engineer_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/ai-prompt-engineer-agent/references.md",
+    "bytes": 974,
+    "sha256": "9444ebf8285232b2f54c2712b748330e5320e6d35855e1d31c40b7d381430a61"
+  },
+  {
+    "old_path": "agents/Chatgpt_Orchestrator_Agent/chatgpt-orchestrator-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/chatgpt-orchestrator-agent/chatgpt-orchestrator-agent.md",
+    "bytes": 1733,
+    "sha256": "d1830f25a03721ab9e72f1a57a4778e59db27f35664f5069ecd892441fe32800"
+  },
+  {
+    "old_path": "agents/Chatgpt_Orchestrator_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/chatgpt-orchestrator-agent/references.md",
+    "bytes": 1024,
+    "sha256": "bc7dc867889b53257f707340e0729b2063ebffd9e1948641239f1c4c8048bbcd"
+  },
+  {
+    "old_path": "agents/Dashboard_Designer_Agent/dashboard-designer-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/dashboard-designer-agent/dashboard-designer-agent.md",
+    "bytes": 948,
+    "sha256": "8de888173347cd6984ece08ae455867c215ed86b3aea9051a3dd5054faa1fdc6"
+  },
+  {
+    "old_path": "agents/Dashboard_Designer_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/dashboard-designer-agent/references.md",
+    "bytes": 849,
+    "sha256": "1c2fc6d35ef46bb55852bc88b3ba489a5984aff9ca3b2ac86c27eda625e22061"
+  },
+  {
+    "old_path": "agents/Flow_Designer_Agent/flow-designer-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/flow-designer-agent/flow-designer-agent.md",
+    "bytes": 923,
+    "sha256": "4312a4168e4e51f631043b96c08e3020837235176c921f3c8b0973ff44a48913"
+  },
+  {
+    "old_path": "agents/Flow_Designer_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/flow-designer-agent/references.md",
+    "bytes": 998,
+    "sha256": "17d8fb52e3911d49886480517ef6088236e40cc0e6d0c5d458567a73a5dfe70c"
+  },
+  {
+    "old_path": "agents/Front_End_Developer_Agent/front-end-developer-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/front-end-developer-agent/front-end-developer-agent.md",
+    "bytes": 1043,
+    "sha256": "66bb3b582712627a21fc69b6d276d1f71cf11357423df179b9298e57877ad6f2"
+  },
+  {
+    "old_path": "agents/Front_End_Developer_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/front-end-developer-agent/references.md",
+    "bytes": 955,
+    "sha256": "59238393209018d11a0f553ffc105677d15641cd9f242c0f388bbb0824e8bd6b"
+  },
+  {
+    "old_path": "agents/Ms_Teams_Integration_Agent/ms-teams-integration-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/ms-teams-integration-agent/ms-teams-integration-agent.md",
+    "bytes": 987,
+    "sha256": "4f22aafe5229e185b82ae4b5414839e2963ece369d80d9f6cb205acdc6f16579"
+  },
+  {
+    "old_path": "agents/Ms_Teams_Integration_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/ms-teams-integration-agent/references.md",
+    "bytes": 859,
+    "sha256": "49603df2b2b5f4b0c85ef182f9668427d68d0e81b2d0f982eb4ee226f9ae7890"
+  },
+  {
+    "old_path": "agents/Persona_User_Journeys_Agent/persona-user-journeys-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/persona-user-journeys-agent/persona-user-journeys-agent.md",
+    "bytes": 1219,
+    "sha256": "cacd43ec750c98da1026f70eb1f28d9d13d413c24895693f9711c0d4f07673f6"
+  },
+  {
+    "old_path": "agents/Persona_User_Journeys_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/persona-user-journeys-agent/references.md",
+    "bytes": 891,
+    "sha256": "5da5259b9b28b8a540d5e4d8455ff9260a628ad4aeafcc6ae6c48bcfdb161ec3"
+  },
+  {
+    "old_path": "agents/Platform_Developer_Agent/platform-developer-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/platform-developer-agent/platform-developer-agent.md",
+    "bytes": 1036,
+    "sha256": "4acaa1c7bdb2be16a7b7367f9f112d81db8991a3ead8dd1ee558b2c3b178c241"
+  },
+  {
+    "old_path": "agents/Platform_Developer_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/platform-developer-agent/references.md",
+    "bytes": 865,
+    "sha256": "2612df9ed7e1ea7897937aa828a536fd405aede5b8917574c38d703f4e35d59a"
+  },
+  {
+    "old_path": "agents/Quality_Engineer_Agent/quality-engineer-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/quality-engineer-agent/quality-engineer-agent.md",
+    "bytes": 979,
+    "sha256": "23edd29edcd939d6cd696b487069937baf8cf122c0cf64ca1c0025e38192fcae"
+  },
+  {
+    "old_path": "agents/Quality_Engineer_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/quality-engineer-agent/references.md",
+    "bytes": 1045,
+    "sha256": "5799af81191361d1a4f0a3f9c5d7423cd6ed55d23d87b59035a6e13b7de88e5e"
+  },
+  {
+    "old_path": "agents/Security_Expert_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/security-expert-agent/references.md",
+    "bytes": 695,
+    "sha256": "ef5f2bd407dbb8098306d56ebcdf55dab0bd4122a0a5f8000052d5339cbf4444"
+  },
+  {
+    "old_path": "agents/Security_Expert_Agent/security-expert-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/security-expert-agent/security-expert-agent.md",
+    "bytes": 972,
+    "sha256": "3baa62e1dd74a3e2b31311c38d3eda243018e028fa7fa04e3a63cdf95e7d7a10"
+  },
+  {
+    "old_path": "agents/Servicenow_Architect_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/servicenow-architect-agent/references.md",
+    "bytes": 996,
+    "sha256": "5b29e7f22fb6448f523782961a7989d92c10ad4a9b0b172c4a0da2ff26b4d6b8"
+  },
+  {
+    "old_path": "agents/Servicenow_Architect_Agent/servicenow-architect-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/servicenow-architect-agent/servicenow-architect-agent.md",
+    "bytes": 1142,
+    "sha256": "1a749137cfb9ad05fc9676ae17dc058106edcd24e2e5816c27be8055fe8adee7"
+  },
+  {
+    "old_path": "agents/Ux_Ui_Designer_Agent/REFERENCES.md",
+    "new_path": "03-prompt-packs-derived/agents/ux-ui-designer-agent/references.md",
+    "bytes": 816,
+    "sha256": "d783c81d389b392fce0f31218baae3a52ca1da26519daf5e3946fa1800c6dc64"
+  },
+  {
+    "old_path": "agents/Ux_Ui_Designer_Agent/ux-ui-designer-agent.md",
+    "new_path": "03-prompt-packs-derived/agents/ux-ui-designer-agent/ux-ui-designer-agent.md",
+    "bytes": 1255,
+    "sha256": "bdd05b5c954aeaebbe4816f08249a0a09a13fc6b75f96318e286d4892d73cb9f"
+  },
+  {
+    "old_path": "architecture/README.md",
+    "new_path": "02-specifications-derived/architecture/readme.md",
+    "bytes": 79,
+    "sha256": "83b3eeb82cc32a99283d6f1a0681ab1137affe79ff03e3447ab96b95fe76babf"
+  },
+  {
+    "old_path": "design/README.md",
+    "new_path": "02-specifications-derived/design/readme.md",
+    "bytes": 62,
+    "sha256": "feeeafc4547735ce5fda7d595b3c70c3e503ce68a3ec6e2f8687a88cc0c936aa"
+  },
+  {
+    "old_path": "development/development-standards-authoritative.md",
+    "new_path": "01-standards-authoritative/development/development-standards-authoritative.md",
+    "bytes": 6755,
+    "sha256": "9831208441599282b9e8fdfe928f597dea0e8029b913720580d4628c4279107d"
+  },
+  {
+    "old_path": "development/README.md",
+    "new_path": "02-specifications-derived/development/readme.md",
+    "bytes": 69,
+    "sha256": "0f356ea3c5941b6c1501f7bfead0466fbd791d4a77ba4215e3e66345c816dbb3"
+  },
+  {
+    "old_path": "development/REFERENCES.md",
+    "new_path": "02-specifications-derived/development/references.md",
+    "bytes": 859,
+    "sha256": "49603df2b2b5f4b0c85ef182f9668427d68d0e81b2d0f982eb4ee226f9ae7890"
+  },
+  {
+    "old_path": "development/rbm-linting-pack/.eslintrc.cjs",
+    "new_path": "02-specifications-derived/development/rbm-linting-pack/.eslintrc.cjs",
+    "bytes": 4878,
+    "sha256": "d8cea8065fd31f2d037d33dcf270cb998832efa150822da4fed49e763fc1c07c"
+  },
+  {
+    "old_path": "development/rbm-linting-pack/README.md",
+    "new_path": "02-specifications-derived/development/rbm-linting-pack/readme.md",
+    "bytes": 894,
+    "sha256": "83ecd3f2391e97f96f8b455fb62c7a96f51aeca10f3c42f54dd73c54356d3adb"
+  },
+  {
+    "old_path": "development/rbm-linting-pack/tsconfig.json",
+    "new_path": "02-specifications-derived/development/rbm-linting-pack/tsconfig.json",
+    "bytes": 733,
+    "sha256": "dbbdfdbc1ab0f66b59b80d9e7d1e90f15574e0825642f0bad75d046447b1fa3f"
+  },
+  {
+    "old_path": "governance/README.md",
+    "new_path": "02-specifications-derived/governance/readme.md",
+    "bytes": 85,
+    "sha256": "bec2d6162aaf4c9b0d511b2122280398e08eebff5771df60cab56706a991faf1"
+  },
+  {
+    "old_path": "icons/icon-standards.md",
+    "new_path": "01-standards-authoritative/icons/icon-standards.md",
+    "bytes": 2505,
+    "sha256": "0620ef34c3394b17bc7884190e1e11465e603705083e3a48c6a14295f7e18af9"
+  },
+  {
+    "old_path": "icons/icons.canonical.json",
+    "new_path": "01-standards-authoritative/icons/icons.canonical.json",
+    "bytes": 1422,
+    "sha256": "90f4b39f43b221cebb25e6a0ad3daa5965d82525e05e55e32a59a9e80b1566cb"
+  },
+  {
+    "old_path": "icons/icons.horizon.map.json",
+    "new_path": "01-standards-authoritative/icons/icons.horizon.map.json",
+    "bytes": 2109,
+    "sha256": "4531387acb4dad0c7b2fa0a7fca5093e1d75014f4ae7d7bf4159fe7622d9acc0"
+  },
+  {
+    "old_path": "icons/icons.lucide.map.json",
+    "new_path": "01-standards-authoritative/icons/icons.lucide.map.json",
+    "bytes": 2014,
+    "sha256": "e3bdc56e5db04cb9751dddd18464fa01f4e1c369710b90a779106815dc604e1f"
+  },
+  {
+    "old_path": "icons/README.md",
+    "new_path": "01-standards-authoritative/icons/readme.md",
+    "bytes": 46,
+    "sha256": "a3c91bafe00806539d6eb175a1f9f8bb37ad2c85dffe0ea4a8a5429b1207e3b6"
+  },
+  {
+    "old_path": "personas/personas-manifest.md",
+    "new_path": "02-specifications-derived/personas/personas-manifest.md",
+    "bytes": 11268,
+    "sha256": "79c58062a14123e96edba2548aaf3061be0f3925d03bfcb4c1defb50f0058d96"
+  },
+  {
+    "old_path": "personas/README.md",
+    "new_path": "02-specifications-derived/personas/readme.md",
+    "bytes": 220,
+    "sha256": "bb3163c1285e14c7eb48e36a0e3783856bebe448265bfbc576ee196a72ebde2a"
+  },
+  {
+    "old_path": "personas/Change-Leadership/Chief-Information-Officer.md",
+    "new_path": "02-specifications-derived/personas/change-leadership/chief-information-officer.md",
+    "bytes": 1939,
+    "sha256": "1ea7a6b323a5ceb115ab3e7c83bf52468514cd3e681dbfd4cdcd0d7d9b9461f3"
+  },
+  {
+    "old_path": "personas/Change-Leadership/Client-Services-Director.md",
+    "new_path": "02-specifications-derived/personas/change-leadership/client-services-director.md",
+    "bytes": 2733,
+    "sha256": "cf7ad716664e487f61aeb5e6e158d8730bcffed9e230bb8433953bcb8bb4326c"
+  },
+  {
+    "old_path": "personas/Change-Leadership/Deployment-Cutover-Manager.md",
+    "new_path": "02-specifications-derived/personas/change-leadership/deployment-cutover-manager.md",
+    "bytes": 2722,
+    "sha256": "4bcd084fd3c1842e78fa74fccdf4b325cab3adbe18ef40ef01aecaaf3d9e73e2"
+  },
+  {
+    "old_path": "personas/Change-Leadership/Programme-Director.md",
+    "new_path": "02-specifications-derived/personas/change-leadership/programme-director.md",
+    "bytes": 2952,
+    "sha256": "beefafb319efce1065e1cdd97f1cb8d4d3e41bd69463d97d19ba7a1336facb75"
+  },
+  {
+    "old_path": "personas/Change-Leadership/Programme-Manager.md",
+    "new_path": "02-specifications-derived/personas/change-leadership/programme-manager.md",
+    "bytes": 3293,
+    "sha256": "95a7cd7d0f2bec8c5b4bd685448c692744900acff8fc9b0317b45f032af9a4e2"
+  },
+  {
+    "old_path": "personas/Change-Leadership/Project-Manager.md",
+    "new_path": "02-specifications-derived/personas/change-leadership/project-manager.md",
+    "bytes": 2710,
+    "sha256": "fcc95f390c3b262320e63c45de81b93f9ccb261823e0e79b663c3703e2f8c3e8"
+  },
+  {
+    "old_path": "personas/Change-Leadership/README.md",
+    "new_path": "02-specifications-derived/personas/change-leadership/readme.md",
+    "bytes": 514,
+    "sha256": "f5d68f288087f3d99f595cf85515673102e863aa080b352f4708dec9d4eec7e9"
+  },
+  {
+    "old_path": "personas/Change-Leadership/Senior-Project-Manager.md",
+    "new_path": "02-specifications-derived/personas/change-leadership/senior-project-manager.md",
+    "bytes": 2749,
+    "sha256": "1ab1daea96fd3a9a2e2b230fc8854e66df9e4ec64228f4082ff93a82aa8ef10d"
+  },
+  {
+    "old_path": "personas/Cyber-Recovery-Leaders/Cyber-Incident-Response-Lead.md",
+    "new_path": "03-prompt-packs-derived/personas/cyber-recovery-leaders/cyber-incident-response-lead.md",
+    "bytes": 1065,
+    "sha256": "b9e0143465160792be21521b4c914674839975c973f8261b61f829223c922a9c"
+  },
+  {
+    "old_path": "personas/Cyber-Recovery-Leaders/Cyber-Recovery-Architecture-Lead.md",
+    "new_path": "02-specifications-derived/personas/cyber-recovery-leaders/cyber-recovery-architecture-lead.md",
+    "bytes": 1058,
+    "sha256": "86b16c5b2b20605a0011ea1d3337b163d0cc8ac70571507b2e1f53ba619c91b5"
+  },
+  {
+    "old_path": "personas/Cyber-Recovery-Leaders/Cyber-Recovery-Testing-Manager.md",
+    "new_path": "02-specifications-derived/personas/cyber-recovery-leaders/cyber-recovery-testing-manager.md",
+    "bytes": 1055,
+    "sha256": "bdd2ba6d5b70431172019d9ffccceb85860b5e3dacadcf948d6210000ef84bce"
+  },
+  {
+    "old_path": "personas/Cyber-Recovery-Leaders/Head-of-Cyber-Recovery.md",
+    "new_path": "02-specifications-derived/personas/cyber-recovery-leaders/head-of-cyber-recovery.md",
+    "bytes": 1363,
+    "sha256": "cbb1580be51b05a5cec9ab294ac15a55920946764f2339a73540872415897b45"
+  },
+  {
+    "old_path": "personas/Cyber-Recovery-Leaders/Ransomware-Recovery-Manager.md",
+    "new_path": "02-specifications-derived/personas/cyber-recovery-leaders/ransomware-recovery-manager.md",
+    "bytes": 986,
+    "sha256": "b4a0430e6bababba33024d92c8151b44c68b0475d3b93fc3c5ca3333b6ce8146"
+  },
+  {
+    "old_path": "personas/Cyber-Recovery-Leaders/README.md",
+    "new_path": "02-specifications-derived/personas/cyber-recovery-leaders/readme.md",
+    "bytes": 551,
+    "sha256": "b646e16ed18d268b03b096a65deaa5ba93bedd1d955f3e1f5c06ee7888ad9834"
+  },
+  {
+    "old_path": "personas/DR-BC-Leaders/Crisis-Management-Lead.md",
+    "new_path": "02-specifications-derived/personas/dr-bc-leaders/crisis-management-lead.md",
+    "bytes": 994,
+    "sha256": "922144ac4e67f5d3c35b641b05f0414a45d9e8811286a9a5612972080e94eae9"
+  },
+  {
+    "old_path": "personas/DR-BC-Leaders/Disaster-Recovery-Lead.md",
+    "new_path": "02-specifications-derived/personas/dr-bc-leaders/disaster-recovery-lead.md",
+    "bytes": 1138,
+    "sha256": "accf1c86dea8e92f3e08e1d776e06415b128344b6b52b5cb65c2062ee5b7f4a5"
+  },
+  {
+    "old_path": "personas/DR-BC-Leaders/DR-Recovery-Manager.md",
+    "new_path": "02-specifications-derived/personas/dr-bc-leaders/dr-recovery-manager.md",
+    "bytes": 2716,
+    "sha256": "6ed71d7d81ec1c7d195c720de7ae3d1f130bcf70b584d7f9268a7995ad6d3d44"
+  },
+  {
+    "old_path": "personas/DR-BC-Leaders/Head-of-Business-Continuity.md",
+    "new_path": "02-specifications-derived/personas/dr-bc-leaders/head-of-business-continuity.md",
+    "bytes": 1314,
+    "sha256": "73f674edfd42d71aed7a0216b117140a434d75843120ff63bb6803188bca61a1"
+  },
+  {
+    "old_path": "personas/DR-BC-Leaders/README.md",
+    "new_path": "02-specifications-derived/personas/dr-bc-leaders/readme.md",
+    "bytes": 568,
+    "sha256": "9f367ea5a72392f9bd84432f6a1471eff1debbfc66f6b645049a9bf85c841570"
+  },
+  {
+    "old_path": "personas/DR-BC-Leaders/Resilience-Testing-Manager.md",
+    "new_path": "02-specifications-derived/personas/dr-bc-leaders/resilience-testing-manager.md",
+    "bytes": 1048,
+    "sha256": "68e9d2de0b1c50a699ac6658ea0c7be875cfd1c6f8f386e4379fc0e11f92a62c"
+  },
+  {
+    "old_path": "personas/DR-BC-Leaders/Service-Recovery-Manager.md",
+    "new_path": "02-specifications-derived/personas/dr-bc-leaders/service-recovery-manager.md",
+    "bytes": 1016,
+    "sha256": "6788a1243066603df4b29226359d4fe8a810ee531c29f86d8b7703b468835fe2"
+  },
+  {
+    "old_path": "personas/Governance-Assurance/Chief-Technology-Officer.md",
+    "new_path": "02-specifications-derived/personas/governance-assurance/chief-technology-officer.md",
+    "bytes": 1818,
+    "sha256": "62236d6c863108d01bbbd772d07195642f63a06852026882df6a1e6b435ce4f8"
+  },
+  {
+    "old_path": "personas/Governance-Assurance/Internal-Auditor.md",
+    "new_path": "02-specifications-derived/personas/governance-assurance/internal-auditor.md",
+    "bytes": 3547,
+    "sha256": "aa7a7376d7005cccbdfa6178e96d219ba050c6e8015a4ec50bf3cb71a34bb3ab"
+  },
+  {
+    "old_path": "personas/Governance-Assurance/README.md",
+    "new_path": "02-specifications-derived/personas/governance-assurance/readme.md",
+    "bytes": 221,
+    "sha256": "7e436def6589aee9a239cd7d5c0375c4b67798045c666b73968909a1394fbbfb"
+  },
+  {
+    "old_path": "personas/Governance-Assurance/Regulatory-Auditor.md",
+    "new_path": "02-specifications-derived/personas/governance-assurance/regulatory-auditor.md",
+    "bytes": 3343,
+    "sha256": "3d5ddc1db17875e111ea1f58f5154a45869e198c21b38ca181eb98107a11c851"
+  },
+  {
+    "old_path": "personas/Operational-Authoring/Component-Author.md",
+    "new_path": "02-specifications-derived/personas/operational-authoring/component-author.md",
+    "bytes": 2679,
+    "sha256": "df765b321140047489a130845dcaad26c5c99d5258cd07d1812ebdffdd4fd5f6"
+  },
+  {
+    "old_path": "personas/Operational-Authoring/Content-Author.md",
+    "new_path": "02-specifications-derived/personas/operational-authoring/content-author.md",
+    "bytes": 2696,
+    "sha256": "ade04148f2a0437069b818435b546982c56cb306fd71059d9dad492ab056ea17"
+  },
+  {
+    "old_path": "personas/Operational-Authoring/Event-Support-Analyst.md",
+    "new_path": "02-specifications-derived/personas/operational-authoring/event-support-analyst.md",
+    "bytes": 2721,
+    "sha256": "4af3d94b12abc34329d7bcd05e7b2aa234d3e64915f73d628ab58b71c0327b93"
+  },
+  {
+    "old_path": "personas/Operational-Authoring/README.md",
+    "new_path": "02-specifications-derived/personas/operational-authoring/readme.md",
+    "bytes": 490,
+    "sha256": "970b4b0a28b71a12035e1a592c6e32127eda0853c84960ac7010b868f41db93f"
+  },
+  {
+    "old_path": "personas/Operational-Authoring/Runbook-Engineer.md",
+    "new_path": "02-specifications-derived/personas/operational-authoring/runbook-engineer.md",
+    "bytes": 3813,
+    "sha256": "aa429fcaf1b5cc0026fb42eedaf31b09b2434b25a55429ca112b723b4ac05999"
+  },
+  {
+    "old_path": "personas/Operational-Authoring/Task-Agent-Owner.md",
+    "new_path": "03-prompt-packs-derived/personas/operational-authoring/task-agent-owner.md",
+    "bytes": 2710,
+    "sha256": "a7b3b6effb26b3d594bb2a2e470d48d48c6b26745290c7d13ebd0c6628aceaac"
+  },
+  {
+    "old_path": "personas/Operational-Authoring/Team-Leader.md",
+    "new_path": "02-specifications-derived/personas/operational-authoring/team-leader.md",
+    "bytes": 2684,
+    "sha256": "46a4e25e1b70b9659931647d8d8b0703319bb742d55b27e6d084ef0f5643ce8b"
+  },
+  {
+    "old_path": "personas/Operational-Authoring/Template-Author.md",
+    "new_path": "02-specifications-derived/personas/operational-authoring/template-author.md",
+    "bytes": 2669,
+    "sha256": "50652c7353148ed1b1586131e30218b881774f64cdb4baaac37773f739a273d6"
+  },
+  {
+    "old_path": "personas/Procurement-Stakeholders/Commercial-Manager.md",
+    "new_path": "02-specifications-derived/personas/procurement-stakeholders/commercial-manager.md",
+    "bytes": 1142,
+    "sha256": "c3bba3adc30e8c39ae4f25e0337a19b04b536829731bcf3e3ae2bb4aad447f4d"
+  },
+  {
+    "old_path": "personas/Procurement-Stakeholders/Head-of-Procurement.md",
+    "new_path": "02-specifications-derived/personas/procurement-stakeholders/head-of-procurement.md",
+    "bytes": 1640,
+    "sha256": "688848d7015c7a5ea7f4850da4a665a0207d67ae6cdc5798559d98ab15ca0bcc"
+  },
+  {
+    "old_path": "personas/Procurement-Stakeholders/Legal-Counsel.md",
+    "new_path": "02-specifications-derived/personas/procurement-stakeholders/legal-counsel.md",
+    "bytes": 1184,
+    "sha256": "7447571a305f01775e13502a1b6fcb1cb67f12f4b67b3bb7ad75905e4b0b7d05"
+  },
+  {
+    "old_path": "personas/Procurement-Stakeholders/README.md",
+    "new_path": "02-specifications-derived/personas/procurement-stakeholders/readme.md",
+    "bytes": 468,
+    "sha256": "14d1d73fc9a07be8608aaaf5fdd40f9771692e1717e7ab09a90cd1dbe9272024"
+  },
+  {
+    "old_path": "personas/Procurement-Stakeholders/Risk-Management.md",
+    "new_path": "02-specifications-derived/personas/procurement-stakeholders/risk-management.md",
+    "bytes": 1083,
+    "sha256": "2ec8bea2b5d8be67b44beedd68dd388debb7e4e768f03285f5b0d1eeb4501fa7"
+  },
+  {
+    "old_path": "personas/Procurement-Stakeholders/Vendor-Management-Office.md",
+    "new_path": "02-specifications-derived/personas/procurement-stakeholders/vendor-management-office.md",
+    "bytes": 1158,
+    "sha256": "6ccb2da6745c4d3c6f0631390612c0e24566e4f17a382b1b8d4fb322d85aa9a5"
+  },
+  {
+    "old_path": "personas/Service-Recovery-Leaders/Head-of-Service-Recovery.md",
+    "new_path": "02-specifications-derived/personas/service-recovery-leaders/head-of-service-recovery.md",
+    "bytes": 1237,
+    "sha256": "300be396a36b9904231f2260794bd271328412167d4d8cbba6392978fa13c774"
+  },
+  {
+    "old_path": "personas/Service-Recovery-Leaders/Major-Incident-Manager.md",
+    "new_path": "03-prompt-packs-derived/personas/service-recovery-leaders/major-incident-manager.md",
+    "bytes": 1017,
+    "sha256": "708cab74a12e2adf688452d861f6287c82f5c460439445d585060e60acb0fa08"
+  },
+  {
+    "old_path": "personas/Service-Recovery-Leaders/README.md",
+    "new_path": "02-specifications-derived/personas/service-recovery-leaders/readme.md",
+    "bytes": 475,
+    "sha256": "52b5f552e621c7bf468358e8b41cc03dda139abd8612c917a0701e975f7463d2"
+  },
+  {
+    "old_path": "personas/Service-Recovery-Leaders/Recovery-Communications-Lead.md",
+    "new_path": "02-specifications-derived/personas/service-recovery-leaders/recovery-communications-lead.md",
+    "bytes": 913,
+    "sha256": "800821d418636e4d700749e456ecf5af0c0ae3cae60967ea04453ebc382cbb51"
+  },
+  {
+    "old_path": "personas/Service-Recovery-Leaders/Service-Owner.md",
+    "new_path": "02-specifications-derived/personas/service-recovery-leaders/service-owner.md",
+    "bytes": 699,
+    "sha256": "78a6f5d2c184fcc6747ceff172029695e714f3f20b64d3913df06131f7ed6a96"
+  },
+  {
+    "old_path": "personas/Service-Recovery-Leaders/Service-Restoration-Manager.md",
+    "new_path": "02-specifications-derived/personas/service-recovery-leaders/service-restoration-manager.md",
+    "bytes": 833,
+    "sha256": "1fed665bda0fe14f195aed624ac748a8233a0781865b47b906a623e861764c6a"
+  },
+  {
+    "old_path": "personas/ServiceNow-Platform/CISO-Security-Architect.md",
+    "new_path": "02-specifications-derived/personas/service-now-platform/ciso-security-architect.md",
+    "bytes": 2985,
+    "sha256": "3a7f6c58b1dd7851a523506b67a8cce8cb7c0a36bd4a4643e9e328218f42d8a7"
+  },
+  {
+    "old_path": "personas/ServiceNow-Platform/IT-Service-Delivery-Manager.md",
+    "new_path": "02-specifications-derived/personas/service-now-platform/it-service-delivery-manager.md",
+    "bytes": 2945,
+    "sha256": "d5492aa79c4e3cbc251232c49d07d468aeef9bd2e4bc191b75eccac2a4d9a5a6"
+  },
+  {
+    "old_path": "personas/ServiceNow-Platform/README.md",
+    "new_path": "02-specifications-derived/personas/service-now-platform/readme.md",
+    "bytes": 346,
+    "sha256": "7dd46f87904820336559c2c8be001e14e174a49c676e9e5254df385c929f7fd8"
+  },
+  {
+    "old_path": "personas/ServiceNow-Platform/ServiceNow-Architect.md",
+    "new_path": "02-specifications-derived/personas/service-now-platform/service-now-architect.md",
+    "bytes": 3133,
+    "sha256": "b71bdaa138efa4b39f3f56a8110eeb4fab30daf798536895293c3e1753145179"
+  },
+  {
+    "old_path": "personas/ServiceNow-Platform/ServiceNow-Platform-Owner.md",
+    "new_path": "02-specifications-derived/personas/service-now-platform/service-now-platform-owner.md",
+    "bytes": 3342,
+    "sha256": "20bf7bb42b1b063e97baff37ff95d969dd5dd59ef33460506e58ae8972bfb21d"
+  },
+  {
+    "old_path": "portfolio-index/README.md",
+    "new_path": "02-specifications-derived/portfolio-index/readme.md",
+    "bytes": 88,
+    "sha256": "0923ee66a61bfe1819518086540c530549de1042c679f93b2412a1771e6c4e5b"
+  },
+  {
+    "old_path": "product/functional-spec-template.md",
+    "new_path": "02-specifications-derived/product/functional-spec-template.md",
+    "bytes": 3603,
+    "sha256": "25ccbf9231116e53d06f786dc17c777fe9cd7569af27a3d6496a22cd1c41d21d"
+  },
+  {
+    "old_path": "product/README.md",
+    "new_path": "02-specifications-derived/product/readme.md",
+    "bytes": 69,
+    "sha256": "2f39e324cdd43f9b8cc483bbf329bfce7fadb4bc9d8e82adbe6e435b09b4cd26"
+  },
+  {
+    "old_path": "rbm-design-system/rbm-design-system.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/rbm-design-system.md",
+    "bytes": 14799,
+    "sha256": "77da5fac1b99e5b720a80a45999e9fbba01a61392d368b96d9a42ad4b27c996f"
+  },
+  {
+    "old_path": "rbm-design-system/README.build-agent.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/readme.build-agent.md",
+    "bytes": 4998,
+    "sha256": "dd80d02b7ebf8596483f1832138bc6d14d2e40bcce57af3e9078d3ea73f75d17"
+  },
+  {
+    "old_path": "rbm-design-system/to-do.txt",
+    "new_path": "01-standards-authoritative/rbm-design-system/to-do.txt",
+    "bytes": 133,
+    "sha256": "b2c8bed0119f8381c31034f7b656050fa2f8bb679b6d126f4532bd936f6e80d7"
+  },
+  {
+    "old_path": "rbm-design-system/build-agent/RBM-Build-Agent-MASTER.prompt.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/build-agent/rbm-build-agent-master.prompt.md",
+    "bytes": 2540,
+    "sha256": "c9875bd475a7630e31d002775196b763b297490bce81fb38c37e1b5be4e96018"
+  },
+  {
+    "old_path": "rbm-design-system/build-agent/rbm-ui-enforcement.prompt.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/build-agent/rbm-ui-enforcement.prompt.md",
+    "bytes": 1909,
+    "sha256": "cd66cfa6c0d17f6272a3ddac449c86b44dfe96e2518b2ef8e736b8e2067ce58d"
+  },
+  {
+    "old_path": "rbm-design-system/eslint/ci-color-grep.sh",
+    "new_path": "01-standards-authoritative/rbm-design-system/eslint/ci-color-grep.sh",
+    "bytes": 243,
+    "sha256": "3db5bcae6618011a6a2ebea3021fc1d29e73e83033bd924a9f240cf0214ddd51"
+  },
+  {
+    "old_path": "rbm-design-system/eslint/eslint.config.mjs",
+    "new_path": "01-standards-authoritative/rbm-design-system/eslint/eslint.config.mjs",
+    "bytes": 3091,
+    "sha256": "cc2355e4d98b80ca325beca17558556364b98f9e2fb31b57b5492f3f8108b2ee"
+  },
+  {
+    "old_path": "rbm-design-system/reference/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/readme.md",
+    "bytes": 745,
+    "sha256": "d6db54c77e293c6519b7f8e48567855c9c2dab7f135954e3b5e8009a02fb0e73"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Card/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/card/index.ts",
+    "bytes": 33,
+    "sha256": "f4146475788439dcd2e589d1742f6e0da9918879c94c7bcc4a53eea14e299537"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Card/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/card/readme.md",
+    "bytes": 686,
+    "sha256": "cdc9cb5685acdead365e2218c8fb460c5b2e66c5093264b684fa707ee5b74585"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Card/src/Card/card.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/card/src/card/card.css",
+    "bytes": 562,
+    "sha256": "182ec723b7a4297f5d600eaba27a6ed6e12d0100dd71b3c0445aa3b9c296b112"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Card/src/Card/Card.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/card/src/card/card.tsx",
+    "bytes": 742,
+    "sha256": "d375c7ef5842bd7bb7ec31aa12ee651ae5fc1f1864fdc6f59490d732476a6b98"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Card/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/card/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Card/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/card/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Card/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/card/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Card/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/card/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/index.ts",
+    "bytes": 35,
+    "sha256": "080e1d45dc9515243792066a8df97ddb9b4b3d9eec88f8602bb36b237fa27bfb"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/readme.md",
+    "bytes": 688,
+    "sha256": "50dd6d89de6b1362aa44a17525155c90820e6035391ba205c601752ca177fb60"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/src/Button/button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/src/button/button.css",
+    "bytes": 1439,
+    "sha256": "594f1a78039d2b522d6d5ab434beff70db4ad54972c71f9d4a5fe723e93fb2a7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/src/Button/Button.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/src/button/button.tsx",
+    "bytes": 1274,
+    "sha256": "c29edd77f245cc29915c095f062e3f2acdb2b8933b375346e1cbc5b6235db2b5"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/src/Modal/modal.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/src/modal/modal.css",
+    "bytes": 847,
+    "sha256": "c19a3adeab03d80fd718b4271756ab3eb54331fca78164fcc9ec9cb95e6ed1f7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/src/Modal/Modal.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/src/modal/modal.tsx",
+    "bytes": 1625,
+    "sha256": "b3c833785d7d7962ce92eca89b44e1b53cc0d25d85a48c044f73a828c90a74f9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Modal/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/modal/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/index.ts",
+    "bytes": 43,
+    "sha256": "e03da96c27ab8029f942d34285d5fdda44c8430f3cccdb8d9262afc3243cc5f3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/readme.md",
+    "bytes": 696,
+    "sha256": "baa1b60c19791666a0d52e8ef0f60c1155ba395b2abc96b2de519d5448ee5179"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/src/Button/button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/src/button/button.css",
+    "bytes": 1439,
+    "sha256": "594f1a78039d2b522d6d5ab434beff70db4ad54972c71f9d4a5fe723e93fb2a7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/src/Button/Button.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/src/button/button.tsx",
+    "bytes": 1274,
+    "sha256": "c29edd77f245cc29915c095f062e3f2acdb2b8933b375346e1cbc5b6235db2b5"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/src/SidePanel/side-panel.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/src/side-panel/side-panel.css",
+    "bytes": 983,
+    "sha256": "88d954a3ceac7cab6fc222018656598b6f808bcbee6a43140cce1b3b8a06419b"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/src/SidePanel/SidePanel.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/src/side-panel/side-panel.tsx",
+    "bytes": 1440,
+    "sha256": "78b8e66ef0e118c62db1010766dac51ebafa25b59bf076f0553204fa10e1bb50"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/SidePanel/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/side-panel/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Tabs/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/tabs/index.ts",
+    "bytes": 33,
+    "sha256": "cc59badbccff5752bbe01dcd5acae2e46b2327705631ec3d95177087a6ae6c4a"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Tabs/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/tabs/readme.md",
+    "bytes": 686,
+    "sha256": "fdafb526f31081729a00aa369bab441b90b227204550deb16032fc88b83d01ba"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Tabs/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/tabs/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Tabs/src/id/id.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/tabs/src/id/id.ts",
+    "bytes": 96,
+    "sha256": "1dd87343aa71bfb4d9bd8534bc8bbbde2eba8d9ea662b611b8cf53d0ef6cd149"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Tabs/src/Tabs/tabs.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/tabs/src/tabs/tabs.css",
+    "bytes": 740,
+    "sha256": "7357381bdab7f9ed6924a4acc447e653c07f3d01243e1f36583f3c6f8c88849c"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Tabs/src/Tabs/Tabs.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/tabs/src/tabs/tabs.tsx",
+    "bytes": 3038,
+    "sha256": "8a83835df255ce29939d04d6394657bd1b018a919149a1ad1a0d3258e50595cb"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Tabs/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/tabs/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Tabs/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/tabs/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/containers/Tabs/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/containers/tabs/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/index.ts",
+    "bytes": 51,
+    "sha256": "e5abc6b5d7a30db1e7ab8b4d6a76452b57f68f798c6e3e1c3e22a0446115e369"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/readme.md",
+    "bytes": 704,
+    "sha256": "fff896bb96b96f0af0c42ca1d636846031c45d6e2626503088a8ccd2730b6042"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/src/BulkActionBar/bulk-action-bar.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/src/bulk-action-bar/bulk-action-bar.css",
+    "bytes": 775,
+    "sha256": "f027d3a62472dd08bcd8d8d5aa460861a689ae17dcd78d4ae5829c0c69b16dd3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/src/BulkActionBar/BulkActionBar.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/src/bulk-action-bar/bulk-action-bar.tsx",
+    "bytes": 1387,
+    "sha256": "5d07ddd76ea0466b5979b17842ede2da48893e2cf3b28b423e44f211f459c28f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/src/Button/button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/src/button/button.css",
+    "bytes": 1439,
+    "sha256": "594f1a78039d2b522d6d5ab434beff70db4ad54972c71f9d4a5fe723e93fb2a7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/src/Button/Button.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/src/button/button.tsx",
+    "bytes": 1274,
+    "sha256": "c29edd77f245cc29915c095f062e3f2acdb2b8933b375346e1cbc5b6235db2b5"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/BulkActionBar/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/bulk-action-bar/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DataGrid/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/data-grid/index.ts",
+    "bytes": 41,
+    "sha256": "c5eb49cfc4d44809fbc7a2fcc25d631d2e1344ec9d910d90eaa539c108097bf7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DataGrid/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/data-grid/readme.md",
+    "bytes": 694,
+    "sha256": "8fd006a765b2c844113ec158790ecf35fa3e3efe96ede73cc4d92e219c90ae3e"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DataGrid/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/data-grid/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DataGrid/src/DataGrid/data-grid.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/data-grid/src/data-grid/data-grid.css",
+    "bytes": 1953,
+    "sha256": "3f48a858a63bac99ef361dc2786c5fb3481572d71c24d45295dbbf656a806bed"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DataGrid/src/DataGrid/DataGrid.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/data-grid/src/data-grid/data-grid.tsx",
+    "bytes": 3472,
+    "sha256": "9c19c5312ff81b83ab941384166fd8502e4dedd910f2f7a700c3aea8fccc92cc"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DataGrid/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/data-grid/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DataGrid/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/data-grid/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DataGrid/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/data-grid/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/index.ts",
+    "bytes": 61,
+    "sha256": "b9b3421b893a27bbc51d3815d850f23b97918f56a0ae246dc3d70b30fe35d3d9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/readme.md",
+    "bytes": 714,
+    "sha256": "f1bb6401276fc7aedc72fd4a925ef6888929e6fff32c3a2c125a3a1c313da7a3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/src/Button/button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/src/button/button.css",
+    "bytes": 1439,
+    "sha256": "594f1a78039d2b522d6d5ab434beff70db4ad54972c71f9d4a5fe723e93fb2a7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/src/Button/Button.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/src/button/button.tsx",
+    "bytes": 1274,
+    "sha256": "c29edd77f245cc29915c095f062e3f2acdb2b8933b375346e1cbc5b6235db2b5"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/src/ConfirmDialog/confirm-dialog.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/src/confirm-dialog/confirm-dialog.css",
+    "bytes": 49,
+    "sha256": "e6a8f1dc019f09d59a17a88c6d7d7fbf427f97ffba47c7bc29f687c3d81863bd"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/src/ConfirmDialog/ConfirmDialog.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/src/confirm-dialog/confirm-dialog.tsx",
+    "bytes": 889,
+    "sha256": "9f7424fd230d4f5cb598936adf0d5904127e360dee9f1025de9c89d4f51a9234"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/src/DependencyChipList/dependency-chip-list.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/src/dependency-chip-list/dependency-chip-list.css",
+    "bytes": 1997,
+    "sha256": "a41149e79bbc9eb76f2f0c5c9fb37f2b492ca7fb8f47abf7d2bbb0a02433815b"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/src/DependencyChipList/DependencyChipList.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/src/dependency-chip-list/dependency-chip-list.tsx",
+    "bytes": 2908,
+    "sha256": "96407e13c05333903955039fbca4be95542798bf2f4d9e422f37940eb18b0313"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/src/Modal/modal.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/src/modal/modal.css",
+    "bytes": 847,
+    "sha256": "c19a3adeab03d80fd718b4271756ab3eb54331fca78164fcc9ec9cb95e6ed1f7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/src/Modal/Modal.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/src/modal/modal.tsx",
+    "bytes": 1625,
+    "sha256": "b3c833785d7d7962ce92eca89b44e1b53cc0d25d85a48c044f73a828c90a74f9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/DependencyChipList/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/dependency-chip-list/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/index.ts",
+    "bytes": 43,
+    "sha256": "1069b19342a33db847da2d6bfdc63eb59ad0a27561a8ae5fb5818ada6c5a0949"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/readme.md",
+    "bytes": 696,
+    "sha256": "ee02bc7ea85c3b148672fe8c14097cd56be55d605ef6d66d5d032b0f47a9f084"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/src/FilterBar/filter-bar.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/src/filter-bar/filter-bar.css",
+    "bytes": 1357,
+    "sha256": "4ca72e01acf4259da176c27c38298e5da7ef17fe4494387ee52397db39a311b6"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/src/FilterBar/FilterBar.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/src/filter-bar/filter-bar.tsx",
+    "bytes": 1680,
+    "sha256": "ced73074a5b2ea19a66dd726bde9150dfc96e85f2399b94ec6cd331839299d46"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/src/id/id.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/src/id/id.ts",
+    "bytes": 96,
+    "sha256": "1dd87343aa71bfb4d9bd8534bc8bbbde2eba8d9ea662b611b8cf53d0ef6cd149"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/src/TextInput/text-input.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/src/text-input/text-input.css",
+    "bytes": 680,
+    "sha256": "998d7e0efd5fcb7b57537e352ca839010bb51f3c5ac59786c55283064673ec4d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/src/TextInput/TextInput.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/src/text-input/text-input.tsx",
+    "bytes": 1152,
+    "sha256": "dd8dc8d7d3d194d465a756efd9d3dd1f50c63620d8d354d8e37ac47b9ee1ed0f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/FilterBar/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/filter-bar/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/index.ts",
+    "bytes": 45,
+    "sha256": "6eed6930dc28fcf9bd920c12ba9965ddca33982cb21fd5b2273b644bba0dfb73"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/readme.md",
+    "bytes": 698,
+    "sha256": "0e91bf99e967ff213e66c0488c96e0e8b711612f681720c5373ee5bac648e8d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/src/Button/button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/src/button/button.css",
+    "bytes": 1439,
+    "sha256": "594f1a78039d2b522d6d5ab434beff70db4ad54972c71f9d4a5fe723e93fb2a7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/src/Button/Button.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/src/button/button.tsx",
+    "bytes": 1274,
+    "sha256": "c29edd77f245cc29915c095f062e3f2acdb2b8933b375346e1cbc5b6235db2b5"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/src/Pagination/pagination.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/src/pagination/pagination.css",
+    "bytes": 643,
+    "sha256": "ea1837e9eb565251dc9e73e1e10664d96047de15883a9c3ed1fddba41e31f18a"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/src/Pagination/Pagination.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/src/pagination/pagination.tsx",
+    "bytes": 1457,
+    "sha256": "4759c01b0d50c899132ed9a2d1b45456e69d6b95eba163c038f1db8adc60bd98"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/Pagination/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/pagination/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/RowActionsMenu/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/row-actions-menu/index.ts",
+    "bytes": 53,
+    "sha256": "a4f78a07b600324e5db628a569dfe2977e484430528f0cb200450507369d53ae"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/RowActionsMenu/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/row-actions-menu/readme.md",
+    "bytes": 706,
+    "sha256": "d885c939c0d34cf799bc5c3b1b177eefcc353df9cbad4e0e72739053a69b66a0"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/RowActionsMenu/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/row-actions-menu/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/RowActionsMenu/src/id/id.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/row-actions-menu/src/id/id.ts",
+    "bytes": 96,
+    "sha256": "1dd87343aa71bfb4d9bd8534bc8bbbde2eba8d9ea662b611b8cf53d0ef6cd149"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/RowActionsMenu/src/RowActionsMenu/row-actions-menu.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/row-actions-menu/src/row-actions-menu/row-actions-menu.css",
+    "bytes": 1203,
+    "sha256": "70e852a091ec4fb3d4eccaf34ba03275873d300621bc8792462674a424b3a5e3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/RowActionsMenu/src/RowActionsMenu/RowActionsMenu.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/row-actions-menu/src/row-actions-menu/row-actions-menu.tsx",
+    "bytes": 3800,
+    "sha256": "d974b36965c6e94888f841a4a2df3435695d411359872a8ae3b393bf941cd2f9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/RowActionsMenu/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/row-actions-menu/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/RowActionsMenu/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/row-actions-menu/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/RowActionsMenu/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/row-actions-menu/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/index.ts",
+    "bytes": 61,
+    "sha256": "7200834c5556d7387b200362608a15bd9e845aa4aa52cb81bd4a497e200bf081"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/readme.md",
+    "bytes": 714,
+    "sha256": "30b5dcb1dba2d8062e338325f4c68e28f713de7ec6e6b617394ad48f9539f56d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/src/DataGrid/data-grid.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/src/data-grid/data-grid.css",
+    "bytes": 1953,
+    "sha256": "3f48a858a63bac99ef361dc2786c5fb3481572d71c24d45295dbbf656a806bed"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/src/DataGrid/DataGrid.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/src/data-grid/data-grid.tsx",
+    "bytes": 3472,
+    "sha256": "9c19c5312ff81b83ab941384166fd8502e4dedd910f2f7a700c3aea8fccc92cc"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/src/SelectableDataGrid/selectable-data-grid.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/src/selectable-data-grid/selectable-data-grid.css",
+    "bytes": 1817,
+    "sha256": "f3973781149039575b127a4e3c8245d663ac22cbe76599fcb055676039f687c1"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/src/SelectableDataGrid/SelectableDataGrid.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/src/selectable-data-grid/selectable-data-grid.tsx",
+    "bytes": 6024,
+    "sha256": "77c1ae401f41bc739df886b4eaf34b1465d04836b4d143667014a2e969cdca69"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/data/SelectableDataGrid/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/data/selectable-data-grid/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/index.ts",
+    "bytes": 51,
+    "sha256": "c8b1fac44552e8e3c68b31f9e97b07a5cfaefd7b3479b6defc4275d39141aaf9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/readme.md",
+    "bytes": 704,
+    "sha256": "aa4f6bce345d2b22b182c168669ce924ca397f17deea69126bc18a34dcc25318"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/src/Button/button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/src/button/button.css",
+    "bytes": 1439,
+    "sha256": "594f1a78039d2b522d6d5ab434beff70db4ad54972c71f9d4a5fe723e93fb2a7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/src/Button/Button.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/src/button/button.tsx",
+    "bytes": 1274,
+    "sha256": "c29edd77f245cc29915c095f062e3f2acdb2b8933b375346e1cbc5b6235db2b5"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/src/ConfirmDialog/confirm-dialog.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/src/confirm-dialog/confirm-dialog.css",
+    "bytes": 49,
+    "sha256": "e6a8f1dc019f09d59a17a88c6d7d7fbf427f97ffba47c7bc29f687c3d81863bd"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/src/ConfirmDialog/ConfirmDialog.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/src/confirm-dialog/confirm-dialog.tsx",
+    "bytes": 889,
+    "sha256": "9f7424fd230d4f5cb598936adf0d5904127e360dee9f1025de9c89d4f51a9234"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/src/Modal/modal.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/src/modal/modal.css",
+    "bytes": 847,
+    "sha256": "c19a3adeab03d80fd718b4271756ab3eb54331fca78164fcc9ec9cb95e6ed1f7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/src/Modal/Modal.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/src/modal/modal.tsx",
+    "bytes": 1625,
+    "sha256": "b3c833785d7d7962ce92eca89b44e1b53cc0d25d85a48c044f73a828c90a74f9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ConfirmDialog/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/confirm-dialog/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/index.ts",
+    "bytes": 49,
+    "sha256": "4b352cfc23b737498da8c8410254bf5fbf987f77dc734cf439c7c153452b910d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/readme.md",
+    "bytes": 702,
+    "sha256": "fb0ab7bcfe01c57c9709f3d5317cc8516c2014e2255af420b4f50b22f2d68ead"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/src/GridSkeleton/grid-skeleton.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/src/grid-skeleton/grid-skeleton.css",
+    "bytes": 441,
+    "sha256": "348c2a90021569099419778912aa84d7b203ba8ed2bdd0e1b6875ebc7f54a0b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/src/GridSkeleton/GridSkeleton.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/src/grid-skeleton/grid-skeleton.tsx",
+    "bytes": 868,
+    "sha256": "563f89c627fc43c56e4e92f9d3e5ef544de3f9ec40524cef8f9dd257a8771d27"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/src/Skeleton/skeleton.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/src/skeleton/skeleton.css",
+    "bytes": 703,
+    "sha256": "ed321eb150c96c6a24f6fa9bf8ecbea394515e4ecb8102de1e77a512b598693f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/src/Skeleton/Skeleton.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/src/skeleton/skeleton.tsx",
+    "bytes": 384,
+    "sha256": "8d1d2f388dd3e1d7fc4f6cf45bc850da48fb417e9a2222ae91702af1073b9901"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/GridSkeleton/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/grid-skeleton/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/index.ts",
+    "bytes": 51,
+    "sha256": "490fa10e1ece0eacee8e2caa970b3cd7f7cb462e04dfe6c8eb618a12f3968429"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/readme.md",
+    "bytes": 704,
+    "sha256": "2deb2bf3ac0c339c3bc6aef7625674d8b2f67b4f90fbe6be4f7bce450e6c41b4"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/src/PanelSkeleton/panel-skeleton.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/src/panel-skeleton/panel-skeleton.css",
+    "bytes": 303,
+    "sha256": "efe51a53918c788a4ec2da49997d79f66bacddc39695eb53512d3962d00ecbe0"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/src/PanelSkeleton/PanelSkeleton.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/src/panel-skeleton/panel-skeleton.tsx",
+    "bytes": 424,
+    "sha256": "b288840e8edc7030adfb21cbb3bb249516f8a56a4ba68cdbd3199548780c4571"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/src/Skeleton/skeleton.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/src/skeleton/skeleton.css",
+    "bytes": 703,
+    "sha256": "ed321eb150c96c6a24f6fa9bf8ecbea394515e4ecb8102de1e77a512b598693f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/src/Skeleton/Skeleton.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/src/skeleton/skeleton.tsx",
+    "bytes": 384,
+    "sha256": "8d1d2f388dd3e1d7fc4f6cf45bc850da48fb417e9a2222ae91702af1073b9901"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/PanelSkeleton/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/panel-skeleton/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ResultState/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/result-state/index.ts",
+    "bytes": 47,
+    "sha256": "d70f2c640b779b425d895f0647c9e5e39e001ce310500bffed13cb269b04567a"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ResultState/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/result-state/readme.md",
+    "bytes": 700,
+    "sha256": "653f46ba92ac398ab3e3c509b3fb7686f5fb2c1ddbcb7b7170b3ca3f572a0390"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ResultState/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/result-state/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ResultState/src/ResultState/result-state.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/result-state/src/result-state/result-state.css",
+    "bytes": 430,
+    "sha256": "fb7d59232b9a019280f17d7bad1b435431484f4bf3eb6163aa96a260a8b601e7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ResultState/src/ResultState/ResultState.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/result-state/src/result-state/result-state.tsx",
+    "bytes": 947,
+    "sha256": "a7c32ef4c40673d936dd0636534c1bac24768fd6c3777a2109a7a48814d89af2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ResultState/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/result-state/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ResultState/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/result-state/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ResultState/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/result-state/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ToastProvider/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/toast-provider/index.ts",
+    "bytes": 51,
+    "sha256": "29c7d6582c3f9bc9c9069410ac7b957a3631d4230a8c4fa588fd77a3e9bace87"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ToastProvider/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/toast-provider/readme.md",
+    "bytes": 704,
+    "sha256": "076b952e7d9c56dfa3b672b04cc4936f7ecdcb02212f8a33786cc1da58306397"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ToastProvider/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/toast-provider/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ToastProvider/src/ToastProvider/toast.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/toast-provider/src/toast-provider/toast.css",
+    "bytes": 1412,
+    "sha256": "0a599446a313b9e3dbaebf8480756c76be0dcbb0f5c93d733a4186289bab2a8f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ToastProvider/src/ToastProvider/ToastProvider.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/toast-provider/src/toast-provider/toast-provider.tsx",
+    "bytes": 2544,
+    "sha256": "a298219347c3d881b8b30ab049885da98c3da16c92397628cf94ac1b8ff1905d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ToastProvider/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/toast-provider/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ToastProvider/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/toast-provider/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/feedback/ToastProvider/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/feedback/toast-provider/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/AuditTrail/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/audit-trail/index.ts",
+    "bytes": 45,
+    "sha256": "a77124d92194455a1c8c1f792a2b499f53d5f5152e9172a2ac821aa0745534ab"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/AuditTrail/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/audit-trail/readme.md",
+    "bytes": 698,
+    "sha256": "8246d082823d0b850dbb50c75f0fc01dd726f573f4ef3396e3e96bf5eba50dfd"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/AuditTrail/src/AuditTrail/audit-trail.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/audit-trail/src/audit-trail/audit-trail.css",
+    "bytes": 1697,
+    "sha256": "f2ae4f898771a9f9c2164d983285c76fedde7ac21cd61d14b576eaa65c4deb74"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/AuditTrail/src/AuditTrail/AuditTrail.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/audit-trail/src/audit-trail/audit-trail.tsx",
+    "bytes": 2111,
+    "sha256": "d65eea1894d2fa069d6659eeb167b7c4234f93bec12b0e3921ae10a23d37d8a6"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/AuditTrail/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/audit-trail/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/AuditTrail/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/audit-trail/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/AuditTrail/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/audit-trail/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/AuditTrail/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/audit-trail/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/index.ts",
+    "bytes": 63,
+    "sha256": "5481e379cd4238a07eae6d63be294bc417ada6380174e9f15c699a3196eb3a14"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/readme.md",
+    "bytes": 716,
+    "sha256": "2ffb15b58288fc00a117a43f3a48bdf730371ab83f82e8120bf8e05b2e129562"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/src/Button/button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/src/button/button.css",
+    "bytes": 1439,
+    "sha256": "594f1a78039d2b522d6d5ab434beff70db4ad54972c71f9d4a5fe723e93fb2a7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/src/Button/Button.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/src/button/button.tsx",
+    "bytes": 1274,
+    "sha256": "c29edd77f245cc29915c095f062e3f2acdb2b8933b375346e1cbc5b6235db2b5"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/src/ExecutionControlBar/execution-control-bar.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/src/execution-control-bar/execution-control-bar.css",
+    "bytes": 686,
+    "sha256": "0bb09b36186b3c8bf42c7d4d1ca27f94d080a95b9a710afbbdc66897fb054b8c"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/src/ExecutionControlBar/ExecutionControlBar.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/src/execution-control-bar/execution-control-bar.tsx",
+    "bytes": 2245,
+    "sha256": "8b9882fa4ca62b0ef785772ee3fdd5fa329e2071e01d49817a0128f0a3b99688"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/src/StatusPill/status-pill.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/src/status-pill/status-pill.css",
+    "bytes": 608,
+    "sha256": "2681c7fc624c78c20e7e95c97a20c2a4c7c85a5f4b0fa10393e5185f0c513a7d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/src/StatusPill/StatusPill.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/src/status-pill/status-pill.tsx",
+    "bytes": 529,
+    "sha256": "a8aae75147fab318607aa827eafe84355504bf87a20c63117b497b3f6ee49d0f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/ExecutionControlBar/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/execution-control-bar/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/StatusPill/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/status-pill/index.ts",
+    "bytes": 45,
+    "sha256": "4fe789a24abb4c30251ed346036bb667e643113a68b5dfa3c83d71ddb7f8a906"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/StatusPill/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/status-pill/readme.md",
+    "bytes": 698,
+    "sha256": "ae4ec7ec8bff0d3153953213b6770fcb52c0a7370c439fc83fca2f8d358508ec"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/StatusPill/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/status-pill/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/StatusPill/src/StatusPill/status-pill.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/status-pill/src/status-pill/status-pill.css",
+    "bytes": 608,
+    "sha256": "2681c7fc624c78c20e7e95c97a20c2a4c7c85a5f4b0fa10393e5185f0c513a7d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/StatusPill/src/StatusPill/StatusPill.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/status-pill/src/status-pill/status-pill.tsx",
+    "bytes": 529,
+    "sha256": "a8aae75147fab318607aa827eafe84355504bf87a20c63117b497b3f6ee49d0f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/StatusPill/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/status-pill/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/StatusPill/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/status-pill/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/StatusPill/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/status-pill/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/index.ts",
+    "bytes": 35,
+    "sha256": "647db4f9bc37a1040c015ff49382465424d094263218310f569c34a51bdbf405"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/readme.md",
+    "bytes": 688,
+    "sha256": "75281ecb696a91a1b4dbe40b89e1a3f979c06da13e193b5a8b88ba07e7c8f21d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/src/StatusPill/status-pill.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/src/status-pill/status-pill.css",
+    "bytes": 608,
+    "sha256": "2681c7fc624c78c20e7e95c97a20c2a4c7c85a5f4b0fa10393e5185f0c513a7d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/src/StatusPill/StatusPill.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/src/status-pill/status-pill.tsx",
+    "bytes": 529,
+    "sha256": "a8aae75147fab318607aa827eafe84355504bf87a20c63117b497b3f6ee49d0f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/src/Steps/steps.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/src/steps/steps.css",
+    "bytes": 2245,
+    "sha256": "5ed9d607eb3546e8f5e30a440c9dcc7e538a92811729a5940882c79d7fe695ac"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/src/Steps/Steps.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/src/steps/steps.tsx",
+    "bytes": 2368,
+    "sha256": "9a8ef6fc13c84eea7c22ea480fc3ed8ad1fbc9cea3abc40bf9193a53cf62120f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/operational/Steps/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/operational/steps/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/index.ts",
+    "bytes": 51,
+    "sha256": "4778d4ab5adaf500536ae857bba833600323f27d096c07345898ef08e0b2e53e"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/readme.md",
+    "bytes": 704,
+    "sha256": "8daac2f31ed8dc338d07ee19caa377b02d59fd45991f4dcf2cabb7d0ef659961"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/src/Button/button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/src/button/button.css",
+    "bytes": 1439,
+    "sha256": "594f1a78039d2b522d6d5ab434beff70db4ad54972c71f9d4a5fe723e93fb2a7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/src/Button/Button.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/src/button/button.tsx",
+    "bytes": 1274,
+    "sha256": "c29edd77f245cc29915c095f062e3f2acdb2b8933b375346e1cbc5b6235db2b5"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/src/id/id.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/src/id/id.ts",
+    "bytes": 96,
+    "sha256": "1dd87343aa71bfb4d9bd8534bc8bbbde2eba8d9ea662b611b8cf53d0ef6cd149"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/src/InlineEditRow/inline-edit-row.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/src/inline-edit-row/inline-edit-row.css",
+    "bytes": 402,
+    "sha256": "e16570eccfc175d72e4a3e3f8e3e61d195d7879e8950750bdc49be0fac3c31d9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/src/InlineEditRow/InlineEditRow.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/src/inline-edit-row/inline-edit-row.tsx",
+    "bytes": 1868,
+    "sha256": "ab88e887a67b602e901a959d5419507dba5902964c46fb5aa7802bc4c412e585"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/src/TextInput/text-input.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/src/text-input/text-input.css",
+    "bytes": 680,
+    "sha256": "998d7e0efd5fcb7b57537e352ca839010bb51f3c5ac59786c55283064673ec4d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/src/TextInput/TextInput.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/src/text-input/text-input.tsx",
+    "bytes": 1152,
+    "sha256": "dd8dc8d7d3d194d465a756efd9d3dd1f50c63620d8d354d8e37ac47b9ee1ed0f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/InlineEditRow/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/inline-edit-row/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/toastPatterns/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/toast-patterns/index.ts",
+    "bytes": 51,
+    "sha256": "38e78a8d15aeae5a61f9382131a2074e1f9636e2a5771aac640076e9436f8c67"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/toastPatterns/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/toast-patterns/readme.md",
+    "bytes": 704,
+    "sha256": "d4f0780eca3559673b0ce87e3ff3ea4a98aba4b1d1c9df03fe4c4937b93f3e90"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/toastPatterns/src/toastPatterns/toastPatterns.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/toast-patterns/src/toast-patterns/toast-patterns.ts",
+    "bytes": 1111,
+    "sha256": "fec6aa91d5356cf4395edbfa676f442672c9309471c1793ea296ce9845983682"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/toastPatterns/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/toast-patterns/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/toastPatterns/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/toast-patterns/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/toastPatterns/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/toast-patterns/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/index.ts",
+    "bytes": 65,
+    "sha256": "26fa85ef450256be697b28fd58d947534201dd2d7317c4c0b022f840bdca304a"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/readme.md",
+    "bytes": 718,
+    "sha256": "a163546722fab298dde78bcb697ed93d156150a73ed1cfb30c9c9e74a35202d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/src/toastPatterns/toastPatterns.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/src/toast-patterns/toast-patterns.ts",
+    "bytes": 1111,
+    "sha256": "fec6aa91d5356cf4395edbfa676f442672c9309471c1793ea296ce9845983682"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/src/ToastProvider/toast.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/src/toast-provider/toast.css",
+    "bytes": 1412,
+    "sha256": "0a599446a313b9e3dbaebf8480756c76be0dcbb0f5c93d733a4186289bab2a8f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/src/ToastProvider/ToastProvider.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/src/toast-provider/toast-provider.tsx",
+    "bytes": 2544,
+    "sha256": "a298219347c3d881b8b30ab049885da98c3da16c92397628cf94ac1b8ff1905d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/src/useConfirmableAction/useConfirmableAction.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/src/use-confirmable-action/use-confirmable-action.tsx",
+    "bytes": 1296,
+    "sha256": "856f5479da1b49248cbece738b2fe77b1cc62aac4e2d09ca0dd79bc992397ef0"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/patterns/useConfirmableAction/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/patterns/use-confirmable-action/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Button/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/button/index.ts",
+    "bytes": 37,
+    "sha256": "9ae26d4c95bce878e521c0ff5ebe26aef39f850a491dad95c89b82ae276f6663"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Button/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/button/readme.md",
+    "bytes": 690,
+    "sha256": "d8d8d4a950788c90e0b70e5486dc3ea6ce5cdf3b4ec59ed79482c31492c3556a"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Button/src/Button/button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/button/src/button/button.css",
+    "bytes": 1439,
+    "sha256": "594f1a78039d2b522d6d5ab434beff70db4ad54972c71f9d4a5fe723e93fb2a7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Button/src/Button/Button.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/button/src/button/button.tsx",
+    "bytes": 1274,
+    "sha256": "c29edd77f245cc29915c095f062e3f2acdb2b8933b375346e1cbc5b6235db2b5"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Button/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/button/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Button/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/button/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Button/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/button/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Button/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/button/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/IconButton/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/icon-button/index.ts",
+    "bytes": 45,
+    "sha256": "0ac37178396b151993452b7ce31c4161bf1ce9f8b63c22e35dc3cd559b78f706"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/IconButton/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/icon-button/readme.md",
+    "bytes": 698,
+    "sha256": "a67b21bb5df15790a7433935327dac31ce28703fbf3600ea0547ee1c0688fcde"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/IconButton/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/icon-button/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/IconButton/src/IconButton/icon-button.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/icon-button/src/icon-button/icon-button.css",
+    "bytes": 644,
+    "sha256": "a03158641138ef0ae1bc909bd6e567586793f48dec4915cfcf3572d29fddc3c7"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/IconButton/src/IconButton/IconButton.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/icon-button/src/icon-button/icon-button.tsx",
+    "bytes": 622,
+    "sha256": "f490dc70b09708915508317d21d5d8de97933923356b456e6422e404fcd23c3b"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/IconButton/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/icon-button/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/IconButton/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/icon-button/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/IconButton/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/icon-button/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Skeleton/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/skeleton/index.ts",
+    "bytes": 41,
+    "sha256": "91b0810d6b1390d1fa26b375fa749d92780c40d4552a8e6d500444a316c66d5a"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Skeleton/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/skeleton/readme.md",
+    "bytes": 694,
+    "sha256": "6417164afb7265a3b8032f74b079f6d3dc08f7450dfefe1af08f4a828f942e7b"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Skeleton/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/skeleton/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Skeleton/src/Skeleton/skeleton.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/skeleton/src/skeleton/skeleton.css",
+    "bytes": 703,
+    "sha256": "ed321eb150c96c6a24f6fa9bf8ecbea394515e4ecb8102de1e77a512b598693f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Skeleton/src/Skeleton/Skeleton.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/skeleton/src/skeleton/skeleton.tsx",
+    "bytes": 384,
+    "sha256": "8d1d2f388dd3e1d7fc4f6cf45bc850da48fb417e9a2222ae91702af1073b9901"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Skeleton/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/skeleton/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Skeleton/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/skeleton/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/Skeleton/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/skeleton/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/TextInput/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/text-input/index.ts",
+    "bytes": 43,
+    "sha256": "6d6a2a3b7e725c3fe8f0eef7f92bdc88dd6f281cdb39526a3224086e67b3abc3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/TextInput/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/text-input/readme.md",
+    "bytes": 696,
+    "sha256": "f92dfddf59c234a3ebeea86741ce2f2390ea9fa60b260f83a98fcbf07330a079"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/TextInput/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/text-input/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/TextInput/src/id/id.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/text-input/src/id/id.ts",
+    "bytes": 96,
+    "sha256": "1dd87343aa71bfb4d9bd8534bc8bbbde2eba8d9ea662b611b8cf53d0ef6cd149"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/TextInput/src/TextInput/text-input.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/text-input/src/text-input/text-input.css",
+    "bytes": 680,
+    "sha256": "998d7e0efd5fcb7b57537e352ca839010bb51f3c5ac59786c55283064673ec4d"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/TextInput/src/TextInput/TextInput.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/text-input/src/text-input/text-input.tsx",
+    "bytes": 1152,
+    "sha256": "dd8dc8d7d3d194d465a756efd9d3dd1f50c63620d8d354d8e37ac47b9ee1ed0f"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/TextInput/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/text-input/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/TextInput/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/text-input/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/primitives/TextInput/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/primitives/text-input/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/cx/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/cx/index.ts",
+    "bytes": 29,
+    "sha256": "b6024aab6140c03045abce1d4b839aa18171a3156751526a0d850c0281133d51"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/cx/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/cx/readme.md",
+    "bytes": 71,
+    "sha256": "87290980cb2b4c317d0d5baeb102bfecee88f5e15553ce4e9d7310a0b597e909"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/cx/src/cx/cx.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/cx/src/cx/cx.ts",
+    "bytes": 125,
+    "sha256": "358eb54807fb190eeb8d843cfcc29389c4fc5373f91c9b526c5d6b41202befb9"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/cx/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/cx/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/cx/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/cx/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/cx/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/cx/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/DensityProvider/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/density-provider/index.ts",
+    "bytes": 55,
+    "sha256": "21f276d8760b68349f149d6fb9405718803f26b8a6cc316a4dfe711c76f929bb"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/DensityProvider/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/density-provider/readme.md",
+    "bytes": 708,
+    "sha256": "ab0cd3f46361f3c525eeacce8cc12106f635ace15b54594563fec17ab9314704"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/DensityProvider/src/DensityProvider/DensityProvider.tsx",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/density-provider/src/density-provider/density-provider.tsx",
+    "bytes": 362,
+    "sha256": "6a90eb0b96bb4044faa9c81cb6e5bce2bf08c4d65d72ea3ae123bd5efc6e4d74"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/DensityProvider/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/density-provider/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/DensityProvider/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/density-provider/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/DensityProvider/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/density-provider/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/id/index.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/id/index.ts",
+    "bytes": 29,
+    "sha256": "57626244d6228f99bb6371eb90cb1ff18db675e3318ce30d2fd893a75ffc8969"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/id/README.md",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/id/readme.md",
+    "bytes": 69,
+    "sha256": "cfd357d0ff7363c2ad6990cd200c29f06f920a246258bd7f169c8d00018ff8fe"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/id/src/id/id.ts",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/id/src/id/id.ts",
+    "bytes": 96,
+    "sha256": "1dd87343aa71bfb4d9bd8534bc8bbbde2eba8d9ea662b611b8cf53d0ef6cd149"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/id/styles/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/id/styles/rbm.base.css",
+    "bytes": 541,
+    "sha256": "64af950e0086a9558c7e59e2e07864ff552d57fe18ede61852853d1c3a6b61b2"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/id/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/id/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/reference/providers-utils/id/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/reference/providers-utils/id/tokens/rbm.tokens.css",
+    "bytes": 1815,
+    "sha256": "d8032fe6971919908803a16044b99d1050bf67a6c9916836783491375c0b4123"
+  },
+  {
+    "old_path": "rbm-design-system/tokens/rbm.base.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/tokens/rbm.base.css",
+    "bytes": 521,
+    "sha256": "82df3620cb2ffd48b01ec53e15969601e9bbf9bb4ac621c56a5950c45c971a30"
+  },
+  {
+    "old_path": "rbm-design-system/tokens/rbm.density.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/tokens/rbm.density.css",
+    "bytes": 402,
+    "sha256": "35f798115be031321097202d3eb0974ae71573d6d99a5f28c97b8ab8c6c710d3"
+  },
+  {
+    "old_path": "rbm-design-system/tokens/rbm.theme.dark.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/tokens/rbm.theme.dark.css",
+    "bytes": 402,
+    "sha256": "cb472b4fc2d091139941bb41f83f4c77ba2b5bb4ffaceae1062102fffd033eb4"
+  },
+  {
+    "old_path": "rbm-design-system/tokens/rbm.theme.hc.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/tokens/rbm.theme.hc.css",
+    "bytes": 335,
+    "sha256": "7ddb1081316de92be905680d28ee25c12c3913550cd3fdff325ad96a8e8b91ae"
+  },
+  {
+    "old_path": "rbm-design-system/tokens/rbm.theme.light.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/tokens/rbm.theme.light.css",
+    "bytes": 84,
+    "sha256": "301a2390a17c228691c3ce2adaeb8a21f8641312ecff081cc31e1939e0d46d8b"
+  },
+  {
+    "old_path": "rbm-design-system/tokens/rbm.tokens.css",
+    "new_path": "01-standards-authoritative/rbm-design-system/tokens/rbm.tokens.css",
+    "bytes": 1857,
+    "sha256": "de58d1655f86fe246b0af1561d8e32f546f92d4ee3fd9474be45e70f107ec0fe"
+  }
+]

@@ -1,0 +1,14 @@
+.rbm-pg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--rbm-space-4);
+  background: var(--rbm-color-surface-1);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  border-radius: var(--rbm-radius-lg);
+  padding: var(--rbm-space-3) var(--rbm-space-4);
+}
+.rbm-pg__range { color: var(--rbm-color-text-muted); font-size: var(--rbm-font-size-sm); }
+.rbm-pg__controls { display: inline-flex; align-items: center; gap: var(--rbm-space-3); }
+.rbm-pg__page { font-size: var(--rbm-font-size-sm); color: var(--rbm-color-text); }
+.rbm-pg__pageNum { font-weight: var(--rbm-font-weight-semibold); }

@@ -1,0 +1,13 @@
+.rbm-field { display: grid; gap: var(--rbm-space-2); }
+.rbm-field__label { font-weight: var(--rbm-font-weight-medium); font-size: var(--rbm-font-size-sm); }
+.rbm-input {
+  height: var(--rbm-control-height);
+  padding: 0 var(--rbm-space-control);
+  border-radius: var(--rbm-radius-sm);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  background: var(--rbm-color-surface-inset);
+  color: var(--rbm-color-text);
+}
+.rbm-input--error { border-color: var(--rbm-color-critical); }
+.rbm-field__help { color: var(--rbm-color-text-muted); font-size: var(--rbm-font-size-sm); }
+.rbm-field__error { color: var(--rbm-color-critical); font-size: var(--rbm-font-size-sm); }

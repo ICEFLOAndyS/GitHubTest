@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "product": "ICEFLO RBM",
+    "generated_utc": "2025-12-23T14:13:43Z",
+    "notes": [
+      "Canonical icon names are the only icon identifiers permitted in product code and UX specs.",
+      "lucide-react mapping is for React applications outside ServiceNow.",
+      "Horizon mapping is for ServiceNow UI Framework using <sn-icon> with @servicenow/icons."
+    ],
+    "coverage": {
+      "canonical_count": 44,
+      "missing_in_lucide_map": [],
+      "missing_in_horizon_map": []
+    }
+  },
+  "map": {
+    "action.add": "h-plus-circle",
+    "action.edit": "h-edit",
+    "action.delete": "h-trash",
+    "action.save": "h-save",
+    "action.cancel": "h-x",
+    "action.search": "h-search",
+    "action.filter": "h-filter",
+    "action.settings": "h-settings",
+    "action.refresh": "h-refresh",
+    "action.export": "h-download",
+    "action.import": "h-upload",
+    "action.open": "h-arrow-up-right",
+    "action.close": "h-x",
+    "action.copy": "h-copy",
+    "action.link": "h-link",
+    "nav.back": "h-chevron-left",
+    "nav.forward": "h-chevron-right",
+    "nav.expand": "h-chevron-down",
+    "nav.collapse": "h-chevron-up",
+    "nav.more": "h-more-vertical",
+    "nav.externalLink": "h-external-link",
+    "status.success": "h-check-circle",
+    "status.warning": "h-alert-triangle",
+    "status.error": "h-x-circle",
+    "status.info": "h-info",
+    "status.inProgress": "h-loader",
+    "status.blocked": "h-ban",
+    "status.paused": "h-pause-circle",
+    "rbm.event": "h-calendar-clock",
+    "rbm.runbook": "h-book-open",
+    "rbm.stage": "h-layers",
+    "rbm.task": "h-list-todo",
+    "rbm.dependency": "h-link",
+    "rbm.workstream": "h-workflow",
+    "rbm.execution": "h-play-circle",
+    "rbm.timeline": "h-gantt",
+    "rbm.manualTaskType": "h-user",
+    "rbm.automatedTaskType": "h-zap",
+    "rbm.communicationTaskType": "h-message-square",
+    "rbm.verificationTaskType": "h-badge-check",
+    "rbm.checkpointTaskType": "h-flag",
+    "rbm.audit": "h-clipboard-check",
+    "rbm.compliance": "h-shield-check",
+    "rbm.contentPack": "h-package"
+  }
+}

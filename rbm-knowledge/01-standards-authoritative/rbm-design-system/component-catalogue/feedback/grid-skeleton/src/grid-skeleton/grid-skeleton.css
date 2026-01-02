@@ -1,0 +1,11 @@
+.rbm-gsk {
+  background: var(--rbm-color-surface-1);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  border-radius: var(--rbm-radius-lg);
+  padding: var(--rbm-space-4);
+  display: grid;
+  gap: var(--rbm-space-3);
+}
+.rbm-gsk__head, .rbm-gsk__row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--rbm-space-3); }
+.rbm-gsk__cell { height: 12px; }
+.rbm-gsk__body { display: grid; gap: var(--rbm-space-3); }

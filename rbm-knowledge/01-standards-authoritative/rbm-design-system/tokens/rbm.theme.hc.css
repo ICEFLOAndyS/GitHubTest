@@ -1,0 +1,13 @@
+:root[data-theme="hc"] {
+  --rbm-color-surface-0: #000000;
+  --rbm-color-surface-1: #000000;
+  --rbm-color-surface-2: #0b0b0b;
+  --rbm-color-surface-inset: #000000;
+
+  --rbm-color-text: #ffffff;
+  --rbm-color-text-muted: #ffffff;
+  --rbm-color-border: #ffffff;
+
+  --rbm-color-focus: #ffffff;
+  --rbm-color-overlay: rgba(0,0,0,0.85);
+}

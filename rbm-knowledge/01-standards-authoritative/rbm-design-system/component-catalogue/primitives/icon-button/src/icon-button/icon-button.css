@@ -1,0 +1,17 @@
+.rbm-ib {
+  width: var(--rbm-control-height);
+  height: var(--rbm-control-height);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rbm-radius-md);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  background: var(--rbm-color-surface-1);
+}
+.rbm-ib--primary {
+  background: var(--rbm-color-primary);
+  color: var(--rbm-color-primary-contrast);
+  border-color: color-mix(in srgb, var(--rbm-color-primary) 70%, var(--rbm-color-border));
+}
+.rbm-ib--danger { background: var(--rbm-color-critical); color: var(--rbm-color-primary-contrast); }
+.rbm-ib__icon { display: inline-flex; }

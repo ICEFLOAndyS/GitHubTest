@@ -1,0 +1,9 @@
+.rbm-rs {
+  background: var(--rbm-color-surface-1);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  border-radius: var(--rbm-radius-lg);
+  padding: var(--rbm-space-6);
+}
+.rbm-rs__title { font-weight: var(--rbm-font-weight-semibold); font-size: var(--rbm-font-size-lg); }
+.rbm-rs__body { margin-top: var(--rbm-space-2); color: var(--rbm-color-text-muted); }
+.rbm-rs__action { margin-top: var(--rbm-space-4); }

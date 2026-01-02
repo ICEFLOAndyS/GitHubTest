@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "product": "ICEFLO RBM",
+    "generated_utc": "2025-12-23T14:13:43Z",
+    "notes": [
+      "Canonical icon names are the only icon identifiers permitted in product code and UX specs.",
+      "lucide-react mapping is for React applications outside ServiceNow.",
+      "Horizon mapping is for ServiceNow UI Framework using <sn-icon> with @servicenow/icons."
+    ],
+    "coverage": {
+      "canonical_count": 44,
+      "missing_in_lucide_map": [],
+      "missing_in_horizon_map": []
+    }
+  },
+  "canonical": {
+    "action": [
+      "add",
+      "edit",
+      "delete",
+      "save",
+      "cancel",
+      "search",
+      "filter",
+      "settings",
+      "refresh",
+      "export",
+      "import",
+      "open",
+      "close",
+      "copy",
+      "link"
+    ],
+    "nav": [
+      "back",
+      "forward",
+      "expand",
+      "collapse",
+      "more",
+      "externalLink"
+    ],
+    "status": [
+      "success",
+      "warning",
+      "error",
+      "info",
+      "inProgress",
+      "blocked",
+      "paused"
+    ],
+    "rbm": [
+      "event",
+      "runbook",
+      "stage",
+      "task",
+      "dependency",
+      "workstream",
+      "execution",
+      "timeline",
+      "manualTaskType",
+      "automatedTaskType",
+      "communicationTaskType",
+      "verificationTaskType",
+      "checkpointTaskType",
+      "audit",
+      "compliance",
+      "contentPack"
+    ]
+  }
+}

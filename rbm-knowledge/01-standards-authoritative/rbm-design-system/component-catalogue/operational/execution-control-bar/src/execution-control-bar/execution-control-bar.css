@@ -1,0 +1,15 @@
+.rbm-ecb {
+  background: var(--rbm-color-surface-1);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  border-radius: var(--rbm-radius-lg);
+  box-shadow: var(--rbm-shadow-sm);
+  padding: var(--rbm-space-4);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--rbm-space-4);
+  align-items: center;
+}
+.rbm-ecb__left { display: flex; align-items: center; gap: var(--rbm-space-3); }
+.rbm-ecb__title { font-size: var(--rbm-font-size-lg); font-weight: var(--rbm-font-weight-semibold); }
+.rbm-ecb__controls { display: flex; gap: var(--rbm-space-2); flex-wrap: wrap; justify-content: flex-end; }
+.rbm-ecb__right { display: flex; justify-content: flex-end; }

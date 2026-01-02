@@ -1,0 +1,17 @@
+:root[data-density="compact"] {
+  --rbm-control-height: 28px;
+  --rbm-row-height: 28px;
+  --rbm-space-control: var(--rbm-space-2);
+}
+
+:root[data-density="cozy"] {
+  --rbm-control-height: 32px;
+  --rbm-row-height: 32px;
+  --rbm-space-control: var(--rbm-space-3);
+}
+
+:root[data-density="comfortable"] {
+  --rbm-control-height: 40px;
+  --rbm-row-height: 40px;
+  --rbm-space-control: var(--rbm-space-4);
+}

@@ -1,0 +1,18 @@
+.rbm-tabs { display: grid; gap: var(--rbm-space-3); }
+.rbm-tabs__list { display: flex; gap: var(--rbm-space-2); border-bottom: var(--rbm-border-width-1) solid var(--rbm-color-border); }
+.rbm-tab {
+  height: var(--rbm-control-height);
+  padding: 0 var(--rbm-space-control);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--rbm-color-text-muted);
+  font-weight: var(--rbm-font-weight-medium);
+}
+.rbm-tab--active { color: var(--rbm-color-text); border-bottom-color: var(--rbm-color-primary); }
+.rbm-tabs__panel {
+  background: var(--rbm-color-surface-1);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  border-radius: var(--rbm-radius-lg);
+  padding: var(--rbm-space-4);
+}

@@ -1,0 +1,21 @@
+@import url("../tokens/rbm.tokens.css");
+@import url("../tokens/rbm.density.css");
+
+:root {
+  color: var(--rbm-color-text);
+  background: var(--rbm-color-surface-0);
+  font-family: var(--rbm-font-family-sans);
+  font-size: var(--rbm-font-size-md);
+  line-height: var(--rbm-line-height-normal);
+}
+
+.rbm-focus { outline: none; }
+.rbm-focus:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--rbm-color-focus) 30%, transparent);
+  border-color: var(--rbm-color-focus);
+}
+
+.rbm-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}

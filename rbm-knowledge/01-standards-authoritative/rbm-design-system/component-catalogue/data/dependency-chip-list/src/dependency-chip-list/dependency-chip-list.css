@@ -1,0 +1,43 @@
+.rbm-dcl {
+  background: var(--rbm-color-surface-1);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  border-radius: var(--rbm-radius-lg);
+  padding: var(--rbm-space-4);
+  display: grid;
+  gap: var(--rbm-space-3);
+}
+.rbm-dcl__title { margin: 0; font-size: var(--rbm-font-size-lg); font-weight: var(--rbm-font-weight-semibold); }
+.rbm-dcl__empty { color: var(--rbm-color-text-muted); }
+.rbm-dcl__list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--rbm-space-2); }
+.rbm-dcl__item { display: grid; grid-template-columns: 1fr auto auto; gap: var(--rbm-space-2); align-items: center; }
+.rbm-dcl__chip {
+  display: inline-flex; align-items: center; gap: var(--rbm-space-2);
+  min-height: calc(var(--rbm-control-height) - 6px);
+  padding: 0 var(--rbm-space-2);
+  border-radius: 999px;
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  background: var(--rbm-color-surface-2);
+  font-size: var(--rbm-font-size-sm);
+}
+.rbm-dcl__kind {
+  font-weight: var(--rbm-font-weight-semibold);
+  border-radius: 999px;
+  padding: 0 var(--rbm-space-2);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  background: var(--rbm-color-surface-1);
+}
+.rbm-dcl__meta { color: var(--rbm-color-text-muted); }
+.rbm-dcl__chip--FS { border-left: 4px solid var(--rbm-color-info); }
+.rbm-dcl__chip--SS { border-left: 4px solid var(--rbm-color-primary); }
+.rbm-dcl__chip--FF { border-left: 4px solid var(--rbm-color-success); }
+.rbm-dcl__chip--SF { border-left: 4px solid var(--rbm-color-warning); }
+.rbm-dcl__remove {
+  height: calc(var(--rbm-control-height) - 6px);
+  padding: 0 var(--rbm-space-2);
+  border-radius: var(--rbm-radius-sm);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  background: var(--rbm-color-surface-1);
+  color: var(--rbm-color-critical);
+}
+.rbm-dcl__confirmStrong { font-weight: var(--rbm-font-weight-semibold); }
+.rbm-dcl__confirmHint { margin-top: var(--rbm-space-2); color: var(--rbm-color-text-muted); }

@@ -1,0 +1,27 @@
+{
+  "knowledge_root": "/RBM-Knowledge",
+  "domains": [
+    "agents",
+    "architecture",
+    "design",
+    "development",
+    "icons",
+    "personas",
+    "product",
+    "rbm-design-system"
+  ],
+  "persona_rules": {
+    "mandatory": true,
+    "precedence": [
+      "Governance",
+      "Platform",
+      "Change",
+      "Operational"
+    ]
+  },
+  "constraints": [
+    "No free-text execution steps",
+    "All workflows must emit audit events",
+    "All features must map to a persona"
+  ]
+}

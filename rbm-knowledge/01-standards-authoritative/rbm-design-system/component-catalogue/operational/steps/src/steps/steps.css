@@ -1,0 +1,28 @@
+.rbm-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--rbm-space-3); }
+.rbm-steps__item { display: grid; grid-template-columns: 18px 1fr; gap: var(--rbm-space-3); }
+.rbm-steps__rail { display: grid; grid-template-rows: 18px 1fr; justify-items: center; }
+.rbm-steps__dot { width: 12px; height: 12px; border-radius: 999px; border: var(--rbm-border-width-1) solid var(--rbm-color-border); background: var(--rbm-color-surface-2); }
+.rbm-steps__line { width: 2px; background: var(--rbm-color-border); margin-top: var(--rbm-space-1); }
+.rbm-steps__dot--active { background: var(--rbm-color-info); border-color: var(--rbm-color-info); }
+.rbm-steps__dot--planned { background: var(--rbm-color-surface-2); }
+.rbm-steps__dot--blocked { background: var(--rbm-color-critical); border-color: var(--rbm-color-critical); }
+.rbm-steps__dot--paused { background: var(--rbm-color-warning); border-color: var(--rbm-color-warning); }
+.rbm-steps__dot--completed { background: var(--rbm-color-success); border-color: var(--rbm-color-success); }
+.rbm-steps__dot--failed { background: var(--rbm-color-critical); border-color: var(--rbm-color-critical); }
+.rbm-steps__card {
+  background: var(--rbm-color-surface-1);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  border-radius: var(--rbm-radius-lg);
+  padding: var(--rbm-space-4);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--rbm-space-4);
+  align-items: start;
+}
+.rbm-steps__card--clickable:hover { background: color-mix(in srgb, var(--rbm-color-surface-2) 60%, transparent); }
+.rbm-steps__top { display: flex; justify-content: space-between; gap: var(--rbm-space-3); align-items: flex-start; }
+.rbm-steps__title { font-weight: var(--rbm-font-weight-semibold); font-size: var(--rbm-font-size-md); }
+.rbm-steps__sub { margin-top: var(--rbm-space-1); color: var(--rbm-color-text-muted); font-size: var(--rbm-font-size-sm); }
+.rbm-steps__titleBtn { background: transparent; border: none; padding: 0; margin: 0; text-align: left;
+  font-weight: var(--rbm-font-weight-semibold); font-size: var(--rbm-font-size-md); color: var(--rbm-color-text); cursor: pointer; }
+.rbm-steps__right { display: inline-flex; align-items: center; justify-content: flex-end; }

@@ -1,0 +1,10 @@
+.rbm-psk {
+  background: var(--rbm-color-surface-1);
+  border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+  border-radius: var(--rbm-radius-lg);
+  padding: var(--rbm-space-4);
+  display: grid;
+  gap: var(--rbm-space-3);
+}
+.rbm-psk__title { width: 55%; }
+.rbm-psk__block { height: 180px; }
