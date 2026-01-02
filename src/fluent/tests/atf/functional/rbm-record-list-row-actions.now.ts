@@ -21,8 +21,6 @@ Test({
   failOnServerError: true
 }, (atf) => {
 
-  let testRecordId = '';
-
   // Step 1: Create a test incident record for action testing
   const createResult = atf.server.recordInsert({
     $id: Now.ID['create_test_incident'],
@@ -39,7 +37,7 @@ Test({
     enforceSecurity: false
   });
 
-  testRecordId = createResult.record_id;
+  const testRecordId = createResult.record_id;
 
   // Step 2: Log the test record creation
   atf.server.log({
@@ -68,7 +66,7 @@ Test({
         viewId: 'incident_management',
         clientCorrelationId: 'atf_test_row_action_view_001',
         invocationType: 'row',
-        timestamp: new Date().toISOString(),
+        timestamp: '2024-01-15T10:00:00Z',
         userAgent: 'ATF Test Agent',
         actionId: 'view',
         recordIds: [testRecordId]
@@ -114,7 +112,7 @@ Test({
         clientCorrelationId: 'atf_test_row_action_delete_001',
         invocationType: 'row',
         justification: 'ATF Test - Deleting test incident created for automated testing purposes. This is a valid justification that meets minimum length requirements.',
-        timestamp: new Date().toISOString(),
+        timestamp: '2024-01-15T10:00:00Z',
         userAgent: 'ATF Test Agent',
         actionId: 'delete',
         recordIds: [testRecordId]
@@ -219,7 +217,7 @@ Test({
         clientCorrelationId: 'atf_test_access_denied_001',
         invocationType: 'row',
         justification: 'ATF Test - Attempting action without permissions to validate access control',
-        timestamp: new Date().toISOString(),
+        timestamp: '2024-01-15T10:00:00Z',
         userAgent: 'ATF Test Agent',
         actionId: 'delete',
         recordIds: [adminRecord.record_id]
@@ -281,7 +279,7 @@ Test({
         clientCorrelationId: 'atf_test_missing_justification_001',
         invocationType: 'row',
         // Missing justification field intentionally
-        timestamp: new Date().toISOString(),
+        timestamp: '2024-01-15T10:00:00Z',
         userAgent: 'ATF Test Agent',
         actionId: 'delete',
         recordIds: ['dummy_record_id']
@@ -327,7 +325,7 @@ Test({
         clientCorrelationId: 'atf_test_short_justification_001',
         invocationType: 'row',
         justification: 'short', // Too short for requirements
-        timestamp: new Date().toISOString(),
+        timestamp: '2024-01-15T10:00:00Z',
         userAgent: 'ATF Test Agent',
         actionId: 'delete',
         recordIds: ['dummy_record_id']
@@ -404,7 +402,7 @@ Test({
         viewId: 'incident_management',
         clientCorrelationId: 'atf_test_unauthorized_source_001',
         invocationType: 'row',
-        timestamp: new Date().toISOString(),
+        timestamp: '2024-01-15T10:00:00Z',
         userAgent: 'ATF Test Agent',
         actionId: 'view',
         recordIds: ['dummy_record_id']

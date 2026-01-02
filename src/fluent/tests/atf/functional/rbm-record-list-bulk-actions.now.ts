@@ -21,27 +21,53 @@ Test({
   failOnServerError: true
 }, (atf) => {
 
-  const testRecordIds = [];
+  // Step 1: Create test record 1
+  const createResult1 = atf.server.recordInsert({
+    $id: Now.ID['create_bulk_test_incident_1'],
+    table: 'incident',
+    fieldValues: {
+      short_description: 'ATF Bulk Test Incident 1',
+      description: 'This is test incident 1 created for bulk action testing',
+      priority: '4',
+      impact: '3',
+      urgency: '3',
+      state: '2'
+    },
+    assert: 'record_successfully_inserted',
+    enforceSecurity: false
+  });
 
-  // Step 1: Create multiple test incident records for bulk action testing
-  for (let i = 1; i <= 5; i++) {
-    const createResult = atf.server.recordInsert({
-      $id: Now.ID[`create_bulk_test_incident_${i}`],
-      table: 'incident',
-      fieldValues: {
-        short_description: `ATF Bulk Test Incident ${i}`,
-        description: `This is test incident ${i} created for bulk action testing`,
-        priority: '4',
-        impact: '3',
-        urgency: '3',
-        state: '2'
-      },
-      assert: 'record_successfully_inserted',
-      enforceSecurity: false
-    });
-    
-    testRecordIds.push(createResult.record_id);
-  }
+  // Step 2: Create test record 2
+  const createResult2 = atf.server.recordInsert({
+    $id: Now.ID['create_bulk_test_incident_2'],
+    table: 'incident',
+    fieldValues: {
+      short_description: 'ATF Bulk Test Incident 2',
+      description: 'This is test incident 2 created for bulk action testing',
+      priority: '4',
+      impact: '3',
+      urgency: '3',
+      state: '2'
+    },
+    assert: 'record_successfully_inserted',
+    enforceSecurity: false
+  });
+
+  // Step 3: Create test record 3
+  const createResult3 = atf.server.recordInsert({
+    $id: Now.ID['create_bulk_test_incident_3'],
+    table: 'incident',
+    fieldValues: {
+      short_description: 'ATF Bulk Test Incident 3',
+      description: 'This is test incident 3 created for bulk action testing',
+      priority: '4',
+      impact: '3',
+      urgency: '3',
+      state: '2'
+    },
+    assert: 'record_successfully_inserted',
+    enforceSecurity: false
+  });
 
   // Step 2: Log the test records creation
   atf.server.log({
