@@ -1,12 +1,13 @@
 /**
- * RBM Record List Bulk Action Handler
+ * RBM Record List Bulk Action Handler - AUTHORITATIVE v1.9.5
  * POST /api/x_icefl_git/rbm/v1/record-list/bulk-action
  * 
- * Handles bulk record actions with:
+ * Handles bulk record actions with MANDATORY audit metadata enforcement:
+ * - ALL metadata fields validation including selectionCount
+ * - Justification enforcement for designated actions  
  * - Server-side bulk cap enforcement (max 100)
- * - Parent batch + child record audit evidence
- * - Partial failure handling with per-record status
- * - Never silently skip failures (explicit reporting)
+ * - Complete audit trail with batch + per-record evidence
+ * - No client-side audit storage validation
  */
 
 import { gs } from '@servicenow/glide';
@@ -16,6 +17,7 @@ export function handleBulkAction(request, response) {
     const { RBMApiUtil } = require('script-includes/RBMApiUtil');
     const { RBMRecordListActionService } = require('script-includes/RBMRecordListActionService');
     const { RBMEvidenceService } = require('script-includes/RBMEvidenceService');
+    const { RBMAuditMetadataValidator } = require('script-includes/RBMAuditMetadataValidator');
     
     let correlationId;
     let batchAuditSysId;
@@ -23,39 +25,76 @@ export function handleBulkAction(request, response) {
     try {
         // Parse request body
         const requestBody = JSON.parse(request.body.data);
-        correlationId = RBMApiUtil.getCorrelationId(requestBody.metadata);
         
-        // Log API operation
-        RBMApiUtil.logApiOperation('record_list_bulk_action', {
-            actionId: requestBody.actionId,
-            recordCount: requestBody.records?.length,
-            hasJustification: !!requestBody.metadata?.justification,
-            sourceComponent: requestBody.metadata?.sourceComponent
-        }, correlationId);
-        
-        // Validate required fields
-        const validation = RBMApiUtil.validateRequiredFields(requestBody, [
-            'actionId',
-            'records',
-            'metadata.sourceComponent',
-            'metadata.selectionCount'
-        ]);
-        
-        if (!validation.valid) {
+        // CRITICAL: Extract and validate client correlation ID
+        correlationId = requestBody.auditMetadata?.clientCorrelationId;
+        if (!correlationId) {
             const errorResponse = RBMApiUtil.createErrorResponse(
-                'MISSING_REQUIRED_FIELDS',
-                `Missing required fields: ${validation.missingFields.join(', ')}`,
+                'MISSING_CORRELATION_ID',
+                'Client correlation ID is mandatory for all RBM bulk requests',
+                RBMApiUtil.generateCorrelationId(),
+                400
+            );
+            return RBMApiUtil.sendResponse(response, errorResponse.response, errorResponse.httpStatus);
+        }
+        
+        // STEP 1: MANDATORY Audit Metadata Validation (ALL fields required)
+        const metadataValidator = new RBMAuditMetadataValidator();
+        const metadataValidation = metadataValidator.validateCompleteAuditMetadata(
+            requestBody.auditMetadata,
+            'bulk',
+            correlationId
+        );
+        
+        if (!metadataValidation.valid) {
+            const errorResponse = RBMApiUtil.createErrorResponse(
+                'AUDIT_METADATA_VALIDATION_FAILED',
+                `Mandatory audit metadata validation failed: ${metadataValidation.errors.join(', ')}`,
                 correlationId,
                 400
             );
             return RBMApiUtil.sendResponse(response, errorResponse.response, errorResponse.httpStatus);
         }
         
-        // Validate sourceComponent for RBM governance
-        if (requestBody.metadata.sourceComponent !== 'rbm-record-list') {
+        // STEP 2: Source Component Authorization (MANDATORY rbm-record-list only)
+        if (requestBody.auditMetadata.sourceComponent !== 'rbm-record-list') {
             const errorResponse = RBMApiUtil.createErrorResponse(
-                'INVALID_SOURCE_COMPONENT',
-                'Only rbm-record-list component is authorized to use this endpoint',
+                'UNAUTHORIZED_SOURCE_COMPONENT',
+                `Source component '${requestBody.auditMetadata.sourceComponent}' is not authorized. Only 'rbm-record-list' is permitted.`,
+                correlationId,
+                403
+            );
+            return RBMApiUtil.sendResponse(response, errorResponse.response, errorResponse.httpStatus);
+        }
+        
+        // STEP 3: Action-Justification Enforcement Validation
+        const actionId = requestBody.actionId;
+        const justificationValidation = metadataValidator.validateActionJustificationRequirement(
+            actionId,
+            requestBody.auditMetadata.justification,
+            correlationId
+        );
+        
+        if (!justificationValidation.valid) {
+            const errorResponse = RBMApiUtil.createErrorResponse(
+                'JUSTIFICATION_ENFORCEMENT_FAILED',
+                justificationValidation.errorMessage,
+                correlationId,
+                400
+            );
+            return RBMApiUtil.sendResponse(response, errorResponse.response, errorResponse.httpStatus);
+        }
+        
+        // STEP 4: Validate No Client-Side Audit Storage (security check)
+        const clientStorageValidation = metadataValidator.validateNoClientSideStorage(
+            requestBody.auditMetadata,
+            correlationId
+        );
+        
+        if (!clientStorageValidation.valid) {
+            const errorResponse = RBMApiUtil.createErrorResponse(
+                'CLIENT_STORAGE_VIOLATION',
+                'Client-side audit storage detected - security policy violation',
                 correlationId,
                 403
             );

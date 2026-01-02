@@ -6,16 +6,12 @@
 
 import '@servicenow/sdk/global';
 import { ScriptInclude } from '@servicenow/sdk/core';
-import RBMApiUtilScript from '../../server/script-includes/RBMApiUtil.js';
-import RBMRecordListServiceScript from '../../server/script-includes/RBMRecordListService.js';
-import RBMRecordListActionServiceScript from '../../server/script-includes/RBMRecordListActionService.js';
-import RBMEvidenceServiceScript from '../../server/script-includes/RBMEvidenceService.js';
 
 // RBMApiUtil Script Include
 export const rbmApiUtil = ScriptInclude({
     $id: Now.ID['rbm-api-util'],
     name: 'RBMApiUtil',
-    script: RBMApiUtilScript,
+    script: Now.include('../../server/script-includes/RBMApiUtil.js'),
     description: 'RBM API utilities for correlation ID generation, validation, and standard response helpers',
     active: true,
     clientCallable: false
@@ -25,7 +21,7 @@ export const rbmApiUtil = ScriptInclude({
 export const rbmRecordListService = ScriptInclude({
     $id: Now.ID['rbm-record-list-service'],
     name: 'RBMRecordListService',
-    script: RBMRecordListServiceScript,
+    script: Now.include('../../server/script-includes/RBMRecordListService.js'),
     description: 'RBM Record List service with hard allow-list registry and server-side data operations',
     active: true,
     clientCallable: false
@@ -35,7 +31,7 @@ export const rbmRecordListService = ScriptInclude({
 export const rbmRecordListActionService = ScriptInclude({
     $id: Now.ID['rbm-record-list-action-service'],
     name: 'RBMRecordListActionService',
-    script: RBMRecordListActionServiceScript,
+    script: Now.include('../../server/script-includes/RBMRecordListActionService.js'),
     description: 'RBM Record List action service with action registry and ACL enforcement',
     active: true,
     clientCallable: false
@@ -45,8 +41,18 @@ export const rbmRecordListActionService = ScriptInclude({
 export const rbmEvidenceService = ScriptInclude({
     $id: Now.ID['rbm-evidence-service'],
     name: 'RBMEvidenceService',
-    script: RBMEvidenceServiceScript,
+    script: Now.include('../../server/script-includes/RBMEvidenceService.js'),
     description: 'RBM Evidence service for audit logging and governance compliance',
+    active: true,
+    clientCallable: false
+});
+
+// RBMAuditMetadataValidator Script Include (NEW for v1.9.5)
+export const rbmAuditMetadataValidator = ScriptInclude({
+    $id: Now.ID['rbm-audit-metadata-validator'],
+    name: 'RBMAuditMetadataValidator',
+    script: Now.include('../../server/script-includes/RBMAuditMetadataValidator.js'),
+    description: 'RBM Audit Metadata Validator for AUTHORITATIVE v1.9.5 compliance enforcement',
     active: true,
     clientCallable: false
 });

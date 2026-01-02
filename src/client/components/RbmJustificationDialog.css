@@ -1,0 +1,175 @@
+/**
+ * RBM Justification Dialog Styles
+ * Using RBM Design System tokens for compliance justification collection
+ */
+
+.rbm-justification-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--rbm-z-index-modal);
+  max-width: var(--rbm-size-dialog-max-width-md, 500px);
+  width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.rbm-justification-dialog__content {
+  background-color: var(--rbm-color-surface-primary);
+  border-radius: var(--rbm-border-radius-lg);
+  box-shadow: var(--rbm-shadow-modal);
+  border: var(--rbm-border-width-thin) solid var(--rbm-color-border-modal);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+/* Dialog Header */
+.rbm-justification-dialog__header {
+  padding: var(--rbm-spacing-lg) var(--rbm-spacing-lg) 0;
+  border-bottom: none;
+}
+
+.rbm-justification-dialog__title {
+  font-size: var(--rbm-font-size-xl);
+  font-weight: var(--rbm-font-weight-semibold);
+  line-height: var(--rbm-line-height-tight);
+  color: var(--rbm-color-text-primary);
+  margin: 0;
+}
+
+/* Dialog Body */
+.rbm-justification-dialog__body {
+  padding: var(--rbm-spacing-md) var(--rbm-spacing-lg);
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.rbm-justification-dialog__description {
+  margin-bottom: var(--rbm-spacing-lg);
+}
+
+.rbm-justification-dialog__description p {
+  font-size: var(--rbm-font-size-sm);
+  line-height: var(--rbm-line-height-comfortable);
+  color: var(--rbm-color-text-secondary);
+  margin: 0 0 var(--rbm-spacing-xs) 0;
+}
+
+.rbm-justification-dialog__description strong {
+  color: var(--rbm-color-text-primary);
+  font-weight: var(--rbm-font-weight-medium);
+}
+
+/* Form */
+.rbm-justification-dialog__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rbm-spacing-sm);
+}
+
+.rbm-justification-dialog__label {
+  font-size: var(--rbm-font-size-sm);
+  font-weight: var(--rbm-font-weight-medium);
+  color: var(--rbm-color-text-primary);
+  margin-bottom: var(--rbm-spacing-xs);
+}
+
+.rbm-justification-dialog__label .required {
+  color: var(--rbm-color-text-error);
+  margin-left: var(--rbm-spacing-xs);
+}
+
+.rbm-justification-dialog__textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: var(--rbm-spacing-sm);
+  border: var(--rbm-border-width-thin) solid var(--rbm-color-border-interactive);
+  border-radius: var(--rbm-border-radius-sm);
+  font-family: var(--rbm-font-family-base);
+  font-size: var(--rbm-font-size-sm);
+  line-height: var(--rbm-line-height-comfortable);
+  color: var(--rbm-color-text-primary);
+  background-color: var(--rbm-color-surface-primary);
+  resize: vertical;
+  transition: border-color var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+}
+
+.rbm-justification-dialog__textarea:focus {
+  outline: none;
+  border-color: var(--rbm-color-border-focus);
+  box-shadow: 0 0 0 var(--rbm-border-width-thick) var(--rbm-color-focus-ring);
+}
+
+.rbm-justification-dialog__textarea:invalid {
+  border-color: var(--rbm-color-border-error);
+}
+
+.rbm-justification-dialog__textarea::placeholder {
+  color: var(--rbm-color-text-placeholder);
+}
+
+.rbm-justification-dialog__help {
+  font-size: var(--rbm-font-size-xs);
+  color: var(--rbm-color-text-tertiary);
+}
+
+.rbm-justification-dialog__help p {
+  margin: 0;
+  line-height: var(--rbm-line-height-comfortable);
+}
+
+.rbm-justification-dialog__help .validation-error {
+  color: var(--rbm-color-text-error);
+  font-weight: var(--rbm-font-weight-medium);
+}
+
+/* Dialog Footer */
+.rbm-justification-dialog__footer {
+  padding: var(--rbm-spacing-md) var(--rbm-spacing-lg) var(--rbm-spacing-lg);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--rbm-spacing-sm);
+  border-top: var(--rbm-border-width-hairline) solid var(--rbm-color-border-subtle);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rbm-justification-dialog {
+    max-width: 95vw;
+  }
+  
+  .rbm-justification-dialog__header,
+  .rbm-justification-dialog__body,
+  .rbm-justification-dialog__footer {
+    padding-left: var(--rbm-spacing-md);
+    padding-right: var(--rbm-spacing-md);
+  }
+  
+  .rbm-justification-dialog__footer {
+    flex-direction: column-reverse;
+  }
+  
+  .rbm-button {
+    width: 100%;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .rbm-justification-dialog__content {
+    border-width: var(--rbm-border-width-thick);
+  }
+  
+  .rbm-justification-dialog__textarea {
+    border-width: var(--rbm-border-width-thick);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .rbm-justification-dialog__textarea {
+    transition: none;
+  }
+}

@@ -1,19 +1,43 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { RbmRecordListProps, RbmRecord, ActiveFilter, SortConfig, ActionDef, BulkActionDef, RecordSelection, RecordRef } from './types';
+import { RbmRecordListProps, RbmRecord, ActiveFilter, SortConfig, ActionDef, BulkActionDef, RecordSelection, RecordRef, DataProviderRequest } from './types';
 import { createRecordListDataProvider } from '../../services/rbm-record-list';
 import { useConfirmDialog } from '../../hooks/useConfirmDialog';
+import { useJustificationDialog } from '../../hooks/useJustificationDialog';
 import { useFocusManagement } from '../../hooks/useFocusManagement';
 import { RbmConfirmDialog } from '../RbmConfirmDialog';
+import { RbmJustificationDialog } from '../RbmJustificationDialog';
 import { RbmInlineError } from '../RbmInlineError';
 import './RbmRecordList.css';
 
-// RBM Design System Catalogue Component Imports
-import { SelectableDataGrid } from '@rbm/catalogue/selectable-data-grid';
-import { FilterBar } from '@rbm/catalogue/filter-bar';
-import { Pagination } from '@rbm/catalogue/pagination';
-import { RowActionsMenu } from '@rbm/catalogue/row-actions-menu';
-import { BulkActionBar } from '@rbm/catalogue/bulk-action-bar';
-import { GridSkeleton } from '@rbm/catalogue/grid-skeleton';
+// RBM Audit Metadata - AUTHORITATIVE v1.9.5
+import {
+  createRowActionRequest,
+  createBulkActionRequest,
+  validateActionRequest,
+  ActionExecutionOptions
+} from '../../services/rbm-record-list/ActionExecution';
+import {
+  correlationIdGenerator,
+  rbmComplianceChecker,
+  acceptanceCriteriaValidator
+} from './audit-metadata-impl';
+import { AuditedActionRequest } from './audit-metadata';
+
+// RBM Design System Catalogue Component Imports (Placeholder - would be actual imports in production)
+// import { SelectableDataGrid } from '@rbm/catalogue/selectable-data-grid';
+// import { FilterBar } from '@rbm/catalogue/filter-bar';
+// import { Pagination } from '@rbm/catalogue/pagination';
+// import { RowActionsMenu } from '@rbm/catalogue/row-actions-menu';
+// import { BulkActionBar } from '@rbm/catalogue/bulk-action-bar';
+// import { GridSkeleton } from '@rbm/catalogue/grid-skeleton';
+
+// Placeholder components for demonstration
+const SelectableDataGrid = ({ children, ...props }: any) => <div {...props}>{children || 'SelectableDataGrid Component'}</div>;
+const FilterBar = ({ children, ...props }: any) => <div {...props}>{children || 'FilterBar Component'}</div>;
+const Pagination = ({ children, ...props }: any) => <div {...props}>{children || 'Pagination Component'}</div>;
+const RowActionsMenu = ({ children, ...props }: any) => <div {...props}>{children || 'RowActionsMenu Component'}</div>;
+const BulkActionBar = ({ children, ...props }: any) => <div {...props}>{children || 'BulkActionBar Component'}</div>;
+const GridSkeleton = ({ children, ...props }: any) => <div {...props}>{children || 'GridSkeleton Component'}</div>;
 
 /**
  * Internal state model for RBM Record List component
@@ -96,18 +120,112 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
   // Confirmation dialog state
   const { dialogState, showConfirm, hideConfirm } = useConfirmDialog();
   
+  // Justification dialog state
+  const { 
+    dialogState: justificationDialogState, 
+    showJustificationDialog, 
+    hideJustificationDialog 
+  } = useJustificationDialog();
+  
   // Focus management for side panel integration
   const { storeFocus, restoreFocus, clearFocus } = useFocusManagement();
   
   // Data provider instance
   const provider = useMemo(() => dataProvider, [dataProvider]);
+  /**
+   * Infer object type from record data
+   */
+  const inferObjectTypeFromRecord = useCallback((record: RbmRecord): string => {
+    // Try to determine from record structure or metadata
+    // This could be enhanced with more sophisticated detection
+    if (record.number && typeof record.number === 'object' && record.number.value) {
+      // Looks like an incident or task
+      const numberValue = record.number.value;
+      if (numberValue.startsWith('INC')) return 'incident';
+      if (numberValue.startsWith('TASK')) return 'task';
+      if (numberValue.startsWith('REQ')) return 'sc_request';
+    }
+    
+    // Fallback based on listKey
+    if (listKey.includes('incident')) return 'incident';
+    if (listKey.includes('user')) return 'sys_user';
+    if (listKey.includes('cmdb_ci')) return 'cmdb_ci';
+    
+    // Default fallback
+    return 'unknown';
+  }, [listKey]);
+  
+  /**
+   * Get display value for record
+   */
+  const getRecordDisplayValue = useCallback((record: RbmRecord): string => {
+    // Try common display fields in order of preference
+    const displayFields = ['short_description', 'name', 'title', 'number', 'label'];
+    
+    for (const field of displayFields) {
+      if (record[field]) {
+        const fieldValue = record[field];
+        const displayValue = typeof fieldValue === 'object' ? fieldValue.display_value : fieldValue;
+        if (displayValue && displayValue.toString().trim()) {
+          return displayValue.toString();
+        }
+      }
+    }
+    
+    // Fallback to sys_id
+    const sysId = typeof record.sys_id === 'object' ? record.sys_id.value : record.sys_id;
+    return sysId || 'Unknown Record';
+  }, []);
+  
+  /**
+   * Create RecordRef from RbmRecord for navigation
+   */
+  const createRecordRef = useCallback((record: RbmRecord): RecordRef => {
+    const sysId = typeof record.sys_id === 'object' ? record.sys_id.value : record.sys_id;
+    const objectType = inferObjectTypeFromRecord(record);
+    const display = getRecordDisplayValue(record);
+    
+    return {
+      sys_id: sysId,
+      objectType: objectType,
+      display: display
+    };
+  }, [inferObjectTypeFromRecord, getRecordDisplayValue]);
+  
+  /**
+   * Handle record open with proper focus management
+   */
+  const handleOpenRecord = useCallback((record: RbmRecord, source: 'double-click' | 'enter-key' | 'action') => {
+    if (!onOpenRecord) {
+      console.warn('onOpenRecord handler not provided');
+      return;
+    }
+    
+    // Store focus before opening side panel
+    storeFocus();
+    
+    // Create record reference
+    const recordRef = createRecordRef(record);
+    
+    // Log navigation for debugging
+    console.log(`Opening record via ${source}:`, recordRef);
+    
+    // Trigger navigation callback
+    try {
+      onOpenRecord(recordRef);
+    } catch (error) {
+      console.error('Error in onOpenRecord callback:', error);
+      // Restore focus if navigation fails
+      restoreFocus();
+    }
+  }, [onOpenRecord, storeFocus, restoreFocus, createRecordRef]);
   
   /**
    * Generate client correlation ID for API call tracking
-   * MANDATORY for every API call
+   * MANDATORY for every API call - uses authoritative generator
    */
   const generateClientCorrelationId = useCallback((): string => {
-    return `client_${Date.now()}_${crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substr(2, 9)}`;
+    return correlationIdGenerator.generate();
   }, []);
   
   /**
@@ -139,29 +257,24 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
       const queryCursor = options.resetCursor ? null : state.currentCursor;
       
       // Build data provider request
-      const request = {
+      const request: DataProviderRequest = {
         table: listKey, // Will be parsed to actual table by server
         filters: queryFilters,
         sort: querySort.length > 0 ? querySort[0] : undefined,
         search: querySearch || undefined,
         pagination: {
           page: 0, // Cursor-based, page number not used
-          pageSize: queryPageSize
+          pageSize: queryPageSize,
+          cursor: queryCursor // Add cursor to pagination
         },
         context: {
           viewId: null, // Could be enhanced to pass view context
           correlationId: clientCorrelationId
         },
         queryParams: {
-          sysparm_display_value: 'all' // Ensure we get both display and raw values
+          sysparm_display_value: 'all' as const // Ensure we get both display and raw values
         }
       };
-      
-      // Add cursor for pagination if available
-      if (queryCursor) {
-        // Cursor-based pagination - add to request
-        request.pagination.cursor = queryCursor;
-      }
       
       // Execute query through data provider
       const response = await provider.fetchRecords(request);
@@ -309,16 +422,34 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
   }, [handleOpenRecord]);
   
   /**
-   * Execute row action with proper confirmation and server communication
+   * Execute row action with AUTHORITATIVE audit metadata enforcement
    */
-  const executeRowAction = useCallback(async (actionId: string, record: RbmRecord, actionDef?: ActionDef) => {
+  const executeRowAction = useCallback(async (
+    actionId: string, 
+    record: RbmRecord, 
+    actionDef?: ActionDef,
+    justification?: string
+  ) => {
     try {
-      // Generate client correlation ID for this action
-      const clientCorrelationId = generateClientCorrelationId();
+      // Create execution options with mandatory metadata
+      const executionOptions: ActionExecutionOptions = {
+        listKey: listKey,
+        viewId: config?.viewId || null,
+        justification: justification,
+        actionDef: actionDef
+      };
       
-      // Extract record identifiers
+      // Create audited action request with ALL mandatory metadata
+      const actionRequest = createRowActionRequest(actionId, record, executionOptions);
+      
+      // CRITICAL: Validate request meets ALL RBM requirements
+      const validation = validateActionRequest(actionRequest);
+      if (!validation.valid) {
+        throw new Error(`Action request validation failed: ${validation.errors.join(', ')}`);
+      }
+      
+      // Extract record identifiers for UI state
       const recordSysId = typeof record.sys_id === 'object' ? record.sys_id.value : record.sys_id;
-      const objectType = inferObjectTypeFromRecord(record);
       
       // Set executing state
       setExecutingAction({
@@ -326,8 +457,11 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         recordId: recordSysId
       });
       
-      // Execute action via data provider
-      const result = await provider.executeAction(actionId, record);
+      // Log compliance verification
+      console.log(`RBM Compliance Check: Row action ${actionId} with correlation ${actionRequest.auditMetadata.clientCorrelationId}`);
+      
+      // Execute action via data provider with complete audit metadata
+      const result = await provider.executeAction(actionId, record, actionRequest.auditMetadata);
       
       if (result.success) {
         // Success: Re-fetch current page (DO NOT mutate UI state locally)
@@ -338,23 +472,24 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
           onActionInvoked(actionId, record, true);
         }
         
-        console.log(`Action ${actionId} completed successfully - CorrelationId: ${clientCorrelationId}`);
+        console.log(`Action ${actionId} completed successfully - CorrelationId: ${actionRequest.auditMetadata.clientCorrelationId}`);
         
       } else {
         // Handle action failure
-        handleActionError(actionId, record, result.error || 'Action failed', clientCorrelationId);
+        handleActionError(actionId, record, result.error || 'Action failed', actionRequest.auditMetadata.clientCorrelationId);
       }
       
     } catch (error) {
       console.error('Row action execution error:', error);
-      handleActionError(actionId, record, error.message, 'unknown');
+      const correlationId = generateClientCorrelationId(); // Fallback correlation ID
+      handleActionError(actionId, record, error.message, correlationId);
     } finally {
       setExecutingAction(null);
     }
-  }, [provider, executeQuery, onActionInvoked, generateClientCorrelationId]);
+  }, [provider, executeQuery, onActionInvoked, generateClientCorrelationId, listKey, config]);
   
   /**
-   * Handle row action selection with navigation integration
+   * Handle row action selection with MANDATORY justification enforcement
    */
   const handleRowActionSelect = useCallback((actionId: string, record: RbmRecord) => {
     // Find action definition (UI hint only - server is authoritative)
@@ -366,7 +501,44 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
       return;
     }
     
-    // Check if confirmation is required
+    // CRITICAL: Check if justification is required (RBM enforcement)
+    const requiresJustification = rbmComplianceChecker.requiresJustification(actionId);
+    
+    if (requiresJustification) {
+      // MANDATORY: Collect justification before proceeding
+      const enforcement = rbmComplianceChecker.getJustificationEnforcement(actionId);
+      const recordDisplay = getRecordDisplayValue(record);
+      
+      showJustificationDialog({
+        actionId: actionId,
+        actionLabel: actionDef?.label || actionId,
+        recordDisplay: recordDisplay,
+        required: enforcement.required,
+        placeholder: enforcement.placeholder,
+        onSubmit: (justification: string) => {
+          // Validate justification
+          const validation = rbmComplianceChecker.validateJustification(justification, enforcement);
+          if (!validation.valid) {
+            setActionError({
+              message: `Invalid justification: ${validation.errorMessage}`,
+              correlationId: generateClientCorrelationId(),
+              actionId: actionId,
+              recordId: typeof record.sys_id === 'object' ? record.sys_id.value : record.sys_id
+            });
+            return;
+          }
+          
+          // Execute with justification
+          executeRowAction(actionId, record, actionDef, justification);
+        },
+        onCancel: () => {
+          console.log(`Action ${actionId} cancelled due to missing justification`);
+        }
+      });
+      return;
+    }
+    
+    // Check if confirmation is required (in addition to justification)
     if (actionDef?.confirm || actionDef?.requiresConfirm) {
       const confirmConfig = actionDef.confirm;
       
@@ -381,10 +553,10 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         }
       });
     } else {
-      // Execute immediately without confirmation
+      // Execute immediately without confirmation (but still with audit metadata)
       executeRowAction(actionId, record, actionDef);
     }
-  }, [actions, showConfirm, executeRowAction, handleOpenRecord]);
+  }, [actions, showConfirm, showJustificationDialog, executeRowAction, handleOpenRecord, getRecordDisplayValue, rbmComplianceChecker, generateClientCorrelationId]);
   
   /**
    * Enhanced error handling for 403 permission denials and other security errors
@@ -502,70 +674,7 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
       };
     });
   }, [getVisibleActions, getActionEnablement]);
-  /**
-   * Create RecordRef from RbmRecord for navigation
-   */
-  const createRecordRef = useCallback((record: RbmRecord): RecordRef => {
-    const sysId = typeof record.sys_id === 'object' ? record.sys_id.value : record.sys_id;
-    const objectType = inferObjectTypeFromRecord(record);
-    const display = getRecordDisplayValue(record);
-    
-    return {
-      sys_id: sysId,
-      objectType: objectType,
-      display: display
-    };
-  }, []);
-  
-  /**
-   * Get display value for record
-   */
-  const getRecordDisplayValue = useCallback((record: RbmRecord): string => {
-    // Try common display fields in order of preference
-    const displayFields = ['short_description', 'name', 'title', 'number', 'label'];
-    
-    for (const field of displayFields) {
-      if (record[field]) {
-        const fieldValue = record[field];
-        const displayValue = typeof fieldValue === 'object' ? fieldValue.display_value : fieldValue;
-        if (displayValue && displayValue.toString().trim()) {
-          return displayValue.toString();
-        }
-      }
-    }
-    
-    // Fallback to sys_id
-    const sysId = typeof record.sys_id === 'object' ? record.sys_id.value : record.sys_id;
-    return sysId || 'Unknown Record';
-  }, []);
-  
-  /**
-   * Handle record open with proper focus management
-   */
-  const handleOpenRecord = useCallback((record: RbmRecord, source: 'double-click' | 'enter-key' | 'action') => {
-    if (!onOpenRecord) {
-      console.warn('onOpenRecord handler not provided');
-      return;
-    }
-    
-    // Store focus before opening side panel
-    storeFocus();
-    
-    // Create record reference
-    const recordRef = createRecordRef(record);
-    
-    // Log navigation for debugging
-    console.log(`Opening record via ${source}:`, recordRef);
-    
-    // Trigger navigation callback
-    try {
-      onOpenRecord(recordRef);
-    } catch (error) {
-      console.error('Error in onOpenRecord callback:', error);
-      // Restore focus if navigation fails
-      restoreFocus();
-    }
-  }, [onOpenRecord, storeFocus, restoreFocus, createRecordRef]);
+
   
   /**
    * Expose focus restoration for parent component
@@ -581,29 +690,7 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
       config.onFocusRestore(exposeFocusRestore);
     }
   }, [config.onFocusRestore, exposeFocusRestore]);
-  
-  /**
-   * Infer object type from record data
-   */
-  const inferObjectTypeFromRecord = useCallback((record: RbmRecord): string => {
-    // Try to determine from record structure or metadata
-    // This could be enhanced with more sophisticated detection
-    if (record.number && typeof record.number === 'object' && record.number.value) {
-      // Looks like an incident or task
-      const numberValue = record.number.value;
-      if (numberValue.startsWith('INC')) return 'incident';
-      if (numberValue.startsWith('TASK')) return 'task';
-      if (numberValue.startsWith('REQ')) return 'sc_request';
-    }
-    
-    // Fallback based on listKey
-    if (listKey.includes('incident')) return 'incident';
-    if (listKey.includes('user')) return 'sys_user';
-    if (listKey.includes('cmdb_ci')) return 'cmdb_ci';
-    
-    // Default fallback
-    return 'unknown';
-  }, [listKey]);
+  // (duplicate removed - definition moved earlier)
   
   /**
    * Handle keyboard events for row actions and navigation
@@ -644,14 +731,33 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
   }, []);
   
   /**
-   * Execute bulk action with proper confirmation and server communication
+   * Execute bulk action with AUTHORITATIVE audit metadata enforcement
    */
-  const executeBulkAction = useCallback(async (actionId: string, records: RbmRecord[], bulkActionDef?: BulkActionDef) => {
+  const executeBulkAction = useCallback(async (
+    actionId: string, 
+    records: RbmRecord[], 
+    bulkActionDef?: BulkActionDef,
+    justification?: string
+  ) => {
     try {
-      // Generate client correlation ID for this bulk action
-      const clientCorrelationId = generateClientCorrelationId();
+      // Create execution options with mandatory metadata
+      const executionOptions: ActionExecutionOptions = {
+        listKey: listKey,
+        viewId: config?.viewId || null,
+        justification: justification,
+        actionDef: bulkActionDef
+      };
       
-      // Convert to record selections
+      // Create audited bulk action request with ALL mandatory metadata
+      const actionRequest = createBulkActionRequest(actionId, records, executionOptions);
+      
+      // CRITICAL: Validate request meets ALL RBM requirements
+      const validation = validateActionRequest(actionRequest);
+      if (!validation.valid) {
+        throw new Error(`Bulk action request validation failed: ${validation.errors.join(', ')}`);
+      }
+      
+      // Convert to record selections for UI state
       const recordSelections = getRecordSelections(records);
       
       // Set executing state
@@ -660,8 +766,11 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         recordCount: records.length
       });
       
-      // Execute bulk action via data provider
-      const result = await provider.executeBulkAction(actionId, records);
+      // Log compliance verification
+      console.log(`RBM Compliance Check: Bulk action ${actionId} on ${records.length} records with correlation ${actionRequest.auditMetadata.clientCorrelationId}`);
+      
+      // Execute bulk action via data provider with complete audit metadata
+      const result = await provider.executeBulkAction(actionId, records, actionRequest.auditMetadata);
       
       if (result.success) {
         // Success: Clear selection and re-fetch current page
@@ -673,23 +782,24 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
           onActionInvoked(actionId, records, true);
         }
         
-        console.log(`Bulk action ${actionId} completed successfully on ${records.length} records - CorrelationId: ${clientCorrelationId}`);
+        console.log(`Bulk action ${actionId} completed successfully on ${records.length} records - CorrelationId: ${actionRequest.auditMetadata.clientCorrelationId}`);
         
       } else {
         // Handle bulk action failure
-        handleBulkActionError(actionId, records, result.error || 'Bulk action failed', clientCorrelationId);
+        handleBulkActionError(actionId, records, result.error || 'Bulk action failed', actionRequest.auditMetadata.clientCorrelationId);
       }
       
     } catch (error) {
       console.error('Bulk action execution error:', error);
-      handleBulkActionError(actionId, records, error.message, 'unknown');
+      const correlationId = generateClientCorrelationId(); // Fallback correlation ID
+      handleBulkActionError(actionId, records, error.message, correlationId);
     } finally {
       setExecutingBulkAction(null);
     }
-  }, [provider, executeQuery, onActionInvoked, generateClientCorrelationId, getRecordSelections]);
+  }, [provider, executeQuery, onActionInvoked, generateClientCorrelationId, getRecordSelections, listKey, config]);
   
   /**
-   * Handle bulk action selection with confirmation and cap enforcement
+   * Handle bulk action selection with MANDATORY justification enforcement and cap validation
    */
   const handleBulkActionSelect = useCallback((actionId: string) => {
     if (selectedRecords.length === 0) {
@@ -713,7 +823,44 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
       return;
     }
     
-    // Check if confirmation is required
+    // CRITICAL: Check if justification is required (RBM enforcement)
+    const requiresJustification = rbmComplianceChecker.requiresJustification(actionId);
+    
+    if (requiresJustification) {
+      // MANDATORY: Collect justification before proceeding
+      const enforcement = rbmComplianceChecker.getJustificationEnforcement(actionId);
+      
+      showJustificationDialog({
+        actionId: actionId,
+        actionLabel: bulkActionDef?.label || actionId,
+        recordDisplay: `${selectedRecords.length} selected records`,
+        recordCount: selectedRecords.length,
+        required: enforcement.required,
+        placeholder: enforcement.placeholder,
+        onSubmit: (justification: string) => {
+          // Validate justification
+          const validation = rbmComplianceChecker.validateJustification(justification, enforcement);
+          if (!validation.valid) {
+            setActionError({
+              message: `Invalid justification: ${validation.errorMessage}`,
+              correlationId: generateClientCorrelationId(),
+              actionId: actionId,
+              recordId: `bulk_${selectedRecords.length}_records`
+            });
+            return;
+          }
+          
+          // Execute with justification
+          executeBulkAction(actionId, selectedRecords, bulkActionDef, justification);
+        },
+        onCancel: () => {
+          console.log(`Bulk action ${actionId} cancelled due to missing justification`);
+        }
+      });
+      return;
+    }
+    
+    // Check if confirmation is required (in addition to justification)
     if (bulkActionDef?.requiresConfirm || bulkActionDef?.confirm) {
       const confirmConfig = bulkActionDef.confirm;
       const message = confirmConfig?.messageTemplate 
@@ -731,10 +878,10 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         }
       });
     } else {
-      // Execute immediately without confirmation
+      // Execute immediately without confirmation (but still with audit metadata)
       executeBulkAction(actionId, selectedRecords, bulkActionDef);
     }
-  }, [selectedRecords, bulkActions, showConfirm, executeBulkAction, generateClientCorrelationId]);
+  }, [selectedRecords, bulkActions, showConfirm, showJustificationDialog, executeBulkAction, generateClientCorrelationId, rbmComplianceChecker]);
   
   /**
    * Handle bulk action errors with correlation ID display

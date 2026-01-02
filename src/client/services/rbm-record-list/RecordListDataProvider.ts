@@ -1,8 +1,8 @@
 /**
- * RBM Record List Data Provider
+ * RBM Record List Data Provider - AUTHORITATIVE v1.9.5
  * 
  * Integrates with server-side RBM Record List API endpoints to provide
- * data operations with proper error handling and correlation ID propagation.
+ * data operations with mandatory audit metadata enforcement.
  * 
  * Endpoints:
  * - POST /api/x_icefl_git/v1/record-list/query
@@ -18,6 +18,18 @@ import {
     ActiveFilter,
     SortConfig 
 } from '../../components/rbm-record-list/types';
+
+import { 
+    ActionExecutionContext, 
+    validateMandatoryMetadata 
+} from './ActionExecution';
+
+import { 
+    CompleteAuditMetadata,
+    AuditedActionResponse 
+} from '../../components/rbm-record-list/audit-metadata';
+
+import { acceptanceCriteriaValidator } from '../../components/rbm-record-list/audit-metadata-impl';
 
 /**
  * ServiceNow-specific data provider implementation
@@ -37,7 +49,7 @@ export class RecordListDataProvider implements DataProvider {
         this.defaultHeaders = {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'X-UserToken': window.g_ck // ServiceNow session token
+            'X-UserToken': (window as any).g_ck // ServiceNow session token
         };
         
         // Store context for action calls
@@ -87,81 +99,136 @@ export class RecordListDataProvider implements DataProvider {
     }
     
     /**
-     * Execute action on individual record
+     * Execute action on individual record with AUTHORITATIVE audit metadata
      */
-    async executeAction(actionId: string, record: RbmRecord): Promise<{ success: boolean; error?: string }> {
-        const clientCorrelationId = this.generateCorrelationId();
-        
+    async executeAction(
+        actionId: string, 
+        record: RbmRecord, 
+        auditMetadata: CompleteAuditMetadata
+    ): Promise<AuditedActionResponse> {
         try {
+            // CRITICAL: Validate mandatory metadata compliance
+            const validation = acceptanceCriteriaValidator.validateMetadataPresence({ auditMetadata });
+            if (!validation) {
+                throw new Error('Audit metadata validation failed - missing required fields');
+            }
+            
+            // Validate justification enforcement
+            const requiresJustification = auditMetadata.actionId && 
+                acceptanceCriteriaValidator.validateJustificationEnforcement(
+                    auditMetadata.actionId, 
+                    !!(auditMetadata.justification && auditMetadata.justification.trim().length > 0)
+                );
+            
+            if (!requiresJustification) {
+                throw new Error(`Action ${auditMetadata.actionId} requires justification but none provided or invalid`);
+            }
+            
+            // Validate no client-side storage of audit data
+            const noClientStorage = acceptanceCriteriaValidator.validateNoClientSideStorage();
+            if (!noClientStorage) {
+                throw new Error('Client-side audit storage detected - security policy violation');
+            }
+            
             const serverRequest = {
                 actionId: actionId,
                 record: {
                     sys_id: this.extractValue(record.sys_id),
                     objectType: this.inferObjectType(record)
                 },
-                metadata: {
-                    sourceComponent: 'rbm-record-list',
-                    listKey: this.listKey || 'unknown',
-                    viewId: this.viewId || null,
-                    clientCorrelationId: clientCorrelationId,
-                    invocationType: 'row',
-                    justification: null // Could be enhanced to collect justification
-                }
+                auditMetadata: auditMetadata // Complete AUTHORITATIVE metadata
             };
             
             const response = await fetch(`${this.baseUrl}/row-action`, {
                 method: 'POST',
-                headers: this.defaultHeaders,
+                headers: {
+                    ...this.defaultHeaders,
+                    'X-RBM-CorrelationId': auditMetadata.clientCorrelationId // Mandatory header
+                },
                 body: JSON.stringify(serverRequest)
             });
             
-            const responseData = await this.handleResponse(response, clientCorrelationId);
+            const responseData = await this.handleResponse(response, auditMetadata.clientCorrelationId);
             
             return {
                 success: true,
-                result: responseData.result
+                serverCorrelationId: responseData.correlationId || auditMetadata.clientCorrelationId,
+                auditTrailId: responseData.auditTrailId,
+                timestamp: new Date().toISOString()
             };
             
         } catch (error) {
             console.error('RecordListDataProvider.executeAction error:', error);
             return {
                 success: false,
-                error: `Action failed: ${error.message} (CorrelationId: ${clientCorrelationId})`
+                error: `Action failed: ${error.message}`,
+                serverCorrelationId: auditMetadata.clientCorrelationId,
+                timestamp: new Date().toISOString()
             };
         }
     }
     
     /**
-     * Execute bulk action on multiple records
+     * Execute bulk action on multiple records with AUTHORITATIVE audit metadata
      */
-    async executeBulkAction(actionId: string, records: RbmRecord[]): Promise<{ success: boolean; error?: string }> {
-        const clientCorrelationId = this.generateCorrelationId();
-        
+    async executeBulkAction(
+        actionId: string, 
+        records: RbmRecord[], 
+        auditMetadata: CompleteAuditMetadata
+    ): Promise<AuditedActionResponse> {
         try {
+            // CRITICAL: Validate mandatory metadata compliance
+            const validation = acceptanceCriteriaValidator.validateMetadataPresence({ auditMetadata });
+            if (!validation) {
+                throw new Error('Bulk action audit metadata validation failed - missing required fields');
+            }
+            
+            // Validate justification enforcement
+            const requiresJustification = auditMetadata.actionId && 
+                acceptanceCriteriaValidator.validateJustificationEnforcement(
+                    auditMetadata.actionId, 
+                    !!(auditMetadata.justification && auditMetadata.justification.trim().length > 0)
+                );
+            
+            if (!requiresJustification) {
+                throw new Error(`Bulk action ${auditMetadata.actionId} requires justification but none provided or invalid`);
+            }
+            
+            // Validate no client-side storage of audit data
+            const noClientStorage = acceptanceCriteriaValidator.validateNoClientSideStorage();
+            if (!noClientStorage) {
+                throw new Error('Client-side audit storage detected - security policy violation');
+            }
+            
+            // Ensure selectionCount matches actual records
+            if (auditMetadata.selectionCount !== records.length) {
+                throw new Error(`Metadata selectionCount (${auditMetadata.selectionCount}) does not match actual record count (${records.length})`);
+            }
+            
+            // Validate recordIds count
+            if (auditMetadata.recordIds.length !== records.length) {
+                throw new Error(`Metadata recordIds count (${auditMetadata.recordIds.length}) does not match actual record count (${records.length})`);
+            }
+            
             const serverRequest = {
                 actionId: actionId,
                 records: records.map(record => ({
                     sys_id: this.extractValue(record.sys_id),
                     objectType: this.inferObjectType(record)
                 })),
-                metadata: {
-                    sourceComponent: 'rbm-record-list',
-                    listKey: this.listKey || 'unknown',
-                    viewId: this.viewId || null,
-                    clientCorrelationId: clientCorrelationId,
-                    invocationType: 'bulk',
-                    selectionCount: records.length,
-                    justification: null // Could be enhanced to collect justification
-                }
+                auditMetadata: auditMetadata // Complete AUTHORITATIVE metadata
             };
             
             const response = await fetch(`${this.baseUrl}/bulk-action`, {
                 method: 'POST',
-                headers: this.defaultHeaders,
+                headers: {
+                    ...this.defaultHeaders,
+                    'X-RBM-CorrelationId': auditMetadata.clientCorrelationId // Mandatory header
+                },
                 body: JSON.stringify(serverRequest)
             });
             
-            const responseData = await this.handleResponse(response, clientCorrelationId);
+            const responseData = await this.handleResponse(response, auditMetadata.clientCorrelationId);
             
             // Handle partial failures from bulk operations
             if (responseData.result && typeof responseData.result.failureCount === 'number' && responseData.result.failureCount > 0) {
@@ -169,26 +236,32 @@ export class RecordListDataProvider implements DataProvider {
                 const failureCount = responseData.result.failureCount;
                 const totalCount = responseData.result.totalRecords || records.length;
                 
-                console.warn(`Bulk action ${actionId} partial failure: ${successCount}/${totalCount} succeeded, ${failureCount} failed - CorrelationId: ${clientCorrelationId}`);
+                console.warn(`Bulk action ${actionId} partial failure: ${successCount}/${totalCount} succeeded, ${failureCount} failed - CorrelationId: ${auditMetadata.clientCorrelationId}`);
                 
                 // For partial failures, still return success but include warning
                 return {
                     success: true,
-                    result: responseData.result,
-                    warning: `Action completed with ${failureCount} failures out of ${totalCount} records. Check individual record statuses for details.`
+                    error: `Action completed with ${failureCount} failures out of ${totalCount} records. Check individual record statuses for details.`,
+                    serverCorrelationId: responseData.correlationId || auditMetadata.clientCorrelationId,
+                    auditTrailId: responseData.auditTrailId,
+                    timestamp: new Date().toISOString()
                 };
             }
             
             return {
                 success: true,
-                result: responseData.result
+                serverCorrelationId: responseData.correlationId || auditMetadata.clientCorrelationId,
+                auditTrailId: responseData.auditTrailId,
+                timestamp: new Date().toISOString()
             };
             
         } catch (error) {
             console.error('RecordListDataProvider.executeBulkAction error:', error);
             return {
                 success: false,
-                error: `Bulk action failed: ${error.message} (CorrelationId: ${clientCorrelationId})`
+                error: `Bulk action failed: ${error.message}`,
+                serverCorrelationId: auditMetadata.clientCorrelationId,
+                timestamp: new Date().toISOString()
             };
         }
     }

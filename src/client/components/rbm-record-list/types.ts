@@ -193,6 +193,34 @@ export interface ActionDef {
   serverActionId?: string;
   /** Whether this action requires confirmation (UI hint) */
   requiresConfirm?: boolean;
+  /** Whether this action requires justification (MANDATORY enforcement) */
+  requiresJustification?: boolean;
+  /** Justification configuration */
+  justification?: {
+    /** Whether justification is required (default: true if requiresJustification is true) */
+    required?: boolean;
+    /** Placeholder text for justification input */
+    placeholder?: string;
+    /** Minimum length for justification text */
+    minLength?: number;
+    /** Maximum length for justification text */
+    maxLength?: number;
+    /** Custom validation function */
+    validate?: (text: string) => { valid: boolean; message?: string };
+  };
+  /** Justification configuration */
+  justification?: {
+    /** Whether justification is required (default: true if requiresJustification is true) */
+    required?: boolean;
+    /** Placeholder text for justification input */
+    placeholder?: string;
+    /** Minimum length for justification text */
+    minLength?: number;
+    /** Maximum length for justification text */
+    maxLength?: number;
+    /** Custom validation function */
+    validate?: (text: string) => { valid: boolean; message?: string };
+  };
   /** Confirmation text configuration (UI hint) */
   confirmText?: {
     title: string;
@@ -234,6 +262,8 @@ export interface BulkActionDef {
   iconKey?: string;
   /** Whether this action requires confirmation */
   requiresConfirm?: boolean;
+  /** Whether this action requires justification (MANDATORY enforcement) */
+  requiresJustification?: boolean;
   /** Server action identifier (if different from id) */
   serverActionId?: string;
   /** Maximum number of records this action can handle (default 100) */
@@ -365,16 +395,16 @@ export interface DataProviderResponse {
 }
 
 /**
- * Data provider interface
+ * Data provider interface - UPDATED for AUTHORITATIVE audit metadata
  * Defines the contract for server-side data operations
  */
 export interface DataProvider {
   /** Fetch records with filtering, sorting, and pagination */
   fetchRecords(request: DataProviderRequest): Promise<DataProviderResponse>;
-  /** Execute individual record action */
-  executeAction(actionId: string, record: RbmRecord): Promise<{ success: boolean; error?: string }>;
-  /** Execute bulk action on multiple records */
-  executeBulkAction(actionId: string, records: RbmRecord[]): Promise<{ success: boolean; error?: string }>;
+  /** Execute individual record action with MANDATORY complete audit metadata */
+  executeAction(actionId: string, record: RbmRecord, auditMetadata: import('./audit-metadata').CompleteAuditMetadata): Promise<import('./audit-metadata').AuditedActionResponse>;
+  /** Execute bulk action on multiple records with MANDATORY complete audit metadata */
+  executeBulkAction(actionId: string, records: RbmRecord[], auditMetadata: import('./audit-metadata').CompleteAuditMetadata): Promise<import('./audit-metadata').AuditedActionResponse>;
   /** Validate filter values */
   validateFilters?(filters: ActiveFilter[]): Promise<{ valid: boolean; errors?: string[] }>;
 }
@@ -475,6 +505,10 @@ export interface RbmRecordListProps {
     onFocusRestore?: (restoreFocusFn: () => void) => void;
     /** View identifier for context */
     viewId?: string;
+    /** Callback when data is loaded */
+    onDataLoad?: (response: DataProviderResponse) => void;
+    /** Callback when selection changes */
+    onSelectionChange?: (selected: RbmRecord[]) => void;
   };
   
   /** Custom CSS class name */
