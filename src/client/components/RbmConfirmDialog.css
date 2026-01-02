@@ -1,0 +1,174 @@
+/**
+ * RBM Confirmation Dialog Styles
+ * Using RBM Design System tokens and patterns
+ */
+
+/* Dialog Backdrop */
+.rbm-dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--rbm-color-overlay-modal);
+  z-index: var(--rbm-z-index-modal-backdrop);
+  backdrop-filter: blur(var(--rbm-blur-subtle));
+}
+
+/* Dialog Container */
+.rbm-confirm-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--rbm-z-index-modal);
+  max-width: var(--rbm-size-dialog-max-width-sm);
+  width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.rbm-confirm-dialog__content {
+  background-color: var(--rbm-color-surface-primary);
+  border-radius: var(--rbm-border-radius-lg);
+  box-shadow: var(--rbm-shadow-modal);
+  border: var(--rbm-border-width-thin) solid var(--rbm-color-border-modal);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dialog Header */
+.rbm-confirm-dialog__header {
+  padding: var(--rbm-spacing-lg) var(--rbm-spacing-lg) 0;
+  border-bottom: none;
+}
+
+.rbm-confirm-dialog__title {
+  font-size: var(--rbm-font-size-xl);
+  font-weight: var(--rbm-font-weight-semibold);
+  line-height: var(--rbm-line-height-tight);
+  color: var(--rbm-color-text-primary);
+  margin: 0;
+}
+
+/* Dialog Body */
+.rbm-confirm-dialog__body {
+  padding: var(--rbm-spacing-md) var(--rbm-spacing-lg);
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.rbm-confirm-dialog__message {
+  font-size: var(--rbm-font-size-md);
+  line-height: var(--rbm-line-height-comfortable);
+  color: var(--rbm-color-text-secondary);
+  margin: 0;
+}
+
+/* Dialog Footer */
+.rbm-confirm-dialog__footer {
+  padding: var(--rbm-spacing-md) var(--rbm-spacing-lg) var(--rbm-spacing-lg);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--rbm-spacing-sm);
+  border-top: var(--rbm-border-width-hairline) solid var(--rbm-color-border-subtle);
+}
+
+/* Button Styles */
+.rbm-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--rbm-spacing-sm) var(--rbm-spacing-md);
+  border: var(--rbm-border-width-thin) solid transparent;
+  border-radius: var(--rbm-border-radius-sm);
+  font-size: var(--rbm-font-size-sm);
+  font-weight: var(--rbm-font-weight-medium);
+  line-height: var(--rbm-line-height-tight);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+  min-width: var(--rbm-size-button-min-width);
+}
+
+.rbm-button--primary {
+  background-color: var(--rbm-color-primary);
+  color: var(--rbm-color-text-on-primary);
+  border-color: var(--rbm-color-primary);
+}
+
+.rbm-button--primary:hover:not(:disabled) {
+  background-color: var(--rbm-color-primary-hover);
+  border-color: var(--rbm-color-primary-hover);
+}
+
+.rbm-button--primary:focus {
+  outline: var(--rbm-border-width-thick) solid var(--rbm-color-focus-ring);
+  outline-offset: var(--rbm-spacing-xs);
+}
+
+.rbm-button--secondary {
+  background-color: var(--rbm-color-surface-secondary);
+  color: var(--rbm-color-text-primary);
+  border-color: var(--rbm-color-border-interactive);
+}
+
+.rbm-button--secondary:hover:not(:disabled) {
+  background-color: var(--rbm-color-surface-secondary-hover);
+  border-color: var(--rbm-color-border-interactive-hover);
+}
+
+.rbm-button--secondary:focus {
+  outline: var(--rbm-border-width-thick) solid var(--rbm-color-focus-ring);
+  outline-offset: var(--rbm-spacing-xs);
+}
+
+.rbm-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rbm-confirm-dialog {
+    max-width: 95vw;
+  }
+  
+  .rbm-confirm-dialog__header,
+  .rbm-confirm-dialog__body,
+  .rbm-confirm-dialog__footer {
+    padding-left: var(--rbm-spacing-md);
+    padding-right: var(--rbm-spacing-md);
+  }
+  
+  .rbm-confirm-dialog__footer {
+    flex-direction: column-reverse;
+  }
+  
+  .rbm-button {
+    width: 100%;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .rbm-confirm-dialog__content {
+    border-width: var(--rbm-border-width-thick);
+  }
+  
+  .rbm-button {
+    border-width: var(--rbm-border-width-thick);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .rbm-confirm-dialog,
+  .rbm-button {
+    transition: none;
+  }
+  
+  .rbm-dialog-backdrop {
+    backdrop-filter: none;
+  }
+}
