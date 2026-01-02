@@ -1,0 +1,6 @@
+{
+  "scope": "x_icefl_git",
+  "scopeId": "7bdb404887de76142e91a60d3fbb355c",
+  "name": "GitHub Test",
+  "tsconfigPath": "./src/server/tsconfig.json"
+}
