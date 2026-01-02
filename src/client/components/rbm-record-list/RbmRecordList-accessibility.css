@@ -1,0 +1,351 @@
+/**
+ * RBM Record List Accessibility Styles - WCAG 2.1 AA Compliance
+ * Using RBM Design System tokens for consistent accessibility support
+ */
+
+/* Screen Reader Only Content */
+.rbm-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip Links */
+.rbm-skip-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--rbm-z-index-modal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--rbm-spacing-xs);
+  padding: var(--rbm-spacing-sm);
+}
+
+.rbm-skip-link {
+  position: absolute;
+  left: -9999px;
+  background-color: var(--rbm-color-primary);
+  color: var(--rbm-color-text-on-primary);
+  padding: var(--rbm-spacing-sm) var(--rbm-spacing-md);
+  border-radius: var(--rbm-border-radius-sm);
+  font-size: var(--rbm-font-size-sm);
+  font-weight: var(--rbm-font-weight-medium);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+}
+
+.rbm-skip-link:focus {
+  position: static;
+  left: auto;
+  outline: var(--rbm-border-width-thick) solid var(--rbm-color-focus-ring);
+  outline-offset: var(--rbm-spacing-xs);
+}
+
+/* Enhanced Focus Indicators */
+.rbm-record-list [role="grid"] {
+  outline: none;
+}
+
+.rbm-record-list [role="grid"]:focus-within {
+  box-shadow: inset 0 0 0 var(--rbm-border-width-thick) var(--rbm-color-focus-ring);
+  border-radius: var(--rbm-border-radius-sm);
+}
+
+/* Grid Row Focus States */
+.rbm-record-list [role="row"] {
+  position: relative;
+  outline: none;
+  transition: all var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+}
+
+.rbm-record-list [role="row"]:focus {
+  background-color: var(--rbm-color-surface-focus-subtle) !important;
+  outline: var(--rbm-border-width-thick) solid var(--rbm-color-focus-ring);
+  outline-offset: calc(var(--rbm-spacing-xs) * -1);
+  z-index: 1; /* Ensure focus ring appears above other content */
+}
+
+.rbm-record-list [role="row"]:focus-visible {
+  background-color: var(--rbm-color-surface-focus-subtle) !important;
+  outline: var(--rbm-border-width-thick) solid var(--rbm-color-focus-ring);
+  outline-offset: calc(var(--rbm-spacing-xs) * -1);
+}
+
+/* Grid Cell Focus States */
+.rbm-record-list [role="gridcell"] {
+  position: relative;
+  outline: none;
+  transition: all var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+}
+
+.rbm-record-list [role="gridcell"]:focus {
+  background-color: var(--rbm-color-surface-focus-subtle) !important;
+  outline: var(--rbm-border-width-thick) solid var(--rbm-color-focus-ring);
+  outline-offset: calc(var(--rbm-spacing-xs) * -1);
+  z-index: 2; /* Higher than row focus */
+}
+
+.rbm-record-list [role="gridcell"]:focus-visible {
+  background-color: var(--rbm-color-surface-focus-subtle) !important;
+  outline: var(--rbm-border-width-thick) solid var(--rbm-color-focus-ring);
+  outline-offset: calc(var(--rbm-spacing-xs) * -1);
+}
+
+/* Selection Indicators (Icon + Text, never color alone) */
+.rbm-selection-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rbm-spacing-xs);
+  font-size: var(--rbm-font-size-sm);
+  font-weight: var(--rbm-font-weight-medium);
+}
+
+.rbm-selection-indicator__icon {
+  width: var(--rbm-size-icon-sm);
+  height: var(--rbm-size-icon-sm);
+  flex-shrink: 0;
+}
+
+.rbm-selection-indicator__text {
+  color: var(--rbm-color-text-secondary);
+}
+
+/* Selected state with icon + text */
+.rbm-record-list [role="row"][aria-selected="true"] .rbm-selection-indicator__icon {
+  color: var(--rbm-color-primary);
+}
+
+.rbm-record-list [role="row"][aria-selected="true"] .rbm-selection-indicator__text {
+  color: var(--rbm-color-primary);
+  font-weight: var(--rbm-font-weight-semibold);
+}
+
+/* Status Indicators (Icon + Text, never color alone) */
+.rbm-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rbm-spacing-xs);
+  font-size: var(--rbm-font-size-sm);
+  padding: var(--rbm-spacing-xs) var(--rbm-spacing-sm);
+  border-radius: var(--rbm-border-radius-sm);
+  border: var(--rbm-border-width-hairline) solid var(--rbm-color-border-subtle);
+}
+
+.rbm-status-indicator__icon {
+  width: var(--rbm-size-icon-xs);
+  height: var(--rbm-size-icon-xs);
+  flex-shrink: 0;
+}
+
+.rbm-status-indicator__text {
+  font-weight: var(--rbm-font-weight-medium);
+}
+
+/* Status variants with both icon and background for redundancy */
+.rbm-status-indicator--success {
+  background-color: var(--rbm-color-surface-success-subtle);
+  border-color: var(--rbm-color-border-success);
+}
+
+.rbm-status-indicator--success .rbm-status-indicator__icon,
+.rbm-status-indicator--success .rbm-status-indicator__text {
+  color: var(--rbm-color-text-success);
+}
+
+.rbm-status-indicator--warning {
+  background-color: var(--rbm-color-surface-warning-subtle);
+  border-color: var(--rbm-color-border-warning);
+}
+
+.rbm-status-indicator--warning .rbm-status-indicator__icon,
+.rbm-status-indicator--warning .rbm-status-indicator__text {
+  color: var(--rbm-color-text-warning);
+}
+
+.rbm-status-indicator--error {
+  background-color: var(--rbm-color-surface-error-subtle);
+  border-color: var(--rbm-color-border-error);
+}
+
+.rbm-status-indicator--error .rbm-status-indicator__icon,
+.rbm-status-indicator--error .rbm-status-indicator__text {
+  color: var(--rbm-color-text-error);
+}
+
+.rbm-status-indicator--info {
+  background-color: var(--rbm-color-surface-info-subtle);
+  border-color: var(--rbm-color-border-info);
+}
+
+.rbm-status-indicator--info .rbm-status-indicator__icon,
+.rbm-status-indicator--info .rbm-status-indicator__text {
+  color: var(--rbm-color-text-info);
+}
+
+/* Loading States */
+.rbm-record-list--loading {
+  position: relative;
+}
+
+.rbm-record-list--loading::before {
+  content: "Loading data...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--rbm-color-overlay-loading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rbm-color-text-primary);
+  font-weight: var(--rbm-font-weight-medium);
+  z-index: var(--rbm-z-index-overlay);
+  border-radius: inherit;
+}
+
+/* Action Menu Focus */
+.rbm-record-list [role="menu"] {
+  outline: none;
+  box-shadow: var(--rbm-shadow-elevated);
+  border: var(--rbm-border-width-thin) solid var(--rbm-color-border-elevated);
+}
+
+.rbm-record-list [role="menu"]:focus-within {
+  border-color: var(--rbm-color-focus-ring);
+}
+
+.rbm-record-list [role="menuitem"] {
+  outline: none;
+  transition: all var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+}
+
+.rbm-record-list [role="menuitem"]:focus,
+.rbm-record-list [role="menuitem"]:focus-visible {
+  background-color: var(--rbm-color-surface-focus-subtle);
+  outline: var(--rbm-border-width-thick) solid var(--rbm-color-focus-ring);
+  outline-offset: calc(var(--rbm-spacing-xs) * -1);
+}
+
+/* Bulk Action Bar Focus */
+.rbm-record-list__bulk-action-bar {
+  outline: none;
+}
+
+.rbm-record-list__bulk-action-bar:focus-within {
+  box-shadow: inset 0 0 0 var(--rbm-border-width-thick) var(--rbm-color-focus-ring);
+  border-radius: var(--rbm-border-radius-sm);
+}
+
+/* Filter Focus */
+.rbm-record-list__filter-bar {
+  outline: none;
+}
+
+.rbm-record-list__filter-bar:focus-within {
+  box-shadow: inset 0 0 0 var(--rbm-border-width-thick) var(--rbm-color-focus-ring);
+  border-radius: var(--rbm-border-radius-sm);
+}
+
+/* Pagination Focus */
+.rbm-record-list__pagination {
+  outline: none;
+}
+
+.rbm-record-list__pagination:focus-within {
+  box-shadow: inset 0 0 0 var(--rbm-border-width-thick) var(--rbm-color-focus-ring);
+  border-radius: var(--rbm-border-radius-sm);
+}
+
+/* High Contrast Mode Enhancements */
+@media (prefers-contrast: high) {
+  .rbm-record-list [role="row"]:focus,
+  .rbm-record-list [role="gridcell"]:focus {
+    outline-width: calc(var(--rbm-border-width-thick) * 2);
+    outline-color: var(--rbm-color-text);
+    background-color: var(--rbm-color-surface-primary) !important;
+  }
+  
+  .rbm-status-indicator {
+    border-width: var(--rbm-border-width-thick);
+    font-weight: var(--rbm-font-weight-bold);
+  }
+  
+  .rbm-selection-indicator__text,
+  .rbm-status-indicator__text {
+    text-decoration: underline;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .rbm-record-list [role="row"],
+  .rbm-record-list [role="gridcell"],
+  .rbm-record-list [role="menuitem"],
+  .rbm-skip-link {
+    transition: none !important;
+  }
+}
+
+/* Keyboard Navigation Instructions */
+.rbm-keyboard-instructions {
+  background-color: var(--rbm-color-surface-info-subtle);
+  border: var(--rbm-border-width-thin) solid var(--rbm-color-border-info);
+  border-radius: var(--rbm-border-radius-sm);
+  padding: var(--rbm-spacing-sm) var(--rbm-spacing-md);
+  margin-bottom: var(--rbm-spacing-md);
+  font-size: var(--rbm-font-size-sm);
+  color: var(--rbm-color-text-info);
+}
+
+.rbm-keyboard-instructions__title {
+  font-weight: var(--rbm-font-weight-semibold);
+  margin-bottom: var(--rbm-spacing-xs);
+}
+
+.rbm-keyboard-instructions__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rbm-spacing-xs);
+}
+
+.rbm-keyboard-instructions__item {
+  display: flex;
+  align-items: center;
+  gap: var(--rbm-spacing-sm);
+}
+
+.rbm-keyboard-instructions__key {
+  background-color: var(--rbm-color-surface-secondary);
+  border: var(--rbm-border-width-thin) solid var(--rbm-color-border-interactive);
+  border-radius: var(--rbm-border-radius-xs);
+  padding: var(--rbm-spacing-xs) var(--rbm-spacing-sm);
+  font-family: var(--rbm-font-family-mono);
+  font-size: var(--rbm-font-size-xs);
+  font-weight: var(--rbm-font-weight-medium);
+  min-width: var(--rbm-size-touch-target-min);
+  text-align: center;
+}
+
+/* Focus visible only for keyboard users */
+.js-focus-visible .rbm-record-list [role="row"]:not(.focus-visible) {
+  outline: none;
+  background-color: inherit;
+}
+
+.js-focus-visible .rbm-record-list [role="gridcell"]:not(.focus-visible) {
+  outline: none;
+  background-color: inherit;
+}
