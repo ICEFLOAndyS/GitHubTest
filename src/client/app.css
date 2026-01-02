@@ -1,52 +1,69 @@
+/**
+ * Main Application Styles - RBM Design System Compliant
+ * Using ONLY RBM design system tokens
+ */
+
+/* Import RBM design system tokens */
+@import url("../../rbm-knowledge/01-standards-authoritative/rbm-design-system/tokens/rbm.base.css");
+
 .incident-app {
-    max-width: 1200px;
+    max-width: 1200px; /* TODO: Replace with --rbm-size-container-max-width when available */
     margin: 0 auto;
-    padding: 20px;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    padding: var(--rbm-space-5);
+    font-family: var(--rbm-font-family-sans);
 }
 
 .app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+    margin-bottom: var(--rbm-space-5);
+    padding-bottom: var(--rbm-space-3);
+    border-bottom: var(--rbm-border-width-1) solid var(--rbm-color-border);
 }
 
 .app-header h1 {
     margin: 0;
-    color: #2c3e50;
+    color: var(--rbm-color-text);
+    font-size: var(--rbm-font-size-2xl);
+    font-weight: var(--rbm-font-weight-semibold);
 }
 
 .create-button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
+    background-color: var(--rbm-color-success);
+    color: var(--rbm-color-primary-contrast);
+    border: var(--rbm-border-width-1) solid var(--rbm-color-success);
+    padding: var(--rbm-space-3) var(--rbm-space-4);
+    border-radius: var(--rbm-radius-sm);
     cursor: pointer;
-    font-weight: bold;
+    font-weight: var(--rbm-font-weight-semibold);
+    font-size: var(--rbm-font-size-sm);
+    transition: all var(--rbm-motion-fast) var(--rbm-ease-standard);
 }
 
 .create-button:hover {
-    background-color: #45a049;
+    background-color: color-mix(in srgb, var(--rbm-color-success) 90%, var(--rbm-color-text));
+}
+
+.create-button:focus {
+    outline: calc(var(--rbm-border-width-1) * 2) solid var(--rbm-color-focus);
+    outline-offset: var(--rbm-space-1);
 }
 
 .loading {
     text-align: center;
-    padding: 40px;
-    font-size: 18px;
-    color: #666;
+    padding: var(--rbm-space-10);
+    font-size: var(--rbm-font-size-xl);
+    color: var(--rbm-color-text-muted);
 }
 
 .error-message {
-    background-color: #ffebee;
-    color: #d32f2f;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    border-left: 4px solid #d32f2f;
+    background-color: color-mix(in srgb, var(--rbm-color-critical) 10%, var(--rbm-color-surface-1));
+    color: color-mix(in srgb, var(--rbm-color-critical) 90%, var(--rbm-color-text));
+    padding: var(--rbm-space-4);
+    margin-bottom: var(--rbm-space-5);
+    border-radius: var(--rbm-radius-sm);
+    border-left: var(--rbm-space-1) solid var(--rbm-color-critical);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,8 +72,38 @@
 .error-message button {
     background: none;
     border: none;
-    color: #d32f2f;
+    color: color-mix(in srgb, var(--rbm-color-critical) 90%, var(--rbm-color-text));
     cursor: pointer;
-    font-weight: bold;
+    font-weight: var(--rbm-font-weight-semibold);
     text-decoration: underline;
+    padding: var(--rbm-space-1);
+    border-radius: var(--rbm-radius-sm);
+    transition: background-color var(--rbm-motion-fast) var(--rbm-ease-standard);
+}
+
+.error-message button:hover {
+    background-color: color-mix(in srgb, var(--rbm-color-critical) 15%, var(--rbm-color-surface-1));
+}
+
+.error-message button:focus {
+    outline: calc(var(--rbm-border-width-1) * 2) solid var(--rbm-color-focus);
+    outline-offset: var(--rbm-space-1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .incident-app {
+    padding: var(--rbm-space-3);
+  }
+  
+  .app-header {
+    flex-direction: column;
+    gap: var(--rbm-space-3);
+    align-items: flex-start;
+  }
+  
+  .create-button {
+    width: 100%;
+    padding: var(--rbm-space-4);
+  }
 }

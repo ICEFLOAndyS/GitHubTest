@@ -1,63 +1,81 @@
+/**
+ * Incident Form Component Styles - RBM Design System Compliant
+ * Using ONLY RBM design system tokens
+ */
+
+/* Import RBM design system tokens */
+@import url("../../../rbm-knowledge/01-standards-authoritative/rbm-design-system/tokens/rbm.base.css");
+
 .form-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--rbm-color-overlay);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: var(--rbm-z-index-modal);
 }
 
 .form-container {
-    background-color: white;
+    background-color: var(--rbm-color-surface-1);
     width: 100%;
     max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: var(--rbm-radius-lg);
+    box-shadow: var(--rbm-shadow-md);
     overflow: hidden;
 }
 
 .form-header {
-    padding: 15px 20px;
-    background-color: #f5f5f5;
+    padding: var(--rbm-space-4) var(--rbm-space-5);
+    background-color: var(--rbm-color-surface-2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: var(--rbm-border-width-1) solid var(--rbm-color-border);
 }
 
 .form-header h2 {
     margin: 0;
-    font-size: 18px;
-    color: #333;
+    font-size: var(--rbm-font-size-xl);
+    color: var(--rbm-color-text);
+    font-weight: var(--rbm-font-weight-semibold);
 }
 
 .close-button {
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: var(--rbm-font-size-2xl);
     cursor: pointer;
-    color: #666;
+    color: var(--rbm-color-text-muted);
+    padding: var(--rbm-space-1);
+    border-radius: var(--rbm-radius-sm);
+    transition: color var(--rbm-motion-fast) var(--rbm-ease-standard);
 }
 
 .close-button:hover {
-    color: #000;
+    color: var(--rbm-color-text);
+    background-color: var(--rbm-color-surface-inset);
+}
+
+.close-button:focus {
+    outline: calc(var(--rbm-border-width-1) * 2) solid var(--rbm-color-focus);
+    outline-offset: var(--rbm-space-1);
 }
 
 form {
-    padding: 20px;
+    padding: var(--rbm-space-5);
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: var(--rbm-space-5);
 }
 
 .form-row {
     display: flex;
-    gap: 15px;
+    gap: var(--rbm-space-4);
 }
 
 .form-row .form-group {
@@ -66,59 +84,101 @@ form {
 
 label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #333;
+    margin-bottom: var(--rbm-space-2);
+    font-weight: var(--rbm-font-weight-medium);
+    color: var(--rbm-color-text);
+    font-size: var(--rbm-font-size-sm);
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
+    padding: var(--rbm-space-3);
+    border: var(--rbm-border-width-1) solid var(--rbm-color-border);
+    border-radius: var(--rbm-radius-sm);
+    font-size: var(--rbm-font-size-md);
+    color: var(--rbm-color-text);
+    background-color: var(--rbm-color-surface-1);
+    font-family: var(--rbm-font-family-sans);
+    transition: border-color var(--rbm-motion-fast) var(--rbm-ease-standard);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #2196f3;
-    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+    border-color: var(--rbm-color-focus);
+    box-shadow: 0 0 0 var(--rbm-space-1) color-mix(in srgb, var(--rbm-color-focus) 25%, transparent);
 }
 
 .form-actions {
     display: flex;
     justify-content: flex-end;
-    margin-top: 30px;
-    gap: 10px;
+    margin-top: var(--rbm-space-8);
+    gap: var(--rbm-space-3);
 }
 
 .cancel-button,
 .submit-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+    padding: var(--rbm-space-3) var(--rbm-space-5);
+    border: var(--rbm-border-width-1) solid transparent;
+    border-radius: var(--rbm-radius-sm);
     cursor: pointer;
-    font-weight: 500;
+    font-weight: var(--rbm-font-weight-medium);
+    font-size: var(--rbm-font-size-md);
+    transition: all var(--rbm-motion-fast) var(--rbm-ease-standard);
 }
 
 .cancel-button {
-    background-color: #e0e0e0;
-    color: #333;
+    background-color: var(--rbm-color-surface-2);
+    color: var(--rbm-color-text);
+    border-color: var(--rbm-color-border);
 }
 
 .cancel-button:hover {
-    background-color: #d5d5d5;
+    background-color: var(--rbm-color-surface-inset);
+    border-color: var(--rbm-color-border);
 }
 
 .submit-button {
-    background-color: #4caf50;
-    color: white;
+    background-color: var(--rbm-color-success);
+    color: var(--rbm-color-primary-contrast);
 }
 
 .submit-button:hover {
-    background-color: #45a049;
+    background-color: color-mix(in srgb, var(--rbm-color-success) 90%, var(--rbm-color-text));
+}
+
+.cancel-button:focus,
+.submit-button:focus {
+    outline: calc(var(--rbm-border-width-1) * 2) solid var(--rbm-color-focus);
+    outline-offset: var(--rbm-space-1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .form-container {
+    width: 95vw;
+    max-height: 95vh;
+  }
+  
+  .form-header,
+  form {
+    padding: var(--rbm-space-3);
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: var(--rbm-space-2);
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+  
+  .cancel-button,
+  .submit-button {
+    width: 100%;
+  }
 }
