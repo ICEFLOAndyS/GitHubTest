@@ -4,10 +4,20 @@ import { createRecordListDataProvider } from '../../services/rbm-record-list';
 import { useConfirmDialog } from '../../hooks/useConfirmDialog';
 import { useJustificationDialog } from '../../hooks/useJustificationDialog';
 import { useFocusManagement } from '../../hooks/useFocusManagement';
+import { 
+  useKeyboardNavigation, 
+  useScreenReaderAnnouncements,
+  useFocusManagement as useAccessibilityFocusManagement
+} from './accessibility-simple';
 import { RbmConfirmDialog } from '../RbmConfirmDialog';
 import { RbmJustificationDialog } from '../RbmJustificationDialog';
 import { RbmInlineError } from '../RbmInlineError';
+import { EnhancedDataGrid } from './EnhancedDataGrid';
+import { BulkActionBar } from './BulkActionBar';
+import { FocusIndicator } from './FocusIndicator';
 import './RbmRecordList.css';
+import './RbmRecordList-accessibility.css';
+import './RbmRecordList-visual-indicators.css';
 
 // RBM Audit Metadata - AUTHORITATIVE v1.9.5
 import {
@@ -36,7 +46,6 @@ const SelectableDataGrid = ({ children, ...props }: any) => <div {...props}>{chi
 const FilterBar = ({ children, ...props }: any) => <div {...props}>{children || 'FilterBar Component'}</div>;
 const Pagination = ({ children, ...props }: any) => <div {...props}>{children || 'Pagination Component'}</div>;
 const RowActionsMenu = ({ children, ...props }: any) => <div {...props}>{children || 'RowActionsMenu Component'}</div>;
-const BulkActionBar = ({ children, ...props }: any) => <div {...props}>{children || 'BulkActionBar Component'}</div>;
 const GridSkeleton = ({ children, ...props }: any) => <div {...props}>{children || 'GridSkeleton Component'}</div>;
 
 /**
@@ -129,6 +138,86 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
   
   // Focus management for side panel integration
   const { storeFocus, restoreFocus, clearFocus } = useFocusManagement();
+  
+  // WCAG 2.1 AA Accessibility features
+  const screenReaderAnnouncements = useScreenReaderAnnouncements();
+  
+  const {
+    announce,
+    announceSelection,
+    announceLoading,
+    announceActionResult,
+    announceError,
+    announceDataChange,
+    createAnnouncementRegions
+  } = screenReaderAnnouncements;
+
+  // Focus management with accessibility zones
+  const focusZones = [
+    { id: 'filters', label: 'Filters', selector: '.rbm-record-list__filter-bar' },
+    { id: 'grid', label: 'Data Grid', selector: '.rbm-record-list__data-grid [role="grid"]' },
+    { id: 'pagination', label: 'Pagination', selector: '.rbm-record-list__pagination' },
+    { id: 'bulk-actions', label: 'Bulk Actions', selector: '.rbm-record-list__bulk-action-bar' }
+  ];
+
+  const accessibilityFocusManagement = useAccessibilityFocusManagement({
+    focusZones,
+    skipLinks: true
+  });
+
+  const {
+    containerRef: accessibilityContainerRef,
+    createSkipLinks,
+    handleKeyDown: handleAccessibilityKeyDown
+  } = accessibilityFocusManagement;
+
+  // Keyboard navigation for the grid
+  const keyboardNavigation = useKeyboardNavigation({
+    gridId: `rbm-grid-${listKey}`,
+    rowCount: state.rows.length,
+    columnCount: columns.length,
+    selectionMode,
+    hasActions: actions.length > 0,
+    onRowSelect: (rowIndex) => {
+      if (onActionInvoked) {
+        const record = state.rows[rowIndex];
+        onActionInvoked('select', record, true);
+      }
+    },
+    onRowActivate: (rowIndex) => {
+      const record = state.rows[rowIndex];
+      handleOpenRecord(record, 'enter-key');
+    },
+    onSelectionToggle: (rowIndex) => {
+      if (selectionMode === 'multiple') {
+        const record = state.rows[rowIndex];
+        const isSelected = selectedRecords.some(selected => {
+          const selectedId = typeof selected.sys_id === 'object' ? selected.sys_id.value : selected.sys_id;
+          const recordId = typeof record.sys_id === 'object' ? record.sys_id.value : record.sys_id;
+          return selectedId === recordId;
+        });
+        
+        if (isSelected) {
+          const newSelection = selectedRecords.filter(selected => {
+            const selectedId = typeof selected.sys_id === 'object' ? selected.sys_id.value : selected.sys_id;
+            const recordId = typeof record.sys_id === 'object' ? record.sys_id.value : record.sys_id;
+            return selectedId !== recordId;
+          });
+          handleSelectionChange(newSelection);
+        } else {
+          handleSelectionChange([...selectedRecords, record]);
+        }
+      }
+    }
+  });
+
+  const {
+    gridRef,
+    handleKeyDown: handleGridKeyDown,
+    enterGridNavigation,
+    getNavigationInstructions,
+    announceToScreenReader
+  } = keyboardNavigation;
   
   // Data provider instance
   const provider = useMemo(() => dataProvider, [dataProvider]);
@@ -248,6 +337,9 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         loading: true, 
         error: null 
       }));
+
+      // Announce loading state
+      announceLoading(true, 'records');
       
       // Determine query parameters
       const queryFilters = options.newFilters !== undefined ? options.newFilters : state.currentFilters;
@@ -294,6 +386,10 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         hasMore: !!(response.metadata?.nextCursor)
       }));
       
+      // Announce loading completion and results
+      announceLoading(false, 'records');
+      announceDataChange(response.records.length, querySearch ? `search "${querySearch}"` : 'current filters', 'records');
+      
       // Clear selection on new query
       if (options.resetCursor) {
         setSelectedRecords([]);
@@ -319,6 +415,9 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
           correlationId: correlationId
         }
       }));
+
+      // Announce error to screen readers
+      announceError(error.message || 'Failed to load data');
     }
   }, [listKey, state, provider, generateClientCorrelationId, config]);
   
@@ -396,15 +495,18 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
   }, [executeQuery]);
   
   /**
-   * Handle record selection changes
+   * Handle record selection changes with accessibility announcements
    */
   const handleSelectionChange = useCallback((selected: RbmRecord[]) => {
     setSelectedRecords(selected);
     
+    // Announce selection changes to screen readers
+    announceSelection(selected.length, state.rows.length, 'records');
+    
     if (config.onSelectionChange) {
       config.onSelectionChange(selected);
     }
-  }, [config]);
+  }, [config, announceSelection, state.rows.length]);
   
   /**
    * Handle record click/open
@@ -471,6 +573,9 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         if (onActionInvoked) {
           onActionInvoked(actionId, record, true);
         }
+        
+        // Announce successful action
+        announceActionResult(true, actionId, getRecordDisplayValue(record));
         
         console.log(`Action ${actionId} completed successfully - CorrelationId: ${actionRequest.auditMetadata.clientCorrelationId}`);
         
@@ -696,6 +801,13 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
    * Handle keyboard events for row actions and navigation
    */
   const handleKeyDown = useCallback((event: React.KeyboardEvent, record: RbmRecord) => {
+    // First handle accessibility-level keyboard navigation
+    handleAccessibilityKeyDown(event);
+    
+    // Then handle grid-specific navigation
+    handleGridKeyDown(event);
+    
+    // Handle specific key actions for records
     if (event.key === 'Enter') {
       event.preventDefault();
       
@@ -712,7 +824,7 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         handleOpenRecord(record, 'enter-key');
       }
     }
-  }, [actions, handleRowActionSelect, handleOpenRecord]);
+  }, [actions, handleRowActionSelect, handleOpenRecord, handleAccessibilityKeyDown, handleGridKeyDown]);
   /**
    * Handle refresh action
    */
@@ -781,6 +893,9 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         if (onActionInvoked) {
           onActionInvoked(actionId, records, true);
         }
+        
+        // Announce successful bulk action
+        announceActionResult(true, `${actionId} bulk action`, `${records.length} records`);
         
         console.log(`Bulk action ${actionId} completed successfully on ${records.length} records - CorrelationId: ${actionRequest.auditMetadata.clientCorrelationId}`);
         
@@ -944,11 +1059,49 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
   
   return (
     <div 
+      ref={accessibilityContainerRef}
       className={`rbm-record-list ${className}`}
       data-testid={testIds.container}
       role="region"
-      aria-label={a11y?.ariaLabel}
+      aria-label={a11y?.ariaLabel || `${listKey} records list`}
+      onKeyDown={handleAccessibilityKeyDown}
     >
+      {/* Screen reader announcement regions */}
+      {createAnnouncementRegions()}
+      
+      {/* Skip links for keyboard navigation */}
+      {createSkipLinks()}
+      
+      {/* Keyboard navigation instructions */}
+      {a11y?.showKeyboardInstructions !== false && (
+        <div className="rbm-keyboard-instructions rbm-sr-only" role="region" aria-label="Keyboard navigation instructions">
+          <div className="rbm-keyboard-instructions__title">Keyboard Navigation</div>
+          <ul className="rbm-keyboard-instructions__list">
+            <li className="rbm-keyboard-instructions__item">
+              <span className="rbm-keyboard-instructions__key">Tab</span>
+              <span>Navigate between sections</span>
+            </li>
+            <li className="rbm-keyboard-instructions__item">
+              <span className="rbm-keyboard-instructions__key">Arrow Keys</span>
+              <span>Navigate within the grid</span>
+            </li>
+            {selectionMode === 'multiple' && (
+              <li className="rbm-keyboard-instructions__item">
+                <span className="rbm-keyboard-instructions__key">Space</span>
+                <span>Toggle row selection</span>
+              </li>
+            )}
+            <li className="rbm-keyboard-instructions__item">
+              <span className="rbm-keyboard-instructions__key">Enter</span>
+              <span>Open record or activate action</span>
+            </li>
+            <li className="rbm-keyboard-instructions__item">
+              <span className="rbm-keyboard-instructions__key">Escape</span>
+              <span>Close menus and dialogs</span>
+            </li>
+          </ul>
+        </div>
+      )}
       
       {/* 1. Filter Bar */}
       {filters.length > 0 && (
@@ -975,10 +1128,16 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
       )}
       
       {/* 2. Grid */}
-      <div 
-        className="rbm-record-list__grid-container"
-        data-testid={testIds.table}
+      <FocusIndicator
+        variant="subtle"
+        shape="rounded"
+        focusWithin={true}
+        className="rbm-record-list__grid-focus-wrapper"
       >
+        <div 
+          className="rbm-record-list__grid-container"
+          data-testid={testIds.table}
+        >
         {state.loading ? (
           <GridSkeleton
             columns={columns.length}
@@ -1050,39 +1209,28 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
             )}
           </div>
         ) : (
-          <SelectableDataGrid
-            key={listKey}
+          <EnhancedDataGrid
+            id={`rbm-grid-${listKey}`}
+            gridRef={gridRef as React.RefObject<HTMLTableElement>}
             columns={gridConfig.columns}
             records={state.rows}
             selectionMode={gridConfig.selectionMode}
             selectedRecords={selectedRecords}
-            density={gridConfig.density}
-            sortConfig={state.currentSort.length > 0 ? state.currentSort[0] : undefined}
-            enableColumnResize={gridConfig.enableColumnResize}
-            enableColumnReorder={gridConfig.enableColumnReorder}
             onSelectionChange={handleSelectionChange}
-            onSortChange={handleSortChange}
             onRecordClick={handleRecordClick}
             onRecordDoubleClick={handleRecordDoubleClick}
-            onRecordKeyDown={handleKeyDown} // Keyboard support
+            onRecordKeyDown={handleKeyDown}
+            sortConfig={state.currentSort.length > 0 ? state.currentSort[0] : undefined}
+            onSortChange={handleSortChange}
+            actions={actions}
+            onActionSelect={handleRowActionSelect}
             className="rbm-record-list__data-grid"
-            ariaLabel={a11y?.descriptions?.tableDescription || 'Records data table'}
-            testId={testIds.table}
+            ariaLabel={a11y?.descriptions?.tableDescription || `${listKey} records data table with ${state.rows.length} records`}
             loading={state.loading}
-            // Row actions integration with advisory security
-            rowActionsComponent={actions.length > 0 ? (
-              <RowActionsMenu
-                actions={getActionsWithEnablement} // Pass function to get actions per record
-                onActionSelect={handleRowActionSelect}
-                placement="bottom-end"
-                className="rbm-record-list__row-actions"
-                disabled={state.loading || !!executingAction}
-                showDisabledTooltip={true} // Show tooltips for disabled actions
-              />
-            ) : undefined}
           />
         )}
       </div>
+      </FocusIndicator>
       
       {/* 3. Pagination */}
       {!state.loading && !state.error && state.rows.length > 0 && (
@@ -1130,8 +1278,8 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
         <div 
           className="rbm-record-list__bulk-actions"
           data-testid={testIds.actions}
-          role="toolbar"
-          aria-label="Bulk actions for selected records"
+          role="region"
+          aria-label={a11y?.descriptions?.bulkActionsDescription || "Bulk actions for selected records"}
         >
           <BulkActionBar
             selectedCount={selectedRecords.length}
@@ -1141,8 +1289,6 @@ const RbmRecordList: React.FC<RbmRecordListProps> = ({
             onClearSelection={handleClearSelection}
             className="rbm-record-list__bulk-action-bar"
             position="sticky-bottom"
-            showSelectedCount={true}
-            showClearSelection={true}
             ariaLabel={`${selectedRecords.length} records selected. Available bulk actions`}
             disabled={state.loading || !!executingAction || !!executingBulkAction}
           />

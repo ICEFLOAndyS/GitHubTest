@@ -456,7 +456,9 @@ export interface RbmRecordListProps {
   /** Accessibility configuration */
   a11y?: {
     /** Primary ARIA label for the component */
-    ariaLabel: string;
+    ariaLabel?: string;
+    /** Whether to show keyboard navigation instructions */
+    showKeyboardInstructions?: boolean;
     /** Additional accessibility descriptions */
     descriptions?: {
       /** Description for the data table */
@@ -465,6 +467,8 @@ export interface RbmRecordListProps {
       filtersDescription?: string;
       /** Description for pagination controls */
       paginationDescription?: string;
+      /** Description for bulk actions */
+      bulkActionsDescription?: string;
     };
     /** Keyboard shortcuts configuration */
     keyboardShortcuts?: {

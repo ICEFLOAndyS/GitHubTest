@@ -1,0 +1,574 @@
+/**
+ * WCAG 2.1 AA Visual Indicators CSS
+ * Ensures all status is conveyed through multiple visual cues, never color alone
+ * 
+ * Visual Communication Methods Used:
+ * - Icons and symbols
+ * - Text labels
+ * - Patterns and textures
+ * - Shapes and borders
+ * - Size and spacing variations
+ * - Animation and movement (respecting reduced motion preferences)
+ */
+
+/* Icon Component */
+.rbm-icon {
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  font-style: normal;
+  font-weight: normal;
+  speak: none; /* Prevent screen readers from reading symbols */
+}
+
+.rbm-icon--xs { 
+  font-size: calc(var(--rbm-font-size-xs) * 0.8);
+  width: var(--rbm-size-icon-xs);
+  height: var(--rbm-size-icon-xs);
+}
+
+.rbm-icon--sm { 
+  font-size: var(--rbm-font-size-sm);
+  width: var(--rbm-size-icon-sm);
+  height: var(--rbm-size-icon-sm);
+}
+
+.rbm-icon--md { 
+  font-size: var(--rbm-font-size-md);
+  width: var(--rbm-size-icon-md, 24px);
+  height: var(--rbm-size-icon-md, 24px);
+}
+
+.rbm-icon--lg { 
+  font-size: var(--rbm-font-size-lg);
+  width: var(--rbm-size-icon-lg, 32px);
+  height: var(--rbm-size-icon-lg, 32px);
+}
+
+.rbm-icon--xl { 
+  font-size: var(--rbm-font-size-xl);
+  width: var(--rbm-size-icon-xl, 40px);
+  height: var(--rbm-size-icon-xl, 40px);
+}
+
+/* Enhanced Status Indicator */
+.rbm-enhanced-status-indicator {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--rbm-spacing-xs) var(--rbm-spacing-sm);
+  border-radius: var(--rbm-border-radius-sm);
+  border: var(--rbm-border-width-thin) solid;
+  font-size: var(--rbm-font-size-sm);
+  font-weight: var(--rbm-font-weight-medium);
+  min-height: var(--rbm-size-touch-target-min);
+  overflow: hidden;
+}
+
+.rbm-enhanced-status-indicator__content {
+  display: flex;
+  align-items: center;
+  gap: var(--rbm-spacing-xs);
+  position: relative;
+  z-index: 2;
+}
+
+.rbm-enhanced-status-indicator__icon {
+  flex-shrink: 0;
+}
+
+.rbm-enhanced-status-indicator__text {
+  line-height: var(--rbm-line-height-tight);
+}
+
+.rbm-enhanced-status-indicator__prefix {
+  font-weight: var(--rbm-font-weight-semibold);
+}
+
+/* Status Variants with Multiple Visual Cues */
+.rbm-enhanced-status-indicator--success {
+  background-color: var(--rbm-color-surface-success-subtle);
+  border-color: var(--rbm-color-border-success);
+  color: var(--rbm-color-text-success);
+  /* Success gets solid background pattern */
+}
+
+.rbm-enhanced-status-indicator--warning {
+  background-color: var(--rbm-color-surface-warning-subtle);
+  border-color: var(--rbm-color-border-warning);
+  color: var(--rbm-color-text-warning);
+  /* Warning gets diagonal stripes */
+  border-style: dashed;
+}
+
+.rbm-enhanced-status-indicator--error {
+  background-color: var(--rbm-color-surface-error-subtle);
+  border-color: var(--rbm-color-border-error);
+  color: var(--rbm-color-text-error);
+  /* Error gets dotted pattern */
+  border-style: dotted;
+  border-width: var(--rbm-border-width-thick);
+}
+
+.rbm-enhanced-status-indicator--info {
+  background-color: var(--rbm-color-surface-info-subtle);
+  border-color: var(--rbm-color-border-info);
+  color: var(--rbm-color-text-info);
+  /* Info gets horizontal lines */
+  border-style: double;
+}
+
+.rbm-enhanced-status-indicator--neutral {
+  background-color: var(--rbm-color-surface-neutral-subtle);
+  border-color: var(--rbm-color-border-subtle);
+  color: var(--rbm-color-text-secondary);
+}
+
+.rbm-enhanced-status-indicator--pending {
+  background-color: var(--rbm-color-surface-warning-subtle);
+  border-color: var(--rbm-color-border-warning);
+  color: var(--rbm-color-text-warning);
+  border-style: dashed;
+  /* Animated border for pending states */
+  animation: rbm-pending-border 2s linear infinite;
+}
+
+.rbm-enhanced-status-indicator--in-progress {
+  background-color: var(--rbm-color-surface-info-subtle);
+  border-color: var(--rbm-color-border-info);
+  color: var(--rbm-color-text-info);
+  /* Animated background for in-progress */
+  background-image: linear-gradient(
+    45deg,
+    transparent 25%,
+    var(--rbm-color-surface-info) 25%,
+    var(--rbm-color-surface-info) 50%,
+    transparent 50%,
+    transparent 75%,
+    var(--rbm-color-surface-info) 75%
+  );
+  background-size: 20px 20px;
+  animation: rbm-progress-stripes 1s linear infinite;
+}
+
+.rbm-enhanced-status-indicator--complete {
+  background-color: var(--rbm-color-surface-success-subtle);
+  border-color: var(--rbm-color-border-success);
+  color: var(--rbm-color-text-success);
+  /* Double border for completion */
+  border-style: double;
+  border-width: calc(var(--rbm-border-width-thin) * 2);
+}
+
+/* Size Variants */
+.rbm-enhanced-status-indicator--compact {
+  padding: calc(var(--rbm-spacing-xs) * 0.5) var(--rbm-spacing-xs);
+  font-size: var(--rbm-font-size-xs);
+  min-height: auto;
+}
+
+.rbm-enhanced-status-indicator--detailed {
+  padding: var(--rbm-spacing-sm) var(--rbm-spacing-md);
+  font-size: var(--rbm-font-size-sm);
+}
+
+/* Visual Patterns (Background textures that work without color) */
+.rbm-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rbm-pattern--diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    currentColor 0,
+    currentColor 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}
+
+.rbm-pattern--dots {
+  background-image: radial-gradient(
+    circle,
+    currentColor 1px,
+    transparent 1px
+  );
+  background-size: 8px 8px;
+}
+
+.rbm-pattern--horizontal {
+  background-image: repeating-linear-gradient(
+    0deg,
+    currentColor 0,
+    currentColor 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+/* Enhanced Selection Indicator */
+.rbm-enhanced-selection-indicator {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rbm-spacing-xs);
+  cursor: pointer;
+  transition: all var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+  min-height: var(--rbm-size-touch-target-min);
+  min-width: var(--rbm-size-touch-target-min);
+}
+
+.rbm-enhanced-selection-indicator:hover:not([aria-disabled="true"]) {
+  transform: scale(1.05);
+}
+
+.rbm-enhanced-selection-indicator[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Selection Shapes */
+.rbm-selection-shape {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: var(--rbm-border-width-thick) solid var(--rbm-color-border-interactive);
+  background-color: var(--rbm-color-surface-primary);
+  transition: all var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+}
+
+.rbm-selection-shape--square-empty,
+.rbm-selection-shape--square-filled,
+.rbm-selection-shape--square-mixed {
+  border-radius: var(--rbm-border-radius-xs);
+}
+
+.rbm-selection-shape--circle-empty,
+.rbm-selection-shape--circle-filled {
+  border-radius: 50%;
+}
+
+.rbm-selection-shape--square-filled,
+.rbm-selection-shape--circle-filled {
+  background-color: var(--rbm-color-primary);
+  border-color: var(--rbm-color-primary);
+}
+
+.rbm-selection-shape--square-mixed {
+  background: linear-gradient(
+    45deg,
+    var(--rbm-color-primary) 50%,
+    var(--rbm-color-surface-primary) 50%
+  );
+  border-color: var(--rbm-color-primary);
+}
+
+/* Selection States */
+.rbm-enhanced-selection-indicator--checked .rbm-selection-icon,
+.rbm-enhanced-selection-indicator--selected .rbm-selection-icon {
+  color: var(--rbm-color-text-on-primary);
+}
+
+.rbm-enhanced-selection-indicator--mixed .rbm-selection-icon {
+  color: var(--rbm-color-primary);
+}
+
+.rbm-enhanced-selection-indicator--unchecked .rbm-selection-icon,
+.rbm-enhanced-selection-indicator--unselected .rbm-selection-icon {
+  color: var(--rbm-color-text-tertiary);
+}
+
+/* Selection Pattern Overlay */
+.rbm-selection-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.rbm-enhanced-selection-indicator--checked .rbm-selection-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 2px,
+    rgba(255, 255, 255, 0.2) 2px,
+    rgba(255, 255, 255, 0.2) 4px
+  );
+}
+
+/* Text Labels */
+.rbm-enhanced-selection-indicator__text {
+  font-size: var(--rbm-font-size-sm);
+  color: var(--rbm-color-text-primary);
+  white-space: nowrap;
+}
+
+.rbm-enhanced-selection-indicator--compact .rbm-enhanced-selection-indicator__text {
+  font-size: var(--rbm-font-size-xs);
+}
+
+/* Focus Ring */
+.rbm-selection-focus-ring {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: var(--rbm-border-width-thick) solid transparent;
+  border-radius: var(--rbm-border-radius-sm);
+  pointer-events: none;
+  opacity: 0;
+  transition: all var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+}
+
+.rbm-enhanced-selection-indicator:focus .rbm-selection-focus-ring {
+  opacity: 1;
+  border-color: var(--rbm-color-focus-ring);
+  box-shadow: 0 0 0 var(--rbm-spacing-xs) var(--rbm-color-focus-ring);
+}
+
+/* Focus Indicator Component */
+.rbm-focus-indicator {
+  position: relative;
+  display: inline-block;
+}
+
+.rbm-focus-indicator__rings {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--rbm-transition-duration-fast) var(--rbm-transition-easing-ease);
+}
+
+.rbm-focus-indicator--focused.rbm-focus-indicator--keyboard .rbm-focus-indicator__rings {
+  opacity: 1;
+}
+
+.rbm-focus-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--rbm-border-radius-md);
+  pointer-events: none;
+}
+
+.rbm-focus-ring--outer {
+  border: calc(var(--rbm-border-width-thick) * 2) solid var(--rbm-color-focus-ring);
+  animation: rbm-focus-pulse 2s ease-in-out infinite;
+}
+
+.rbm-focus-ring--inner {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: var(--rbm-border-width-thin) solid var(--rbm-color-surface-primary);
+}
+
+.rbm-focus-ring--accent {
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: var(--rbm-border-width-hairline) solid var(--rbm-color-primary);
+}
+
+/* Focus Variants */
+.rbm-focus-indicator--subtle .rbm-focus-ring--outer {
+  border-color: var(--rbm-color-border-interactive);
+  border-width: var(--rbm-border-width-thin);
+}
+
+.rbm-focus-indicator--prominent .rbm-focus-ring--outer {
+  border-color: var(--rbm-color-focus-ring);
+  border-width: calc(var(--rbm-border-width-thick) * 2);
+  box-shadow: 0 0 0 var(--rbm-spacing-xs) var(--rbm-color-focus-ring-subtle, rgba(59, 130, 246, 0.3));
+}
+
+.rbm-focus-indicator--high-contrast .rbm-focus-ring--outer {
+  border-color: var(--rbm-color-text-primary);
+  border-width: calc(var(--rbm-border-width-thick) * 3);
+  background-color: var(--rbm-color-surface-primary);
+}
+
+/* Focus Shapes */
+.rbm-focus-indicator--rectangular .rbm-focus-ring {
+  border-radius: var(--rbm-border-radius-xs);
+}
+
+.rbm-focus-indicator--rounded .rbm-focus-ring {
+  border-radius: var(--rbm-border-radius-md);
+}
+
+.rbm-focus-indicator--circular .rbm-focus-ring {
+  border-radius: 50%;
+}
+
+/* Focus Corner Indicators */
+.rbm-focus-corners {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.rbm-focus-indicator--focused.rbm-focus-indicator--keyboard .rbm-focus-corners {
+  opacity: 1;
+}
+
+.rbm-focus-corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--rbm-color-focus-ring);
+  transform: rotate(45deg);
+}
+
+.rbm-focus-corner--top-left {
+  top: 0;
+  left: 0;
+}
+
+.rbm-focus-corner--top-right {
+  top: 0;
+  right: 0;
+}
+
+.rbm-focus-corner--bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.rbm-focus-corner--bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+/* Animations */
+@keyframes rbm-focus-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.8;
+  }
+}
+
+@keyframes rbm-pending-border {
+  0% {
+    border-color: var(--rbm-color-border-warning);
+  }
+  50% {
+    border-color: var(--rbm-color-warning);
+  }
+  100% {
+    border-color: var(--rbm-color-border-warning);
+  }
+}
+
+@keyframes rbm-progress-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 0;
+  }
+}
+
+/* High Contrast Mode Enhancements */
+@media (prefers-contrast: high) {
+  .rbm-enhanced-status-indicator,
+  .rbm-enhanced-selection-indicator {
+    border-width: calc(var(--rbm-border-width-thick) * 2);
+    font-weight: var(--rbm-font-weight-bold);
+  }
+  
+  .rbm-pattern {
+    opacity: 0.3;
+  }
+  
+  .rbm-focus-ring--outer {
+    border-width: calc(var(--rbm-border-width-thick) * 3);
+    border-color: var(--rbm-color-text-primary);
+  }
+  
+  .rbm-focus-corner {
+    background-color: var(--rbm-color-text-primary);
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .rbm-enhanced-status-indicator,
+  .rbm-enhanced-selection-indicator,
+  .rbm-focus-indicator *,
+  .rbm-selection-shape {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .rbm-enhanced-selection-indicator:hover:not([aria-disabled="true"]) {
+    transform: none;
+  }
+}
+
+/* Force Visibility for Critical Indicators */
+.rbm-enhanced-status-indicator[data-status="error"],
+.rbm-enhanced-status-indicator[data-status="warning"] {
+  /* Ensure error/warning indicators are always highly visible */
+  min-height: calc(var(--rbm-size-touch-target-min) * 1.1);
+  font-weight: var(--rbm-font-weight-bold);
+  border-width: var(--rbm-border-width-thick);
+}
+
+/* Print Styles */
+@media print {
+  .rbm-enhanced-status-indicator,
+  .rbm-enhanced-selection-indicator {
+    background: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .rbm-enhanced-status-indicator[data-status="error"]::after {
+    content: " (ERROR)";
+    font-weight: bold;
+  }
+  
+  .rbm-enhanced-status-indicator[data-status="warning"]::after {
+    content: " (WARNING)";
+    font-weight: bold;
+  }
+  
+  .rbm-enhanced-status-indicator[data-status="success"]::after {
+    content: " (SUCCESS)";
+  }
+}
